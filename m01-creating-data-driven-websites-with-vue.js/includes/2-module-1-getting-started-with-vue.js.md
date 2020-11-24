@@ -20,7 +20,7 @@ Vue.js is an open-source *modelviewviewmodel* (MVVM) *front end* JavaScript fram
 
 Like many other design patterns, MVVM helps organize code into modules to make development, updating and reuse of code simpler and faster. **Model** refers to either a domain model, which represents real *state* content (an object-oriented approach), or to the data access layer, which represents the content. **View** refers to the structure, layout, and appearance of what a user sees on the screen, i.e., the user interface. The View displays a representation of the model and receives the user's interaction through mouse clicks, keyboard input, screen tap gestures, etc. It then forwards the handling of these inputs to the **Viewmodel**, which can be described as the *state of the data* within the model.
 
-*The core library of Vue.js is focused on the View layer only*, and that will be the focus of these initial training modules. Additional tools are needed to create more complex Vue applications. We will address those concepts in the later modules within this course. First, let's focus on functionality available through the core library.
+*The core library of Vue.js is focused on the View layer only*, and that will be the focus of these initial training modules. Additional tools are needed to create more complex Vue applications. We will address those concepts and the Vue CLI in later modules within this course. First, let's focus on functionality available through the core library.
 
 ## Unit: Overview of web application
 
