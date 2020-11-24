@@ -63,8 +63,7 @@ You can see a list of installed extensions in Visual Studio Code by clicking the
 ## Unit: Create a simple Vue app
 
 > [!TIP]
-> TIP! We have prepared some source code files to help you get started quickly. These files include images, a starter HTML page, and a CSS stylesheet. To use these starter files, download XXXX.zip and extract the files to a folder on your computer.
-
+> [!TIP] We have prepared some source code files to help you get started quickly. These files include images, a starter HTML page, and a CSS stylesheet. To use these starter files, download XXXX.zip and extract the files to a folder on your computer.
 Go to the official Vue page at [https://vuejs.org/v2/guide/installation.html](https://vuejs.org/v2/guide/installation.html) to copy the latest CDN link and paste it into the index.html page. We are using version 3.0 of Vue.js for this training. If you are using our HTML starter file, your page should look like the code shown below. The Vue.js script source you are adding should be entered on line 9 of that file.
 
 ```html
@@ -103,8 +102,7 @@ Now we can start writing Vue script inside our HTML file if we want to, but it i
 The `createApp()` function is available to us because we imported the Vue.js library into the `<head>` of our HTML page. We then pass an argument for this function as an object with a `data` property. This object returns another object that will store our data. Let's define a data item named *product* with a value of *Book a Cruise to the Moon*.
 
 > [!TIP]
-> The full code for this data property would be data: function(), but Vue allows an ES6 shorthand notation that lets us remove the colon (:) and the word 'function' so the resulting code is simply data(). ES6 stands for ECMAScript 6, which was created to standardize JavaScript. ES6 is the 6th version of ECMAScript. Vue requires at least ECMAScript 5, which is common in most modern browsers.
-
+> [!TIP] The full code for this data property would be data: function(), but Vue allows an ES6 shorthand notation that lets us remove the colon (:) and the word 'function' so the resulting code is simply data(). ES6 stands for ECMAScript 6, which was created to standardize JavaScript. ES6 is the 6th version of ECMAScript. Vue requires at least ECMAScript 5, which is common in most modern browsers.
 ```javascript
 const app = Vue.createApp({
 
@@ -133,7 +131,7 @@ Then we link to this JavaScript application by adding the following code snippet
 
 In addition to importing the Vue app that is defined in our JavaScript file, we want to mount our Vue application into the DOM so that Vue can track the current state of different objects in our HTML page. To accomplish this, we add another piece of script below the imported Vue app. Inside the mount method we have an argument `#app`, which is a DOM selector used to plug the app into a piece of our DOM.
 
-When a web page is loaded, the browser creates a DOM (Document Object Model) of the page. The HTML DOM model is constructed as a tree of Objects. This provides JavaScript with all the power it needs to change elements, attributes, and CSS styles within an HTML document, thus enabling the creation of dynamic HTML on the front end. An image and further explanation of the DOM is available at [https://www.w3schools.com/js/js_htmldom.asp](https://www.w3schools.com/js/js_htmldom.asp).
+[!NOTE] When a web page is loaded, the browser creates a DOM (Document Object Model) of the page. The HTML DOM model is constructed as a tree of Objects. This provides JavaScript with all the power it needs to change elements, attributes, and CSS styles within an HTML document, thus enabling the creation of dynamic HTML on the front end. An image and further explanation of the DOM is available at [https://www.w3schools.com/js/js_htmldom.asp](https://www.w3schools.com/js/js_htmldom.asp).
 
 ```javascript
     <!-- Mount Vue app into the DOM -->
@@ -146,7 +144,7 @@ When a web page is loaded, the browser creates a DOM (Document Object Model) of 
 
 ```
 
-To identify the Vue app within the DOM we wrap a <div> tag around the parts of our HTML code where we want to plug in pieces of data being tracked by our Vue application.
+To identify the Vue app within the DOM we wrap a `<div>` tag around the parts of our HTML code where we want to plug in pieces of data being tracked by our Vue application.
 
 ```html
     <div id="app">
@@ -157,10 +155,9 @@ To identify the Vue app within the DOM we wrap a <div> tag around the parts of o
 
 ```
 
-Now we need to tell our HTML page where to display the piece of `data` we have defined for our `product`. So, we replace the literal text in our <h1> tag with a VueJS variable name placed inside double curly braces `{{ variable` }}, as shown in the code snippet below.
+Now we need to tell our HTML page where to display the piece of `data` we have defined for our `product`. So, we replace the literal text in our `<h1>` tag with a VueJS variable name placed inside double curly braces `{{ variable` }}, as shown in the code snippet below.
 
-> [!IMPORTANT]
-> Note that page execution order is important in VueJS processing. We cannot attach our application to the DOM until the HTML page is fully loaded. Therefore, we suggested importing and mounting the Vue application at the bottom of the page after all other HTML elements have been loaded into the browser. You could technically include the <script> src tag at the top of the page as long as it is located below the opening <div> tag that defines the app, but it is generally a good idea to let the HTML page load before calling an offsite script file.
+[!IMPORTANT] Note that page execution order is important in VueJS processing. We cannot attach our application to the DOM until the HTML page is fully loaded. Therefore, we suggested importing and mounting the Vue application at the bottom of the page after all other HTML elements have been loaded into the browser. You could technically include the `<script>` src tag at the top of the page as long as it is located below the opening `<div>` tag that defines the app, but it is generally a good idea to let the HTML page load before calling an offsite script file.
 
 ```Choose a language.
       <h1>{{ product }}</h1>
@@ -212,6 +209,6 @@ Choose the best response for each of the questions below. Then select **Check yo
 
 ## Multiple Choice
 Select the correct statement from options listed below.
-()In order to create a Vue application, you will need to re-write your existing framework.{{Incorrect. Vue is described as a progressive application, which means it can be added to any existing framework and implemented in a progressive manner. This means you can start with simple functionality and continue to build a complex application, as needed.}}
 ()Vue applications must make an external call to a back end server that hosts a database application.{{Incorrect. While a Vue application can make use of a back end server and database, it is not necessary because Vue is capable of allowing you to build powerful single-page applications on the front end in an HTML web browser.}}
 (x)A Vue application can be implemented by entering a simple script tag in an HTML document that references the Vue core library.{{Correct! There is no need to use external tools or an external server to build a powerful single-page application in an HTML web browser. The Vue application details can be scripted within the HTML page, or the page can be linked to a separate JavaScript file that contains the Vue application code.}}
+()In order to create a Vue application, you will need to re-write your existing framework.{{Incorrect. Vue is described as a progressive application, which means it can be added to any existing framework and implemented in a progressive manner. This means you can start with simple functionality and continue to build a complex application, as needed.}}
