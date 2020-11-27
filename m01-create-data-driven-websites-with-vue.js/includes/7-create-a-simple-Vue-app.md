@@ -81,22 +81,20 @@ To identify the Vue app within the DOM we wrap a `<div>` tag around the parts of
 
 ```html
 <div id="app">
-  <h1>Product name goes here</h1>
+  <h2>Product name goes here</h2>
 </div>
 ```
 
 Now we need to tell our HTML page where to display the piece of `data` we have defined for our `product`. So, we replace the literal text in our `<h2>` tag with a VueJS variable name placed inside double curly braces `{{ variable }}`, as shown in the code snippet below.
 
-> [!IMPORTANT]
-> IMPORTANT: Note that page execution order is important in VueJS processing. We cannot attach our application to the DOM until the HTML page is fully loaded. Therefore, we suggested importing and mounting the Vue application at the bottom of the page after all other HTML elements have been loaded into the browser. You could technically include the `<script>` src tag at the top of the page as long as it is located below the opening `<div>` tag that defines the app, but it is generally a good idea to let the HTML page load before calling an offsite script file.
-
 ```html
 <h1>{{ product }}</h1>
 ```
 
-You should now be able to view the HTML page in your browser to see that the words "Product Name Goes Here" have been replaced with the words "Book a Cruise to the Moon." You can just double-click on the index.html file to open it in a browser on your local computer.
+> [!IMPORTANT]
+> IMPORTANT: Note that page execution order is important in VueJS processing. We cannot attach our application to the DOM until the HTML page is fully loaded. Therefore, we import the Vue application at the bottom of the page after all other HTML elements have been loaded into the browser. It is generally a good idea to let the HTML page load before calling an external script file that is intended to change the content or structure of the DOM.
 
-If you have installed the Live Server extension in VS Code, you can open a live view of your HTML page that will be updated immediately every time you make a change and save the file. Start the server by clicking the "Go Live" link in the blue footer at the bottom of the screen.
+You should now be able to view the HTML page in your browser to see that the words "Product name goes here" have been replaced with the words "Book a Cruise to the Moon." You can just double-click on the index.html file to open it in a browser on your local computer. However, if you installed the Live Server extension in VS Code, you can open a live view of your HTML page that will be updated immediately every time you make a change and save the file. To do this, start the server by clicking the "Go Live" link in the blue footer at the bottom of the screen.
 
 ![Image of the footer area in the bottom of the VS Code application prior to starting the Go Live server.](../media/liveserver_golive.png)
 
@@ -108,4 +106,4 @@ You can then open the page in the live server by using two consecutive keyboard 
 
 ![Side-by-side images showing the VS Code application on the left with an open HTML file, and the same HTML page on the right displayed in a Microsoft Edge browser running on a live server.](../media/vscode_liveserver.png)
 
-This immediate update of the page in the Live Server demonstrates the **Reactivity** feature of VueJS. Reactivity refers to the fact that data values and their related properties are updated immediately in the HTML interface as soon as a change is made in the Vue application.
+This immediate update of the page in the Live Server demonstrates the **Reactivity** feature of VueJS. Reactivity refers to the fact that data values and their related properties are updated immediately in the HTML interface as soon as a change is made in the Vue application. Since there is no need for the browser to request information from an external server and wait for a response, Vue.js is able to make updates to the structure and content of your webpages very quickly.
