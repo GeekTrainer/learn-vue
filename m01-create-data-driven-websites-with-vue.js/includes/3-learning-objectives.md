@@ -1,5 +1,3 @@
-## Learning Objectives
-
 Upon completion of this module you will:
 
 - Understand why Vue.js was developed and how it can be implemented in two ways

@@ -1,11 +1,9 @@
-## Create a simple Vue app
-
-In this section you will create a starter Vue application contained in an HTML file that is linked to a Vue.js JavaScript file. You will define one data variable and display it dynamically within the HTML page.
+In this section you will create a starter Vue application using an HTML file that is linked to the Vue core library and an external JavaScript file that contains the application information. You will also define one Vue data variable and display it dynamically within the HTML page.
 
 > [!TIP]
 > TIP: We have prepared some source code files to help you get started quickly. These include images, a starter HTML page, and a CSS stylesheet. To use these starter files, download XXXX.zip and extract the files to a project work folder on your computer.
 
-**Step One: Link to the Vue core library in your HTML file**
+## Step 1: Link to the Vue core library in your HTML file
 
 To install Vue by linking to the Vue core library, paste the following script tag into line 9 of the starter HTML file.
 
@@ -34,7 +32,7 @@ Your **index.html** page should now look like the example shown below.
 > [!TIP]
 >The [official Vue page](https://vuejs.org/v2/guide/installation.html) provides installation information and the latest CDN link that you can paste into any HTML page where you want to enable Vue.js. We are using version 3.0 of Vue.js for this training. You can also refer to the [Progressive JavaScript Framework](https://v3.vuejs.org/) webiste for more information about Vue.js version 3.
 
-**Step 2: Create a separate JavaScript file for your Vue application**
+## Step 2: Create a separate JavaScript file for your Vue application
 
 Now we can start writing Vue script inside our HTML file if we want to, but it is much cleaner and easier to update our application if we place the Vue data into a separate JavaScript file. Let's create a **main.js** file for this purpose. On the first line we instantiate (create an instance of) our Vue application using a `constant` named `app`. We will also define a data item named **product** with a value of **Book a Cruise to the Moon**.
 
@@ -55,7 +53,7 @@ const app = Vue.createApp({
 
 The `createApp()` function is available to us because we imported the Vue.js library into the `<head>` tag of our HTML page. We then pass an argument for this function as an object with a `data` property. This object returns another object that we will use to store our data.
 
-**Step Three: Mount the Vue Application**
+## Step Three: Mount the Vue Application
 
 In addition to importing the Vue app that is defined in our JavaScript file, we need to mount our Vue application into the DOM so that Vue can track the current state of different objects in our HTML page. To accomplish this, add another construct at the bottom of the main.js file.
 
@@ -65,7 +63,7 @@ const mountedApp = app.mount('#app')
 
 Inside the mount method we have an argument `#app`, which is a DOM selector used to plug the app into a piece of our DOM. **Mount** the application by adding the following construct below the **app** construct in your main.js file.
 
-**Step Four: Link to the Vue application in your HTML file**
+## Step Four: Link to the Vue application in your HTML file
 
 Next we link to our Vue application by adding the following code snippet just above the ending `</body>` tag in our **index.html** file.
 
@@ -77,7 +75,7 @@ Next we link to our Vue application by adding the following code snippet just ab
 > [!NOTE]
 > NOTE: When a web page is loaded, the browser creates a DOM (Document Object Model) of the page. The HTML DOM model is constructed as a tree of Objects. This provides JavaScript with all the power it needs to change elements, attributes, and CSS styles within an HTML document, thus enabling the creation of dynamic HTML on the front end. An image and further explanation of the DOM is available on the [W3 Schools website](https://www.w3schools.com/js/js_htmldom.asp).
 
-**Step Five: Identify the Vue app within the DOM**
+## Step Five: Identify the Vue app within the DOM
 
 To identify the Vue app within the DOM we wrap a `<div>` tag around the parts of our HTML code where we want to plug in pieces of data being tracked by our Vue application.
 
@@ -102,15 +100,12 @@ If you have installed the Live Server extension in VS Code, you can open a live 
 
 ![Image of the footer area in the bottom of the VS Code application prior to starting the Go Live server.](../media/liveserver_golive.png)
 
-
 You will briefly see text indicating that the server is starting, and the Go Live icon will be replaced with the name of the Port where the live server is running.
 
 ![Image of the footer area in the bottom of the VS Code application after starting the Go Live server.](../media/liveserver_port.png)
 
-
 You can then open the page in the live server by using two consecutive keyboard commands: **Alt+L** followed by **Alt+O**. Note that the browser will not be displayed inside the VSCode editor, but rather will appear in a separate browser window. In the image below you can see VS Code on the left and an Edge browser running on the live server on the right.
 
 ![Side-by-side images showing the VS Code application on the left with an open HTML file, and the same HTML page on the right displayed in a Microsoft Edge browser running on a live server.](../media/vscode_liveserver.png)
-
 
 This immediate update of the page in the Live Server demonstrates the **Reactivity** feature of VueJS. Reactivity refers to the fact that data values and their related properties are updated immediately in the HTML interface as soon as a change is made in the Vue application.

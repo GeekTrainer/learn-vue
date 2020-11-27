@@ -1,5 +1,3 @@
-## Overview
-
 **Vue.js** was created by Evan You and first released in February 2014. His objective in developing Vue was to create a progressive, lightweight version of JavaScript. It was designed to allow developers to create a user interface by adding a set of custom HTML attributes that connect software components with data. To accomplish this, Vue.js interprets the HTML attributes as **directives** that bind input or output parts of the page to a model that is represented by standard JavaScript variables. You can easily add the Vue core library to any page and immediately start creating dynamic HTML markup with powerful data binding and event handling features.
 
 Vue is described as progressive because you can adopt it incrementally by adding functionality available in a library to power sophisticated single-page applications without needing to re-write your existing framework. Vue is also flexible enough to be configured with back end applications that rely on an external database or a Web server such as Node.

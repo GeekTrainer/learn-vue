@@ -1,5 +1,3 @@
-## Preview web application
-
 Let's take a quick look at the web application we will build in this course.
 
 Suppose you work for an exciting new start-up company named **Relecloud Galaxy Tours**. It is your job to set up a web application that will allow people to book various tours throughout the galaxy. As a first step, passengers will need to book a cruise to the moon. From there they can depart from a moon-based space station to explore other parts of the galaxy by adding tour enhancements such as a Meteor Fireworks Display, a Bullet Train that travels through the center of the Earth, and a Ride-Along in an alien spaceship to watch titanium mining on the moon.

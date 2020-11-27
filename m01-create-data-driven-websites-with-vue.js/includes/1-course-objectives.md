@@ -1,5 +1,3 @@
-## Learning objectives
-
 In this course, you will:
 
 - Understand Vue.js as a powerful JavaScript framework that is easy to implement

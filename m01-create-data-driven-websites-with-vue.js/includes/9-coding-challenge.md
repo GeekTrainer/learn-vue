@@ -1,5 +1,3 @@
-## Coding Challenge
-
 Now it's your turn! Armed with the information presented in Module 1, you should now be able to perform the following tasks on your own.
 
 - Create an **index.html** file and a **main.js** file to instantiate a VueJS application.
