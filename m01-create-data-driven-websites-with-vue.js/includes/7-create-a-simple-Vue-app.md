@@ -32,7 +32,7 @@ Your **index.html** page should now look like the example shown below.
 ```
 
 > [!TIP]
->The [official Vue page](https://vuejs.org/v2/guide/installation.html) provides installation information and the latest CDN link that you can paste into any HTML page where you want to enable Vue.js. We are using version 3.0 of Vue.js for this training. 
+>The [official Vue page](https://vuejs.org/v2/guide/installation.html) provides installation information and the latest CDN link that you can paste into any HTML page where you want to enable Vue.js. We are using version 3.0 of Vue.js for this training. You can also refer to the [Progressive JavaScript Framework](https://v3.vuejs.org/) webiste for more information about Vue.js version 3.
 
 **Step 2: Create a separate JavaScript file for your Vue application**
 
@@ -113,4 +113,4 @@ You can then open the page in the live server by using two consecutive keyboard 
 ![Side-by-side images showing the VS Code application on the left with an open HTML file, and the same HTML page on the right displayed in a Microsoft Edge browser running on a live server.](../media/vscode_liveserver.png)
 
 
-This immediate update of the page in the Live Server demonstrates the *Reactivity* feature of VueJS. Reactivity refers to the fact that data values and their related properties are updated immediately in the HTML interface as soon as a change is made in the Vue application.
+This immediate update of the page in the Live Server demonstrates the **Reactivity** feature of VueJS. Reactivity refers to the fact that data values and their related properties are updated immediately in the HTML interface as soon as a change is made in the Vue application.
