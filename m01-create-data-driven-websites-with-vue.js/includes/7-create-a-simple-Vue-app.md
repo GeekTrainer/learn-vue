@@ -1,5 +1,7 @@
 ## Create a simple Vue app
 
+In this section you will create a starter Vue application contained in an HTML file that is linked to a Vue.js JavaScript file. You will define one data variable and display it dynamically within the HTML page.
+
 > [!TIP]
 > TIP: We have prepared some source code files to help you get started quickly. These include images, a starter HTML page, and a CSS stylesheet. To use these starter files, download XXXX.zip and extract the files to a project work folder on your computer.
 
@@ -9,39 +11,24 @@ To install Vue by linking to the Vue core library, paste the following script ta
 
 ```html
 <script src="https://unpkg.com/vue@next"></script>
-
 ```
 Your **index.html** page should now look like the example shown below.
 
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
-
   <head>
-
     <meta charset="UTF-8" />
-
     <title>Relecloud Galaxy Tours</title>
-
     <!-- Import Styles -->
-
     <link rel="stylesheet" href="./assets/styles.css" />
-
     <!-- Import Vue.js -->
-
     <script src="https://unpkg.com/vue@next"></script>
-
   </head>
-
   <body>
-
-      <h1>Product name goes here</h1>
-
+    <h1>Product name goes here</h1>
   </body>
-
 </html>
-
 ```
 
 > [!TIP]
@@ -55,19 +42,12 @@ Create the following lines of code and save your new file as **main.js** in the 
 
 ```javascript
 const app = Vue.createApp({
-
     data() {
-
         return {
-
             product: 'Book a Cruise to the Moon'
-
         }
-
     },
-
 })
-
 ```
 
 > [!TIP]
@@ -81,7 +61,6 @@ In addition to importing the Vue app that is defined in our JavaScript file, we 
 
 ```javascript
 const mountedApp = app.mount('#app')
-
 ```
 
 Inside the mount method we have an argument `#app`, which is a DOM selector used to plug the app into a piece of our DOM. **Mount** the application by adding the following construct below the **app** construct in your main.js file.
@@ -90,48 +69,31 @@ Inside the mount method we have an argument `#app`, which is a DOM selector used
 
 Next we link to our Vue application by adding the following code snippet just above the ending `</body>` tag in our **index.html** file.
 
-```javascript
-    <!-- Import Vue app -->
-
-    <script src="./main.js"></script>
-
+```html
+<!-- Import Vue app -->
+<script src="./main.js"></script>
 ```
 
-[!NOTE]
-NOTE: When a web page is loaded, the browser creates a DOM (Document Object Model) of the page. The HTML DOM model is constructed as a tree of Objects. This provides JavaScript with all the power it needs to change elements, attributes, and CSS styles within an HTML document, thus enabling the creation of dynamic HTML on the front end. An image and further explanation of the DOM is available on the [W3 Schools website](https://www.w3schools.com/js/js_htmldom.asp).
-
-```javascript
-    <!-- Mount Vue app into the DOM -->
-
-    <script>
-
-      const mountedApp = app.mount('#app')
-
-    </script>
-
-```
+> [!NOTE]
+> NOTE: When a web page is loaded, the browser creates a DOM (Document Object Model) of the page. The HTML DOM model is constructed as a tree of Objects. This provides JavaScript with all the power it needs to change elements, attributes, and CSS styles within an HTML document, thus enabling the creation of dynamic HTML on the front end. An image and further explanation of the DOM is available on the [W3 Schools website](https://www.w3schools.com/js/js_htmldom.asp).
 
 **Step Five: Identify the Vue app within the DOM**
 
 To identify the Vue app within the DOM we wrap a `<div>` tag around the parts of our HTML code where we want to plug in pieces of data being tracked by our Vue application.
 
 ```html
-    <div id="app">
-
-      <h1>Product name goes here</h1>
-
-    </div>
-
+<div id="app">
+  <h1>Product name goes here</h1>
+</div>
 ```
 
 Now we need to tell our HTML page where to display the piece of `data` we have defined for our `product`. So, we replace the literal text in our `<h2>` tag with a VueJS variable name placed inside double curly braces `{{ variable }}`, as shown in the code snippet below.
 
-[!IMPORTANT]
-IMPORTANT: Note that page execution order is important in VueJS processing. We cannot attach our application to the DOM until the HTML page is fully loaded. Therefore, we suggested importing and mounting the Vue application at the bottom of the page after all other HTML elements have been loaded into the browser. You could technically include the `<script>` src tag at the top of the page as long as it is located below the opening `<div>` tag that defines the app, but it is generally a good idea to let the HTML page load before calling an offsite script file.
+> [!IMPORTANT]
+> IMPORTANT: Note that page execution order is important in VueJS processing. We cannot attach our application to the DOM until the HTML page is fully loaded. Therefore, we suggested importing and mounting the Vue application at the bottom of the page after all other HTML elements have been loaded into the browser. You could technically include the `<script>` src tag at the top of the page as long as it is located below the opening `<div>` tag that defines the app, but it is generally a good idea to let the HTML page load before calling an offsite script file.
 
 ```html
-      <h1>{{ product }}</h1>
-
+<h1>{{ product }}</h1>
 ```
 
 You should now be able to view the HTML page in your browser to see that the words "Product Name Goes Here" have been replaced with the words "Book a Cruise to the Moon." You can just double-click on the index.html file to open it in a browser on your local computer.
