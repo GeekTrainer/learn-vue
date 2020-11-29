@@ -1,3 +1,5 @@
+## Segment page content with `<div>` tags
+
 To display images in our HTML application, we will first create `<div>` tags on the page to contain our images in the left side of the screen, leaving the right side for display of detailed product information. Add the following code elements to your index.html page.
 
 ```html
@@ -36,7 +38,7 @@ The HTML page should look like the screenshot below when viewed in your Live bro
 
 ![Screenshot showing the HTML page with new div sections that display an image on the left, with the product name centered in the section on the right.](../media/html-formatted-with-image-on-left.png)
 
-## Bind an Attribute to an Expression
+## Bind an attribute to an expression
 
 At this point we have hard-coded the name of the image file that is being displayed in the left side of our webpage, but we can bind the `src` attribute by entering its value into our Vue app. Open your main.js file and add the following code in the data() return function.
 
@@ -73,7 +75,7 @@ If you were to change the value of `selected_prod_img` in your **main.js** file 
 
 ![Screenshot showing the same HTML page displayed previously, with a new asteroid image displayed on the left side of the page.](../media/selected-product-changed-to-asteroid.png)
 
-## Use Shorthand for Attribute Binding
+## Use shorthand for attribute binding
 
 Vue allows you to use shorthand syntax for v-bind. It essentially allows you to simply use the colon (:) by itself in front of an attribute, which means it is not necessary to include the text `v-bind` within the attribute binding. The result is that the following HTML syntax works just as well as the full v-bind syntax shown above.
 
