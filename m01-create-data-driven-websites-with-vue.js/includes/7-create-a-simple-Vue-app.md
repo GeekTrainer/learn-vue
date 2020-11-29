@@ -42,7 +42,7 @@ Create the following lines of code and save your new file as **main.js** in the 
 const app = Vue.createApp({
     data() {
         return {
-            product: 'Book a Cruise to the Moon'
+            product_name: 'Book a Cruise to the Moon'
         }
     },
 })
@@ -88,7 +88,7 @@ To identify the Vue app within the DOM we wrap a `<div>` tag around the parts of
 Now we need to tell our HTML page where to display the piece of `data` we have defined for our `product`. So, we replace the literal text in our `<h2>` tag with a VueJS variable name placed inside double curly braces `{{ variable }}`, as shown in the code snippet below.
 
 ```html
-<h1>{{ product }}</h1>
+<h1>{{ product_name }}</h1>
 ```
 
 > [!IMPORTANT]
