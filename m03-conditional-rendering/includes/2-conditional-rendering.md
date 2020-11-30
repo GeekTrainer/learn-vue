@@ -1,6 +1,6 @@
-Let's start with a simple example to demonstrate conditional rendering. In this section, we will add two `<p>` tags to our HTML page, and have the browser display only one of these tags based on whether reservations are still available for that particular product, or whether the product is booked to capacity.
+Let's start with a simple example to demonstrate conditional rendering. In this section, we will add two `<p>` tags to your HTML page, then direct the browser to display only one of these tags based on whether reservations are still available for a particular product, or whether the product is already booked to capacity.
 
-In your **index.html** file, create an `<h3>` tag under the `<h2>` tag for display of a product description. Next create two new `<p>` tags under the new `<h3>` tag.
+In your **index.html** file, create an `<h3>` tag under the `<h2>` tag for display of a product description. Next create two new `<p>` tags under the new `<h3>` tag. Example HTML text is shown below.
 
 ```html
 <h2>{{ product_name }}</h2>
@@ -9,12 +9,12 @@ In your **index.html** file, create an `<h3>` tag under the `<h2>` tag for displ
 <p><span style="color:red;">Sold out</span> Please check back for our next available shuttle.</p>
 ```
 
-We only want one of the two new paragraphs to be displayed in our browser, depending on availability of bookings. In order to create a conditional statement based on some sort of logic, we need to set up a few more properites in our application data() object. Add a `seatsAvailable` property in your **main.js** file, and set the value to "true" to initialize it as a boolean.
+We only want one of the two new paragraphs to be displayed in our browser, depending on availability of bookings. In order to create a conditional statement based on some sort of logic, we need to set up a few more properites in our application data() object. Add a `seats_available` property in your **main.js** file, and set the value to "true" to initialize it as a boolean.
 
-Also add a `product_desc` property to render in the new `<h3>` tag. Your **main.js** file should now include the information shown below.
+Also add a `product_desc` property in your **main.js** file to render a product description inside the new `<h3>` tag. An example is included in the code shown below.
 
 ```javascript
-seatsAvailable: true,
+seats_available: true,
 product_desc: 'Cruise to the moon in our luxurious shuttle. Watch the astronauts working outside the International Space Station.',
 ```
 
@@ -33,7 +33,7 @@ Now we can apply the combination of directives `v-if` and `v-else` to display th
  <div class="product-desc">
    <h2>{{ product_name }}</h2>
    <h3>{{ product_desc }}</h3>
-   <p v-if="seatsAvailable" style="color:green;">Reservations available</p>
+   <p v-if="seats_available" style="color:green;">Reservations available</p>
    <p v-else><span style="color: red">Sold out!</span> Please check back for our next available shuttle.</p>
 </div>
 ```
