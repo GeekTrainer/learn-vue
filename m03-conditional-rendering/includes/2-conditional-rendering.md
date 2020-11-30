@@ -117,12 +117,12 @@ To accomplish these objectives, change the `<p>` tags in your **index.html** fil
 
 You can verify whether your code works as expected by changing the value of the `num_seats_available` property in your **main.js** file and then viewing the HTML output in the browser. If you enter **26 as the value**, you should see a display like the screenshot below, which includes the top `v-if` paragraph and the Early Bird discount.
 
-![Screenshot showing the HTML page with product name, product description and expected paragraphs displayed on the right based on a value of 26 for the variable num_seats_available. The paragraphs should read "Reservations available" and "Early Bird discount 12% if you book by December 20, 2050!"](../media/conditional-paragraphs-at-26-seats.png)
+![Screenshot showing the HTML page with product name, product description and expected paragraphs displayed on the right based on a value of 26 for the property num_seats_available. The paragraphs should read "Reservations available" and "Early Bird discount 12% if you book by December 20, 2050!"](../media/conditional-paragraphs-at-26-seats.png)
 
 If you enter a **value of 12** for `num_seats_available`, your display should look the image below. The second paragraph `v-else-if` statement is now showing, but the Early Bird paragraph is hidden.
 
-![Screenshot showing the HTML page with product name, product description and expected paragraphs displayed on the right based on a value of 12 for the variable num_seats_available. The only paragraph that should be displayed reads "Almost Sold Out!"](../media/conditional-paragraphs-at-12-seats.png)
+![Screenshot showing the HTML page with product name, product description and expected paragraphs displayed on the right based on a value of 12 for the property num_seats_available. The only paragraph that should be displayed reads "Almost Sold Out!"](../media/conditional-paragraphs-at-12-seats.png)
 
 If you enter a **value of 0** for `num_seats_available`, your display should look the image below. The third paragraph (`v-else`) statement is now showing, and the Early Bird discount remains hidden.
 
-![Screenshot showing the HTML page with product name, product description and expected paragraphs displayed on the right based on a value of 0 for the variable num_seats_available. The only paragraph that should be displayed reads "Sold Out! Please check back for our next available shuttle."](../media/conditional-paragraphs-at-0-seats.png)
+![Screenshot showing the HTML page with product name, product description and expected paragraphs displayed on the right based on a value of 0 for the property num_seats_available. The only paragraph that should be displayed reads "Sold Out! Please check back for our next available shuttle."](../media/conditional-paragraphs-at-0-seats.png)
