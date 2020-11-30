@@ -115,6 +115,8 @@ To accomplish these objectives, change the `<p>` tags in your **index.html** fil
 </div>
 ```
 
+In the examples above we have used `>=` or `<` in the mathematical formulas for comparison of the value in `num_seats_available`. It is important to understand that if any of your expressions involve the use of an equals sign, you must use a double equals (`==`) in your expression. For example: `v-show="num_seats_available == 0"`.
+
 You can verify whether your code works as expected by changing the value of the `num_seats_available` property in your **main.js** file and then viewing the HTML output in the browser. If you enter **26 as the value**, you should see a display like the screenshot below, which includes the top `v-if` paragraph and the Early Bird discount.
 
 ![Screenshot showing the HTML page with product name, product description and expected paragraphs displayed on the right based on a value of 26 for the property num_seats_available. The paragraphs should read "Reservations available" and "Early Bird discount 12% if you book by December 20, 2050!"](../media/conditional-paragraphs-at-26-seats.png)
