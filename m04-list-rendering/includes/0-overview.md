@@ -1,0 +1,1 @@
+In this lesson we will demonstrate how to display an ordered or unordered list in our HTML page by looping through an array of data that we will define in our **main.js** file. For this purpose, we will use the Vue.js `v-for` directive.
