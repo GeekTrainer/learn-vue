@@ -1,20 +1,27 @@
 Let's start with a simple example to demonstrate conditional rendering. In this section, we will add two `<p>` tags to your HTML page, then direct the browser to display only one of these elements based on whether reservations are still available for a particular product, or whether the product is already booked to capacity.
 
-In your **index.html** file, create an `<h3>` tag under the `<h2>` tag for display of a product description. Next create two new `<p>` tags under the new `<h3>` tag. Example HTML text is shown below.
+In your **index.html** file, create an `<h3>` tag under the `<h2>` tag for display of a product description. `//TODO: Add <h2> tag for product_desc value.`
+
+Next create two new `<p>` tags under the new `<h3>` tag. `TODO: Create two <p> tags with example text shown below to be used for content that will be rendered based on conditions specified in the Vue application`.
 
 ```html
-<h2>{{ product_name }}</h2>
-<h3>{{ product_desc }}</h3>
-<p style="color:green;">Reservations available</p>
-<p><span style="color:red;">Sold out</span> Please check back for our next available shuttle.</p>
+...
+<div class="product-desc">
+  <h2>{{ product_name }}</h2>
+  <!-- TODO: Add <h3> tag for product_desc value. -->
+  <h3>{{ product_desc }}</h3>
+  <!-- TODO: Add two <p> tags for content that will be rendered based on conditions. -->
+  <p style="color:green;">Reservations available</p>
+  <p><span style="color:red;">Sold out</span> Please check back for our next available shuttle.</p>
 ```
 
 We only want one of the two new paragraphs to be displayed in our browser, depending on availability of bookings. In order to create a conditional statement based on some sort of logic, we need to set up a few more properites in our application data() object. Add a `seats_available` property in your **main.js** file, and set the value to "true" to initialize it as a boolean.
 
-Also add a `product_desc` property in your **main.js** file that you will use to render a product description inside the new `<h3>` tag. An example is included in the code shown below.
+Also add a `product_desc` property in your **main.js** file that you will use to render a product description in the new `<h3>` tag. `//TODO: Add a product_desc property using example text shown below`.
 
 ```javascript
 seats_available: true,
+//TODO: Add product_desc property with example text shown below
 product_desc: 'Cruise to the moon in our luxurious shuttle. Watch the astronauts working outside the International Space Station.',
 ```
 
@@ -27,14 +34,16 @@ If you render the HTML file now, you will see the new product description and bo
 
 ## v-if and v-else
 
-Now we can apply the combination of directives `v-if` and `v-else` to display the first paragarph if `seatsAvailable` is true, or display the second paragraph if it is false. Modify your HTML file as shown in the code snippet below.
+Now we can apply the combination of directives `v-if` and `v-else` to display the first paragarph if `seatsAvailable` is true, or display the second paragraph if it is false. `//TODO: Modify your HTML file to add a v-if directive to the first <p> tag and a v-else directive to the second <p> tag`, as shown below.
 
 ```html
 ...
  <div class="product-desc">
    <h2>{{ product_name }}</h2>
    <h3>{{ product_desc }}</h3>
+   <!-- //TODO: Add a v-if directive if seats_available property is TRUE -->
    <p v-if="seats_available" style="color:green;">Reservations available</p>
+   <!-- //TODO: Add a v-else directive if seats_available property is NOT TRUE -->
    <p v-else><span style="color: red">Sold out!</span> Please check back for our next available shuttle.</p>
 </div>
 ...
@@ -51,15 +60,21 @@ On the other hand, you could use a simpler `v-show` directive, as explained in t
 
 The `v-show` directive provides an easy way to change the visibility of an element rather than completely removing it from the DOM the way `v-if` does. We can toggle an element's `display` attribute off or on. An element on an HTML page can be hidden by using an inline style of `display:none`. The `v-show` directive can be used to change the `display` property.
 
-Let's use a new paragraph of text to illustrate the `v-show` directive. Add the following `<p>` tag under the previous two paragraphs, as shown below.
+Let's use a new paragraph of text to illustrate the `v-show` directive. `//TODO: Add a new <p> tag with v-show directive to display <p> if the Early Bird special is set to TRUE and more than 12 seats are available for booking`, as shown below.
 
 ```html
-<p v-show="earlybird" style="color: blue">Early Bird discount 12% if you book by December 20, 2050!</p>
+...
+<p v-else><span style="color: red">Sold out!</span> Please check back for our next available shuttle.</p>
+<!-- //TODO: Add a new <p> tag with v-show directive to display <p> if the Early Bird special is set to TRUE and more than 12 seats are available for booking-->
+<p v-show="earlybird && num_seats_available > 12" style="color: blue">Early Bird discount 12% if you book by December 20, 2050!</p>
 ```
 
-We want this new paragraph to be displayed whenever we are running our **Early Bird** special. So we also need to create an earlybird property in the data() component of our Vue app, as shown below:
+We want this new paragraph to be displayed whenever we are running our **Early Bird** special. So we also need to `//TODO: create an earlybird property in the data() component of our Vue app`, as shown below:
 
 ```javascript
+...
+seats_available: true,
+//TODO: create an earlybird property in the data() component of our Vue app`
 earlybird: true,
 ```
 
@@ -85,15 +100,17 @@ Currently our product description area on the right side of our HTML page is str
 </div>
 ```
 
-Suppose we want to implement more complex conditional logic based upon more than the two options that are available to us when using a boolean value (i.e., true or false). To do this, we want to create a property that is based on a numeric value so that we can create a range of options along a mathematical scale. Add a new property in your **main.js** file named `num_seats_available` and set it to a value of 100, as shown below.
+Suppose we want to implement more complex conditional logic based upon more than the two options that are available to us when using a boolean value (i.e., true or false). To do this, we want to create a property that is based on a numeric value so that we can create a range of options along a mathematical scale. `TODO: Add a new property in your **main.js** file named num_seats_available and set it to a value of 100`, as shown below.
 
 ```javascript
 const app = Vue.createApp({
     data() {
         return {
           ...
+          earlybird: true,
+          //TODO: Add a numeric property for num_seats_available with a value of 100
           num_seats_available: 100,
-				}
+       }
     }
 })
 ```
@@ -102,15 +119,20 @@ Now we can display 1 of 3 paragraphs in our HTML interface by using a stacked co
 
 We want to display the first `<p>` tag if more than 12 seats are available for booking; or display a new 2nd paragraph with the text **Almost Sold Out** if there are 12 or fewer seats available (but we are not yet fully booked); or display the **Sold Out** third paragraph if no seats are available on our space shuttle. Furthermore, we might not want to offer the Early Bird discount if there are 12 or fewer seats available for booking.
 
-To accomplish these objectives, change the `<p>` tags in your **index.html** file as shown below. We have also added a condition to our existing paragraph that uses the `v-show` directive. It is important to note that the `v-show` directive is placed below the `v-if` through `v-else` directives.
+To accomplish these objectives, `//TODO: change the <p> tags in your index.html to reflect the appropriate v-if, v-else-if, and v-else directives`, as shown below.
+
+`//TODO: Also add a condition to our existing paragraph that uses the v-show directive to display the <p> only if there are more than 12 seats available for booking`.
+
+It is important to note that the `v-show` directive is placed below the `v-if` through `v-else` directives.
 
 ```html
 <div class="product-desc">
   <h2>{{ product_name }}</h2>
   <h3>{{ product_desc }}</h3>
-  <p v-if="num_seats_available >= 12" style="color:green;">Reservations available</p>
-  <p v-else-if="num_seats_available < 12 && num_seats_available > 0" style="color:red;">Almost Sold Out!</p> 
+  <p v-if="num_seats_available > 12" style="color:green;">Reservations available</p>
+  <p v-else-if="num_seats_available <= 12 && num_seats_available > 0" style="color:red;">Almost Sold Out!</p> 
   <p v-else><span style="color: red">Sold out!</span> Please check back for our next available shuttle.</p>
+  <!-- //TODO: Also add a condition to our existing paragraph that uses the v-show directive to display the <p> only if there are more than 12 seats available for booking -->
   <p v-show="earlybird && num_seats_available > 12" style="color: blue">Early Bird discount 12% if you book by December 20, 2050!</p>
 </div>
 ```

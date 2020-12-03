@@ -19,9 +19,11 @@ To display images in our HTML application, we will first create `<div>` tags on 
       <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
       <div class="main">
         <div class="product-container">
+          <!-- Create <div> section on left to contain product images -->
           <div class="product-images" >
             <img src="./assets/images/space-4888643_1284x856.jpg">
           </div>
+          <!-- Create <div> section on right to contain product details -->
           <div class="product-desc">
             <h2>{{ product_name }}</h2>
           </div>
@@ -40,11 +42,7 @@ The HTML page should look like the screenshot below when viewed in your Live bro
 
 ## Bind an attribute to an expression
 
-At this point we have hard-coded the name of the image file that is being displayed in the left side of our webpage, but we can bind the `src` attribute by entering its value into our Vue app. Open your main.js file and add the following code in the data() return function.
-
-```javascript
-productimage: './assets/images/space-4888643_1284x856.jpg',
-```
+At this point we have hard-coded the name of the image file that is being displayed in the left side of our webpage, but we can bind the `src` attribute by entering its value into our Vue app. Open your **main.js** file and add the following code in the `data() return` function: `//TODO: selected_prod_img: './assets/images/space-4888643_1284x856.jpg'`
 
 Your main.js file should now include the following lines of code:
 
@@ -53,7 +51,8 @@ const app = Vue.createApp({
     data() {
         return {
             product_name: 'Book a Cruise to the Moon',
-					  selected_prod_img: './assets/images/space-4888643_1284x856.jpg',
+            //TODO: Add property for the currently selected image`
+            selected_prod_img: './assets/images/space-4888643_1284x856.jpg',
         }
     }
 })
@@ -61,9 +60,10 @@ const app = Vue.createApp({
 const mountedApp = app.mount('#app')
 ```
 
-Now all we have to do is change the literal `src` attribute in our HTML page to dynamically display any image of our choice. We cannot simply replace the path to our image within double curly braces like we did to display our product name. We need to include the `v-bind` directive to bind the attribute to the data defined in our Vue app. Change the `img` tag on line 18 of your HTML file to reflect the code shown below.
+Now all we have to do is change the literal `src` attribute in our HTML page to dynamically display any image of our choice. We cannot simply replace the path to our image within double curly braces like we did to display our product name. We need to include the `v-bind` directive to bind the attribute to the data defined in our Vue app. Change the `img` tag in your HTML file to use the new property: `//TODO: <img v-bind:src="selected_prod_img">`.
 
 ```html
+<!-- TODO: Change the <img src> tag to use the selected_prod_img value instead of a specific image -->
 <img v-bind:src="selected_prod_img">
 ```
 
