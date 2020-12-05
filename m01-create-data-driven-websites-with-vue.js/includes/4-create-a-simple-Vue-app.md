@@ -5,7 +5,7 @@ In this section you will create a starter Vue application using an HTML file tha
 To install Vue by linking to the Vue core library, paste the following script tag into the starter HTML file.
 
 ```html
-<!-- //TODO: link to the VueJS library within the <head> tag of your HTML file -->
+<!-- //TODO: link to the VueJS core library within the <head> tag of your HTML file -->
 <script src="https://unpkg.com/vue@next"></script>
 ```
 Your **index.html** page should now look like the example shown below.
@@ -16,9 +16,9 @@ Your **index.html** page should now look like the example shown below.
   <head>
     <meta charset="UTF-8" />
     <title>Relecloud Galaxy Tours</title>
-    <!-- Import Styles -->
+    <!-- Import CSS Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
-    <!-- //TODO: link to the VueJS library within the <head> tag of your HTML file -->
+    <!-- //TODO: link to the VueJS core library within the <head> tag of your HTML file -->
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
@@ -73,7 +73,7 @@ const mountedApp = app.mount('#app')
 Next we link to our Vue application `//TODO: by adding the following code snippet just above the ending </body> tag in our index.html file`.
 
 ```html
-<!-- Import Vue app after DOM is loaded by adding script src just above the ending </body> tag -->
+<!-- Import Vue app after DOM is loaded -->
     <script src="./main.js"></script>
   </body>
 </html>
