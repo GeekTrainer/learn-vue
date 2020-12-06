@@ -10,8 +10,9 @@ const app = Vue.createApp({
             earlybird: true,
             //TODO: Set num_seats_available to 75
             num_seats_available: 75,
-            //TODO: Add an array of values to display available passenger rates
+            //TODO: Add an array of values to display passenger rates
             passenger_rates: ['$125,000 - Coach class', '$150,000 - Business class', '$250,000 - First class', '$400,000 - First class with sleeping berth'],
+            //Coding Challenge: Add an array of values to display group discount rates
             group_discounts: ['$1,000 (each person) - groups of 3-4', '$1,250 (each person) - groups of 5-6', '$1,750 (each person) - groups of 7-10', '$2,500 (each person) - groups of 11 or more'],
         }
     }

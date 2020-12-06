@@ -33,8 +33,9 @@
               <ul v-show="num_seats_available > 0">
                 <li v-for="passenger_rate in passenger_rates">{{ passenger_rate }}</li>
               </ul>
+              <!-- Add an <h4> tag to display a heading for a list of group discounts. The heading should not be displayed if no seats are available for booking. -->
               <h4 v-show="num_seats_available > 0">Group Discounts</h4>
-              <!-- Add a <ul> tag to display the list of values in an unordered array. The list should not be displayed if no seats are available for booking. -->
+              <!-- Add a <ul> tag to display the list of group discounts. The list should not be displayed if no seats are available for booking. -->
                 <ul v-show="num_seats_available > 0">
                 <li v-for="group_discount in group_discounts">{{ group_discount }}</li>
               </ul>
