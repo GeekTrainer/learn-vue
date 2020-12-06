@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Relecloud Galaxy Tours</title>
+    <!-- Import CSS Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js core library -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+      <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
+      <div class="main">
+        <div class="product-container">
+          <div class="product-images" >
+            <!-- //TODO: Bind the company_url to the anchor tag on the selected product image -->
+            <a :href="company_url" target="_blank"><img :src="selected_prod_img"></a>
+          </div>
+          <div class="product-desc">
+            <h2>{{ product_name }}</h2>
+            <!-- TODO: create <h3> tag for product description. -->
+            <h3>{{ product_desc }}</h3>
+            <!-- //TODO: change the <p> tag directives to reflect the appropriate v-if, v-else-if, v-else, and v-show conditions -->
+              <p v-if="num_seats_available > 12" style="color:green;">Reservations available</p>
+              <p v-else-if="num_seats_available <= 12 && num_seats_available > 0" style="color:red;">Almost Sold Out!</p> 
+              <p v-else><span style="color: red">Sold out!</span> Please check back for our next available shuttle.</p>
+              <p v-show="earlybird && num_seats_available > 12" style="color: blue">Early Bird discount 12% if you book by December 20, 2050!</p>
+            <!-- //Coding Challenge: Add a paragraph below the **Sold Out** paragraph that lets users know when the next shuttle flight will be available for booking (when num_seats_available is 0) -->
+              <p v-show="num_seats_available == 0">Bookings for our next cruise shuttle will be available in February, 2051!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Import Vue app after DOM is loaded -->
+    <script src="./main_03_end.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Relecloud Galaxy Tours</title>
+    <!-- Import CSS Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js core library -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+      <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
+      <div class="main">
+        <div class="product-container">
+          <div class="product-images" >
+            <a :href="company_url" target="_blank"><img :src="selected_prod_img"></a>
+          </div>
+          <div class="product-desc">
+            <h2>{{ product_name }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Import Vue app after DOM is loaded -->
+    <script src="./main_03_start.js"></script>
+  </body>
+</html>

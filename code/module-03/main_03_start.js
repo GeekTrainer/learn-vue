@@ -4,9 +4,6 @@ const app = Vue.createApp({
         return {
             product_name: 'Book a Cruise to the Moon',
             product_desc: 'Cruise to the moon in our luxurious shuttle. Watch the astronauts working outside the International Space Station.',
-            //TODO: Add a property with a value for the currently selected image
-            selected_prod_img: './assets/images/space-4888643_1284x856',
-            //Coding Challenge: Add a property with a value for the currently selected image
             company_url: 'https://docs.microsoft.com/en-us/learn/',
         }
     }
