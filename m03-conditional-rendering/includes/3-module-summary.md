@@ -10,6 +10,6 @@ The `v-show` option may be a more efficient processing method for any item where
 
 ## Coding Challenge
 
-Now it's your turn! Armed with the information presented in Module 3, you should be able to perform the following task on your own.
+Now it's your turn! Armed with the information presented in this module, you should be able to perform the following task on your own.
 
 - Add a paragraph below the **Sold Out** paragraph that lets users know when the next shuttle flight will be available for booking (if `num_seats_available` is 0).
