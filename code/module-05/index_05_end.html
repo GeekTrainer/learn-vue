@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Relecloud Galaxy Tours</title>
+    <!-- Import CSS Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js core library -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+      <!-- Add a <div> for a cart object that will display the number of items a user has added to the booking cart -->
+      <div class="cart">Cart ({{ cart }})</div>
+      <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
+      <div class="main">
+        <div class="product-container">
+          <div class="product-images" >
+            <a :href="company_url" target="_blank"><img :src="selected_prod_img"></a>
+            <!-- Add a <div> to contain a row of thumbnail images below the selected product image-->
+            <div style="text-align:left; padding-top:0; height:200px;">
+              <img @mouseover src="./assets/images/space-4888643_1284x856.jpg" style="width:12%; margin-right:0px;">
+              <img src="./assets/images/asteroid-5737398_1284x856.jpg" style="width:12%; margin-left:12px; margin-right:0px;">
+              <img src="./assets/images/fantasy-5732286_1284x856.jpg" style="width:12%; margin-left:12px; margin-right:0px;">
+              <img src="./assets/images/spaceship-5730066_1284x856.jpg" style="width:12%; margin-left:12px; margin-right:0px;">
+            </div>
+          </div>
+          <div class="product-desc">
+            <h2>{{ product_name }}</h2>
+            <h3>{{ product_desc }}</h3>
+            <p v-if="num_seats_available > 12" style="color:green;">Reservations available</p>
+            <p v-else-if="num_seats_available <= 12 && num_seats_available > 0" style="color:red;">Almost Sold Out!</p> 
+            <p v-else><span style="color: red">Sold out!</span> Please check back for our next available shuttle.</p>
+            <p v-show="earlybird && num_seats_available > 12" style="color: blue">Early Bird discount 12% if you book by June 30, 2051.</p>
+            <p v-show="num_seats_available == 0">Bookings for our next cruise shuttle will be available in December, 2051!</p>
+            <h3 v-show="num_seats_available > 0">Passenger Rates</h3>
+            <ul v-show="num_seats_available > 0">
+              <li v-for="passenger_rate in passenger_rates">{{ passenger_rate }}</li>
+            </ul>
+            <!-- Add an <h4> tag to display a heading for a list of group discounts. The heading should not be displayed if no seats are available for booking. -->
+            <h4 v-show="num_seats_available > 0">Group Discounts</h4>
+            <!-- Add a <ul> tag to display the list of group discounts. The list should not be displayed if no seats are available for booking. -->
+            <ul v-show="num_seats_available > 0">
+              <li v-for="group_discount in group_discounts">{{ group_discount }}</li>
+            </ul>
+            <!-- Add a button that reads "Book a Cruise"-->
+            <!-- Use v-on:click directive to add 1 to the value of cart when the button is clicked-->
+            <button class="button" @click="addItemToCart">Book a Cruise</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Import Vue app after DOM is loaded -->
+    <script src="./main_05_end.js"></script>
+  </body>
+</html>
