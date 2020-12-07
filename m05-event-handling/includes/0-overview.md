@@ -1,4 +1,4 @@
-In this lesson we demonstrate how to capture events that a user might perform, such as clicking a button or hovering their mouse over an object on a webpage. This will allow us to trigger changes in our application logic that will be dynamically reflected in our HTML file.
+In this lesson we demonstrate how to capture events that a user might perform, such as clicking a button or hovering their mouse over an object on a webpage. This allows us to trigger changes in our application logic that will be dynamically reflected in our HTML interface.
 
 ## Learning Objectives
 

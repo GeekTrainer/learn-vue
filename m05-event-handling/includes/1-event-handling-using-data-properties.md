@@ -1,4 +1,4 @@
-The image below displays the content we have created so far in this training. If you did not perform the Coding Challenge in the previous module, `//TODO: add an array in your main.js file to display group discounts.`
+The image below displays the content we have created so far in this training. If you have not performed the Coding Challenge in the previous module, `//TODO: add an array in your main.js file to display group discounts.`
 
 ```javascript
 ...
@@ -15,7 +15,7 @@ Then `//TODO: add the following <h4> and <ul> tags in your HTML file.` We do not
 <h4 v-show="num_seats_available > 0">Group Discounts</h4>
 <!-- Add a <ul> tag to display the list of group discounts. The list should not be displayed if no seats are available for booking. -->
 <ul v-show="num_seats_available > 0">
-<li v-for="group_discount in group_discounts">{{ group_discount }}</li>
+  <li v-for="group_discount in group_discounts">{{ group_discount }}</li>
 </ul>
 ...
 ```

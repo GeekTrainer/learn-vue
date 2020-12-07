@@ -18,7 +18,7 @@ To see how this can be done, let's switch out the data expression we were using 
 ```
 
 >[!NOTE]
->Note that the punctuation structure when defining a method is distinctly different from the structure for a data property.
+>Note that the punctuation structure when defining a method is distinctly different from the structure for defining a data property.
 
 Now `//TODO: change the button in your HTML file to use the addToCart method instead of the data expression used previously.`
 
@@ -30,9 +30,11 @@ Now `//TODO: change the button in your HTML file to use the addToCart method ins
 ...
 ```
 
-If you render the HTML file now, the cart should behave the same way it did when using the data expression. Clicking the "Book a Cruise" button should increment the number in the cart by 1 every time you click it, because the `v-on` directive is still listening for that click event.
+If you render the HTML file now, the cart should behave the same way it did when using the data expression. Clicking the "Book a Cruise" button should increment the number in the cart by 1 every time you click it because the `v-on` directive is still listening for that click event.
 
-However, you should also be aware that Vue allows a shorthand notation when using the `v-on` directive. You can use the "at" symbol (@) instead of `v-on:`. `//TODO: Code the button tag in your HTML file to use shorthand notation for the v-on directive, as shown below.
+## Shorthand notation for v-on directive
+
+You should also be aware that Vue allows a shorthand notation when using the `v-on` directive. You can use the "at" symbol (@) instead of `v-on:`. `//TODO: Code the button tag in your HTML file to use shorthand notation for the v-on directive, as shown below.
 
 ```html
 ...
@@ -40,6 +42,3 @@ However, you should also be aware that Vue allows a shorthand notation when usin
 <button class="button" @click="addItemToCart">Book a Cruise</button>
 ...
 ```
-## Trigger event on hover
-
-Now let's use a similar `v-on` directive to update the selected product image at the top left of the screen when a user hovers their mouse over any of the thumbnail images. So now we will need to listen for a `mouseover` event rather than a `click` event.
