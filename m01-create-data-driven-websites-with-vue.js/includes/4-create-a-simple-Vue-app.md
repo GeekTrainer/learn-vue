@@ -2,7 +2,7 @@ In this section you will create a starter Vue application using an HTML file tha
 
 ## Step 1: Link to the Vue core library in your HTML file
 
-To install Vue by linking to the Vue core library, paste the following script tag into the starter HTML file.
+To install Vue.js by linking to the Vue core library, paste the following script tag into the starter HTML file.
 
 ```html
 <!-- //TODO: link to the VueJS core library within the <head> tag of your HTML file -->
@@ -34,19 +34,15 @@ Your **index.html** page should now look like the example shown below.
 
 Now we can start writing Vue script inside our HTML file if we want to, but it is much cleaner and easier to update our application if we place the Vue data into a separate JavaScript file. Let's create a **main.js** file for this purpose.
 
-On the first line we instantiate (create an instance of) our Vue application using a `constant` named `app`. `//TODO: Create the VueJS app using a constant named app. Save the file as main.js.`
-
-Also define a data item **product_name** with a value of **Book a Cruise to the Moon**. `//TODO: in the return function of the data() item define a property as product_name and assign it a text value.`
-
-Your main.js file should now contain the code snippet below.
+On the first line instantiate (create an instance of) your Vue application using a `constant` named `app`. Also define a data item **productName** with a value of **Book a Cruise to the Moon**. Your **main.js** file should now contain the code snippet below.
 
 ```javascript
 //TODO: Create the VueJS app using a constant named app
 const app = Vue.createApp({
     data() {
         return {
-            //TODO: Define a data property item as product_name with a text value
-            product_name: 'Book a Cruise to the Moon'
+            //TODO: Define a data property item as productName with a text value
+            productName: 'Book a Cruise to the Moon'
         }
     },
 })
@@ -61,7 +57,7 @@ The `createApp()` function is available to us because we imported the Vue.js lib
 
 In addition to importing the Vue app that is defined in our JavaScript file, we need to mount our Vue application into the DOM so that Vue can track the current state of different objects in our HTML page. To accomplish this, we add another construct at the bottom of the main.js file to mount the Vue app into the DOM.
 
-Inside the mount method we have an argument `#app`, which is a DOM selector used to plug the app into a piece of our DOM. `//TODO: Mount the application by adding another construct below the app construct in your main.js file`.
+Inside the mount method we have an argument `#app`, which is a DOM selector used to plug the app into a piece of our DOM.
 
 ```javascript
 //TODO: add another construct under the app construct to mount the Vue app into the DOM
@@ -70,10 +66,10 @@ const mountedApp = app.mount('#app')
 
 ## Step Four: Link to the Vue application at the bottom of your HTML file
 
-Next we link to our Vue application `//TODO: by adding the following code snippet just above the ending </body> tag in our index.html file`.
+Next we link to our Vue application in the HTML file. Perform this task as shown in the code snippet below.
 
 ```html
-<!-- Import Vue app after DOM is loaded -->
+<!-- //TODO: Import Vue app after DOM is loaded -->
     <script src="./main.js"></script>
   </body>
 </html>
@@ -84,21 +80,37 @@ Next we link to our Vue application `//TODO: by adding the following code snippe
 
 ## Step Five: Identify the Vue app within the DOM
 
-To identify the Vue app within the DOM we wrap a `<div>` tag around the parts of our HTML code where we want to plug in pieces of data being tracked by our Vue application. `//TODO: Wrap a <div> tag around the parts of your HTML that you want to manipulate with your Vue application.`
+To identify the Vue app within the DOM we wrap a `<div>` tag around the parts of our HTML code where we want to plug in pieces of data being tracked by our Vue application.
+
+Then we need to tell our HTML page where to display the piece of `data` we have defined for our `product`. So, replace the literal text in your `<h2>` tag with a VueJS variable name placed inside double curly braces `{{ variable }}`.
+
+After accomplishing these tasks, your **index.html** should be structured as shown below.
 
 ```html
-<body>
-<!-- Wrap a <div> tag around the HTML content that you want to manipulate with VueJS -->
-<div id="app">
-  <h2>Product name goes here</h2>
-</div>
-```
-
-Now we need to tell our HTML page where to display the piece of `data` we have defined for our `product`. `//TODO: So, replace the literal text in your <h2> tag with a VueJS variable name placed inside double curly braces {{ variable }}`, as shown in the code snippet below.
-
-```html
-<!-- Replace literal text with a defined variable (surrounded by double curly braces) -->
-<h1>{{ product_name }}</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Relecloud Galaxy Tours</title>
+    <!-- Import CSS Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js core library -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <!-- //TODO: Wrap a <div> tag around the HTML content that you want to manipulate with VueJS -->
+    <!-- //TODO: Opening <div> goes below -->
+    <div id="app">
+      <div class="nav-bar"></div>
+      <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
+      <!-- //TODO: replace literal text with a defined variable (surrounded by double curly braces) -->
+      <h2>{{ productName }}</h2>
+    <!-- //TODO: Ending <div> goes below -->
+    </div>
+    <!-- //TODO: Import Vue app after DOM is loaded -->
+    <script src="./main.js"></script>
+  </body>
+</html>
 ```
 
 > [!IMPORTANT]
