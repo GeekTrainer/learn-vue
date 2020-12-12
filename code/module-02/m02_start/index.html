@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Relecloud Galaxy Tours</title>
+    <!-- Import CSS Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js core library -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+      <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
+      <div class="main">
+        <div class="product-container">
+          <div class="product-images" >
+            <!-- //TODO: Change the <img src> tag to use the selectedProdImg value instead of a direct link to the specific image -->
+            <img src="./assets/images/space-4888643_1284x856.jpg">
+          </div>
+          <div class="product-desc">
+            <h2>{{ productName }}</h2>
+            <h3>{{ productDesc }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Import Vue app after DOM is loaded -->
+    <script src="./main.js"></script>
+  </body>
+</html>

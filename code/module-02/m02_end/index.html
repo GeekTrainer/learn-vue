@@ -9,14 +9,23 @@
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
-    <!-- Wrap a <div> tag around the HTML content that you want to manipulate with VueJS -->
     <div id="app">
       <div class="nav-bar"></div>
       <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
-      <h2>{{ product_name }}</h2>
-      <h3>{{ product_desc }}</h3> 
+      <div class="main">
+        <div class="product-container">
+          <div class="product-images" >
+            <!-- //TODO: Change the <img src> tag to use the selectedProdImg value instead of a direct link to the specific image -->
+            <img :src="selectedProdImg">
+          </div>
+          <div class="product-desc">
+            <h2>{{ productName }}</h2>
+            <h3>{{ productDesc }}</h3>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Import Vue app after DOM is loaded -->
-    <script src="./main_02_start.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
