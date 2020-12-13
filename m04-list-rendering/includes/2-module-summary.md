@@ -9,5 +9,5 @@ Now it's your turn! Armed with the information presented in this module, you sho
   - $1,250 (each person) - groups of 5-6
   - $1,750 (each person) - groups of 7-10
   - $2,500 (each person) - groups of 11 or more
-- Display the data array in an unordered list.
-- Add an `<h4>` tag to display the heading **Group Discounts" above the list of discount rates.
+- Display the data array in an unordered list, but specify that number of seats available must be greater than 0 for this list to be displayed in the browser.
+- Add an `<h4>` tag to display the heading **Group Discounts" above the list of discount rates, but specify that this tag must not be displayed unless seats are availalbe for booking.

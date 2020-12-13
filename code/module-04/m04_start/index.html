@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Relecloud Galaxy Tours</title>
+    <!-- Import CSS Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js core library -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+      <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
+      <div class="main">
+        <div class="product-container">
+          <div class="product-images" >
+            <a :href="companyUrl" target="_blank"><img :src="selectedProdImg"></a>
+          </div>
+          <div class="product-desc">
+            <h2>{{ productName }}</h2>
+            <h3>{{ productDesc }}</h3>
+              <p v-if="numSeatsAvailable > 12" style="color:green;">Reservations available</p>
+              <p v-else-if="numSeatsAvailable <= 12 && numSeatsAvailable > 0" style="color:red;">Almost Sold Out!</p> 
+              <p v-else><span style="color: red">Sold out!</span> Please check back for our next available shuttle.</p>
+              <p v-show="earlybird && numSeatsAvailable > 12" style="color: blue">Early Bird discount 12% if you book by June 30, 2051.</p>
+              <p v-show="numSeatsAvailable == 0">Bookings for our next cruise shuttle will be available in February, 2051!</p>
+              <!-- //TODO: Add an <h3> tag to serve as a label for the list of values. The heading should not be displayed if no seats are available for booking. -->
+              
+              <!-- //TODO: Add a <ul> tag to display the list of values in an unordered array. The list should not be displayed if no seats are available for booking. -->
+              
+              
+              
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Import Vue app after DOM is loaded -->
+    <script src="./main.js"></script>
+  </body>
+</html>
