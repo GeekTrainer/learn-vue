@@ -31,7 +31,11 @@
               <ul v-show="numSeatsAvailable > 0">
                 <li v-for="passengerRate in passengerRates">{{ passengerRate }}</li>
               </ul>
-          </div>
+              <h4 v-show="numSeatsAvailable > 0">Group Discounts</h4>
+              <ul v-show="numSeatsAvailable > 0">
+                <li v-for="groupDiscount in groupDiscounts">{{ groupDiscount }}</li>
+              </ul>
+            </div>
         </div>
       </div>
     </div>

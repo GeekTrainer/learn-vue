@@ -1,4 +1,4 @@
-The HTML file that is available in the code start folder for this module looks like the screenshot below when viewed in your browser.
+If you completed the prior exercises, your HTML file should look like the image below when viewed in a browser. You can continue to build upon your own files, or you can use the files in our [`starting code`](link).
 
 ![Screenshot showing the HTML page with new div sections that display an image on the left, with the product name centered in the section on the right.](../media/html-formatted-with-image-on-left.png)
 

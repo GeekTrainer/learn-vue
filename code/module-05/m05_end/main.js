@@ -20,7 +20,12 @@ const app = Vue.createApp({
     methods: {
         addItemToCart() {
             this.cart += 1
-        }
+        },
+        removeItemFromCart() {
+            if (this.cart >=1) {
+                this.cart -= 1
+            }
+        },
     },
 })
 

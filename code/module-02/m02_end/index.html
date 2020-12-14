@@ -16,7 +16,7 @@
         <div class="product-container">
           <div class="product-images" >
             <!-- //TODO: Change the <img src> tag to use the selectedProdImg value instead of a direct link to the specific image -->
-            <img :src="selectedProdImg">
+            <a :href="companyUrl" target="_blank"><img :src="selectedProdImg"></a>
           </div>
           <div class="product-desc">
             <h2>{{ productName }}</h2>
