@@ -26,6 +26,19 @@ const app = Vue.createApp({
                 this.cart -= 1
             }
         },
+    //TODO: Create 4 methods (one for each thumbnail image) to change the selected image whenever the thumbnail is clicked
+        featureBookCruise() {
+            this.selectedProdImg = './assets/images/space-4888643_1284x856.jpg'
+        },
+        featureAsteroid() {
+            this.selectedProdImg = './assets/images/asteroid-5737398_1284x856.jpg'
+        },
+        featureBulletTrain() {
+            this.selectedProdImg = './assets/images/fantasy-5732286_1284x856.jpg' 
+        },
+        featureAlienShip() {
+            this.selectedProdImg = './assets/images/spaceship-5730066_1284x856.jpg'
+        },
     },
 })
 

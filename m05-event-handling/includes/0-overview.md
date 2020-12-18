@@ -9,3 +9,4 @@ Upon completion of this module you will:
 - trigger application logic when the event occurs by:
   - changing inline data properties for implementing simple logic
   - creating a method that can be used to implement more complex logic
+- change the selected product image when a thumbnail image is clicked

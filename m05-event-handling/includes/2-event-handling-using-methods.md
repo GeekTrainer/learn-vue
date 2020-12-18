@@ -44,3 +44,46 @@ You should also be aware that Vue allows a shorthand notation when using the `v-
 <button class="button" @click="addItemToCart">Book a Cruise</button>
 ...
 ```
+
+## Change selected product image when thumbnail image is clicked
+
+Now you can make a change that you have probably been waiting to execute. Let's make the selected image change to display the image that is shown in one of the thumbnails below whenever a thumbnail image is clicked.
+
+Rather than using a data property for this purpose, we should use a method because in later modules we will want to execute additional actions whenever each thumbnail is clicked (e.g., changing the text in the product description area in addition to changing the selected product image.) For now, add four new methods in your **main.js** file, as shown in the code snippet below.
+
+Then use the `v-on:click` directive in your **index.html** file to execute the action in the appropriate method when each thumbnail image is clicked.
+
+```javascript
+...
+//TODO: Create 4 methods (one for each thumbnail image) to change the selected image whenever the thumbnail is clicked
+featureBookCruise() {
+    this.selectedProdImg = './assets/images/space-4888643_1284x856.jpg'
+},
+featureAsteroid() {
+    this.selectedProdImg = './assets/images/asteroid-5737398_1284x856.jpg'
+},
+featureBulletTrain() {
+    this.selectedProdImg = './assets/images/fantasy-5732286_1284x856.jpg' 
+},
+featureAlienShip() {
+    this.selectedProdImg = './assets/images/spaceship-5730066_1284x856.jpg'
+},
+...
+```
+
+```html
+...
+<!-- //TODO: Use the Vue v-on:click directive to change the selected image whenever the thumbnail is clicked -->
+<div style="text-align:left; padding-top:0; height:200px;">
+  <img src="./assets/images/space-4888643_1284x856.jpg" @click="featureBookCruise" style="width:12%; margin-right:0px;">
+  <img src="./assets/images/asteroid-5737398_1284x856.jpg" @click="featureAsteroid" style="width:12%; margin-left:12px; margin-right:0px;">
+  <img src="./assets/images/fantasy-5732286_1284x856.jpg" @click="featureBulletTrain" style="width:12%; margin-left:12px; margin-right:0px;">
+  <img src="./assets/images/spaceship-5730066_1284x856.jpg" @click="featureAlienShip" style="width:12%; margin-left:12px; margin-right:0px;">
+</div>
+...
+```
+
+> [!TIP]
+> If you want to have this method execute whenever a user hovers the mouse over a thumbnail image you could use the Vue @mouseover directive instead of @click.
+
+When testing your **index.html** file in the browser, it may seem like the method is not executing properly if you click the first thumbnail image on the far left. That's because this thumbnail is for the "Book a Cruise to the Moon" feature, which is displayed by default when the page initially loads. Try clicking any other thumbnail, and then click the first thumbnail again to set the selected image back to the default image.
