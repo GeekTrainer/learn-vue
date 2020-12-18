@@ -1,56 +1,45 @@
-If you completed the prior exercises, your HTML file should look like the image below when viewed in a browser. You can continue to build upon your own files, or you can use the the files in our [`starting code`](link).
+Our sample project is a fictitious travel agency for booking space travel. We wnat to allow a customer to add a cruise to their cart. We'll do this by creating a section on the page to display the number of items currently in the cart, and then a button for them to add an item.
 
+## Add the cart display
 ![Screenshot showing the HTML page with a selected product image on the left and 4 thumbnail images below it. Product name and description are displayed on the right, with two paragraphs of text. Below this are unordered lists for Passenger Rates and Group Discounts](../media/m05-start.png)
 
-## Add objects we will use for event handling functionality
+Open **index.html** either from the [starter code](link), or your existing project if you are following along from prior modules.
 
-Now let's create a couple of new objects in the **index.html** file that we can use to implement event handling functionality.
-- Add a `<div>` for a cart under the `navbar <div>` at the top of the `<body>` section.
-- Then add a button titled **Book a Cruise** to appear at the bottom of the product description area under the **Group Discounts** list.
+- Add a `<div>` for the cart below the comment which reads `TODO: Add cart div`
+  - Set the `class` for the `div` to **cart**
+  - Set the text to **Cart ({{ cart }})**
 
 ```html
-...
-<div class="nav-bar"></div>
-<!-- Add a <div> for a cart object that will display the number of items a user has added to the booking cart -->
-<div class="cart">Cart (0)</div>
-...
-<ul v-show="numSeatsAvailable > 0">
-  <li v-for="groupDiscount in groupDiscounts">{{ groupDiscount }}</li>
-</ul>
-<!-- Add a button that reads "Book a Cruise" -->
-<button class="button">Book a Cruise</button>
-...
+<!-- TODO: Add cart div -->
+<div class="cart">Cart ({{ cart }})</div>
 ```
 
-Now that these new objects have been added to the HTML page, it should look like the image shown below.
+`cart` is the variable used to store the number of items currently in the cart. It is stored in the data we registered with Vue.js in the **main.js** file. By using the `{{ }}` syntax (sometimes known as handlebars), we are instructing Vue.js to display the value.
 
-![Screenshot showing the same HTML page as above. In the product details area on the right side a cart object has been added at the top right corner, with 0 items currently in the cart. A button that reads "Book a Cruise" is displayed at the bottom of the product details area under the Group Discounts list.](../media/thumbnails_cart_button.png)
-
-## Event handling using inline data properties
-
-We want to be able to click the button and have Vue increment the booking number in the cart. Currently we have a value of "0" hard-coded in the Cart display. To make the cart value dynamic, we tell Vue to insert the current value of `cart`, which will change based on user behaviors.
-
-Enter the `cart value` property in the `cart <div>` in your **index.html** file to replace the literal 0 that we coded there initially. Keep the parentheses () intact, with the value of `cart` in curly braces within them ({ }).
+- Add a `button` to allow someone to book a cruise below the comment which reads `TODO: Add book cruise button`
+  - Set the `class` to **button**
+  - Set the text to **Book a cruise**
 
 ```html
-...
-<!-- //TODO: Enter the cart value property {{ cart }} in the cart <div> to display the current value of cart instead of a hard-coded value. -->
-<div class="cart">Cart ({{ cart }})</div>
-...
+<!-- TODO: Add book cruise button -->
+<button class="button">Book a Cruise</button>
 ```
 
 To see if this value displays accurately, you can temporarily change the value of cart in your **main.js** file and render your HTML page in the browser to see if the cart correctly displays your new value.
 
-Now we need to enable the button to change the value of the art dynamically when the user clicks it. We do this by adding a "listener" that will change the value of cart whenever a click action occurs. This is accomplished in Vue by adding the `v-on` directive to our button element. The syntax would be `v-on:click="cart += 1"`. An example is shown in the code snippet below.
+## Add the book cruise button
+
+Now we need to enable the button to change the value of the art dynamically when the user clicks it. We do this by adding a **listener** that will change the value of cart whenever a click action occurs. This is accomplished in Vue by adding the `v-on` directive to our button element.
+
+- Add a `button` below the comment which reads `TODO: Add book cruise button`
+  - Set the `class` to **button**
+  - Set the `v-on:click` attribute to **cart += 1**
 
 ```html
-...
-<!-- //TODO: Add a button that reads "Book a Cruise"-->
-<!-- //TODO: Use the v-on:click directive to add 1 to the value of cart each time the button is clicked-->
+<!-- TODO: Add book cruise button -->
 <button class="button" v-on:click="cart += 1">Book a Cruise</button>
-...
 ```
 
-In the code example above, `v-on` is the Vue directive, `click` is the event we are listening for, and `cart += 1` is the expression we are using to calculate the value of `cart` whenever the `click` event occurs.
+In the code example above, `v-on` is the Vue directive, `click` is the event we are listening for, and `cart += 1` is the expression we are using to calculate the value of `cart` whenever the `click` event occurs. The expression can be any valid JavaScript or, as we'll see in the next unit, the name of a function.
 
-After you add the `v-on` directive to the button element in your HTML file and render it in the browser, you should be able to click the button multiple times and watch the number displayed in the cart object increment by a value of 1 for each click.
+After you add the `v-on` directive to the button element in your HTML file, launch it and render it in the browser, you should be able to click the button multiple times and watch the number displayed in the cart object increment by a value of 1 for each click.
