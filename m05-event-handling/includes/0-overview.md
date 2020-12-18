@@ -4,9 +4,9 @@ In this lesson we demonstrate how to capture events that a user might perform, s
 
 Upon completion of this module you will:
 
-- use an expression to calculate a value
-- set up a listener for an event
-- trigger application logic when the event occurs by:
-  - changing inline data properties for implementing simple logic
-  - creating a method that can be used to implement more complex logic
-- change the selected product image when a thumbnail image is clicked
+- Use an expression to calculate a value
+- Set up a listener for an event
+- Trigger application logic when the event occurs by:
+  - Changing inline data properties for implementing simple logic
+  - Creating a method that can be used to implement more complex logic
+- Change the selected product image when a thumbnail image is clicked
