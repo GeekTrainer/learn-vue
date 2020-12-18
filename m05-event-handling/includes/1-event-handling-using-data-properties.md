@@ -1,6 +1,7 @@
 Our sample project is a fictitious travel agency for booking space travel. We wnat to allow a customer to add a cruise to their cart. We'll do this by creating a section on the page to display the number of items currently in the cart, and then a button for them to add an item.
 
 ## Add the cart display
+![Screenshot showing the HTML page with a selected product image on the left and 4 thumbnail images below it. Product name and description are displayed on the right, with two paragraphs of text. Below this are unordered lists for Passenger Rates and Group Discounts](../media/m05-start.png)
 
 Open **index.html** either from the [starter code](link), or your existing project if you are following along from prior modules.
 

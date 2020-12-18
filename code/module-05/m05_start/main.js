@@ -21,6 +21,7 @@ const app = Vue.createApp({
 
 
 
+//TODO: Create 4 methods (one for each thumbnail image) to change the selected image whenever the thumbnail is clicked
 
 })
 
