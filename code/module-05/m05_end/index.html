@@ -11,16 +11,16 @@
   <body>
     <div id="app">
       <div class="nav-bar"></div>
-      <!-- //TODO: Add a <div> for a cart object that will display the number of items a user has added to the booking cart -->
+      <!-- TODO: Add cart div -->
+      <!-- TODO: Display current value of cart. -->
       <div class="cart">Cart ({{ cart }})</div>
-      <!-- //TODO: Enter the cart value property in the cart object (ABOVE) to display the current value of cart instead of a hard-coded value. -->
       <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
       <div class="main">
         <div class="product-container">
           <div class="product-images" >
             <a :href="companyUrl" target="_blank"><img :src="selectedProdImg"></a>
             <!-- <div> to contain a row of thumbnail images below the selected product image-->
-            <!-- //TODO: Use the Vue v-on:click directive to change the selected image whenever the thumbnail is clicked -->
+            <!-- TODO: Change selected image -->
             <div style="text-align:left; padding-top:0; height:200px;">
               <img src="./assets/images/space-4888643_1284x856.jpg" @click="featureBookCruise" style="width:12%; margin-right:0px;">
               <img src="./assets/images/asteroid-5737398_1284x856.jpg" @click="featureAsteroid" style="width:12%; margin-left:12px; margin-right:0px;">
@@ -44,8 +44,8 @@
             <ul v-show="numSeatsAvailable > 0">
               <li v-for="groupDiscount in groupDiscounts">{{ groupDiscount }}</li>
             </ul>
-            <!-- //TODO: Add a button that reads "Book a Cruise"-->
-            <!-- //TODO: Use v-on:click directive to add 1 to the value of cart when the button is clicked-->
+            <!-- TODO: Add book cruise button -->
+            <!-- TODO: Add item to cart -->
             <button class="button" @click="addItemToCart">Book a Cruise</button>
             <button class="button" @click="removeItemFromCart">Remove Item</button>
           </div>

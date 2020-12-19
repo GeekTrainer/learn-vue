@@ -1,11 +1,10 @@
-Our sample project is a fictitious travel agency for booking space travel. We wnat to allow a customer to add a cruise to their cart. We'll do this by creating a section on the page to display the number of items currently in the cart, and then a button for them to add an item.
+Our sample project is a fictitious travel agency for booking space travel. We want to allow a customer to add a cruise to their cart. We'll do this by creating a section on the page to display the number of items currently in the cart, and then a button for them to add an item.
 
 ## Add the cart display
-![Screenshot showing the HTML page with a selected product image on the left and 4 thumbnail images below it. Product name and description are displayed on the right, with two paragraphs of text. Below this are unordered lists for Passenger Rates and Group Discounts](../media/m05-start.png)
 
 Open **index.html** either from the [starter code](link), or your existing project if you are following along from prior modules.
 
-- Add a `<div>` for the cart below the comment which reads `TODO: Add cart div`
+- Add a `<div>` for the cart below the comment that reads `TODO: Add cart div`
   - Set the `class` for the `div` to **cart**
   - Set the text to **Cart ({{ cart }})**
 
@@ -16,9 +15,9 @@ Open **index.html** either from the [starter code](link), or your existing proje
 
 `cart` is the variable used to store the number of items currently in the cart. It is stored in the data we registered with Vue.js in the **main.js** file. By using the `{{ }}` syntax (sometimes known as handlebars), we are instructing Vue.js to display the value.
 
-- Add a `button` to allow someone to book a cruise below the comment which reads `TODO: Add book cruise button`
+- Add a `button` to allow someone to book a cruise below the comment that reads `TODO: Add book cruise button`
   - Set the `class` to **button**
-  - Set the text to **Book a cruise**
+  - Set the text to **Book a Cruise**
 
 ```html
 <!-- TODO: Add book cruise button -->
@@ -31,7 +30,7 @@ To see if this value displays accurately, you can temporarily change the value o
 
 Now we need to enable the button to change the value of the art dynamically when the user clicks it. We do this by adding a **listener** that will change the value of cart whenever a click action occurs. This is accomplished in Vue by adding the `v-on` directive to our button element.
 
-- Add a `button` below the comment which reads `TODO: Add book cruise button`
+- Add a `button` below the comment that reads `TODO: Add book cruise button`
   - Set the `class` to **button**
   - Set the `v-on:click` attribute to **cart += 1**
 
