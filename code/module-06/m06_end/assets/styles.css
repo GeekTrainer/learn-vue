@@ -32,15 +32,6 @@ body {
   box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
 }
 
-.color-circle {
-  width: 50px;
-  height: 50px;
-  margin-top: 8px;
-  border: 2px solid #d8d8d8;
-  border-radius: 50%;
-}
-
-
 .disabledButton {
   background-color: #d8d8d8;
   cursor: not-allowed;
@@ -82,6 +73,11 @@ label {
 
 li {
   font-size: 18px;
+}
+
+/* //TODO: Add a highlight style with background-color set to light yellow */
+.highlight {
+  background-color: rgb(250, 250, 133);
 }
 
 .nav-bar {
