@@ -12,6 +12,8 @@ const app = Vue.createApp({
             isSelectedAsteroid: false,
             isSelectedBullet: false,
             isSelectedAlien: false,
+            //TODO: create button title property
+            btnTitle: 'Book a Cruise',
             seatsAvailable: false,
             earlybird: true,
             numSeatsAvailable: 75,
@@ -31,6 +33,7 @@ const app = Vue.createApp({
         //TODO: set boolean values for each feature
         featureBookCruise() {
             this.selectedProdImg = './assets/images/space-4888643_1284x856.jpg'
+            this.btnTitle = 'Book a Cruise'
             this.isSelectedCruise = true
             this.isSelectedAsteroid = false
             this.isSelectedBullet = false
@@ -38,6 +41,7 @@ const app = Vue.createApp({
         },
         featureAsteroid() {
             this.selectedProdImg = './assets/images/asteroid-5737398_1284x856.jpg'
+            this.btnTitle = 'Add Feature'
             this.isSelectedCruise = false
             this.isSelectedAsteroid = true
             this.isSelectedBullet = false
@@ -45,6 +49,7 @@ const app = Vue.createApp({
         },
         featureBulletTrain() {
             this.selectedProdImg = './assets/images/fantasy-5732286_1284x856.jpg'
+            this.btnTitle = 'Add Feature'
             this.isSelectedCruise = false
             this.isSelectedAsteroid = false
             this.isSelectedBullet = true
@@ -52,6 +57,7 @@ const app = Vue.createApp({
         },
         featureAlienShip() {
             this.selectedProdImg = './assets/images/spaceship-5730066_1284x856.jpg'
+            this.btnTitle = 'Add Feature'
             this.isSelectedCruise = false
             this.isSelectedAsteroid = false
             this.isSelectedBullet = false

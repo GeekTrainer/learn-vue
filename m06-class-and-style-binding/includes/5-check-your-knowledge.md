@@ -3,8 +3,8 @@ Choose the best response for each of the questions below. Then select **Check yo
 ## quiz title: Check your knowledge
 
 ## Multiple Choice
-If you are structuring an element of your application that might require the application of complex logic, which option would be the best?
+Which of the following statements is correct with regard to the way Vue.js lets you manage style and class bindings?
 
-()Changing inline data properties.{{Incorrect. It is possible to trigger changes using inline data properties, but for complex tasks this approach may become awkward and potentially confusing. It is advisable to use a `method` instead of a `data` property to trigger complex logic operations.}}
-()Using the v-for directive to execute different mathematical expressions.{{Incorrect. It is possible to trigger changes using inline expressions, but for complex tasks this approach may become awkward and potentially confusing. It is advisable to use a `method` instead of a `data` property to trigger complex logic operations.}}
-(x)Using the v-on directive to execute a method.{{Correct! Vue.js allows us to use a `method` instead of a `data` property to trigger  complex logic operations.}}
+()Vue allows you to use shorthand notation for `v-on` directives but you cannot use shorthand for `v-bind` when applying class and style bindings.{{Incorrect. Vue allows you to use shorthand notation for `v-on` directives and all `v-bind` directives.}}
+()If you want to add several style properties to an HTML element, you need to apply `v-bind` directives using separate in-line styles.{{Incorrect. You can bind to an entire class of styles, including properties that are defined in your application.}}
+(x)You can apply multiple style and class bindings simultaneously on one HTML element.{{Correct!.}}

@@ -42,7 +42,7 @@
             <ul v-show="numSeatsAvailable > 0">
               <li v-for="groupDiscount in groupDiscounts">{{ groupDiscount }}</li>
             </ul>
-            <button class="button" @click="addItemToCart">Book a Cruise</button>
+            <button class="button" :class="{ buttonFeature:selectedProdImg!='./assets/images/space-4888643_1284x856.jpg' }" @click="addItemToCart">{{ btnTitle }}</button>
             <!-- TODO: Disable Remove Item button -->
             <button class="button" :disabled="cart==0" :class="{ disabledButton:cart==0 }" @click="removeItemFromCart">Remove Item</button>
           </div>
