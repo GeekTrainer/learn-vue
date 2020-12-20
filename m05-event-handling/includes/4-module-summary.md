@@ -6,4 +6,4 @@ In this module you learned how to manage events that a user can trigger through 
 
 Now it's your turn! Armed with the information presented in this module, you should now be able to perform the following task on your own.
 
-- create a new button that decrements the value of the cart object 
+- Create a new button that decrements the value of the cart object 

@@ -15,7 +15,7 @@ Open **index.html** either from the [starter code](link), or your existing proje
 
 `cart` is the variable used to store the number of items currently in the cart. It is stored in the data we registered with Vue.js in the **main.js** file. By using the `{{ }}` syntax (sometimes known as handlebars), we are instructing Vue.js to display the value.
 
-- Add a `button` to allow someone to book a cruise below the comment that reads `TODO: Add book cruise button`
+- Add a `button` to book a cruise below the comment that reads `TODO: Add book cruise button`
   - Set the `class` to **button**
   - Set the text to **Book a Cruise**
 

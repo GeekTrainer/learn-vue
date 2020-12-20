@@ -19,7 +19,7 @@
             <a :href="companyUrl" target="_blank"><img :src="selectedProdImg"></a>
             <!-- <div> to contain a row of thumbnail images -->
             <div style="text-align:left; padding-top:0; height:200px;">
-              <!-- //TODO: Bind a class to each image -->
+              <!-- TODO: Bind a class to each image -->
               <img src="./assets/images/space-4888643_1284x856.jpg" @click="featureBookCruise" :class="{ highlight: isSelectedCruise }" style="width:12%; margin-right:0px;">
               <img src="./assets/images/asteroid-5737398_1284x856.jpg" @click="featureAsteroid" :class="{ highlight: isSelectedAsteroid }" style="width:12%; margin-left:12px; margin-right:0px;">
               <img src="./assets/images/fantasy-5732286_1284x856.jpg" @click="featureBulletTrain" :class="{ highlight: isSelectedBullet }" style="width:12%; margin-left:12px; margin-right:0px;">
@@ -43,7 +43,7 @@
               <li v-for="groupDiscount in groupDiscounts">{{ groupDiscount }}</li>
             </ul>
             <button class="button" @click="addItemToCart">Book a Cruise</button>
-            <!-- //TODO: Disable Remove Item button -->
+            <!-- TODO: Disable Remove Item button -->
             <button class="button" :disabled="cart==0" :class="{ disabledButton:cart==0 }" @click="removeItemFromCart">Remove Item</button>
           </div>
         </div>

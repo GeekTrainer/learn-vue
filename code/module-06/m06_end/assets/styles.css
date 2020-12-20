@@ -75,7 +75,7 @@ li {
   font-size: 18px;
 }
 
-/* //TODO: Add a highlight style with background-color set to light yellow */
+/* TODO: Add a highlight class */
 .highlight {
   background-color: rgb(250, 250, 133);
 }
