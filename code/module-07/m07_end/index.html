@@ -48,8 +48,8 @@
             <div v-show="bookingType=='feature'">
               <h3>Cost and Availability</h3>
               <h4>{{ featureDetails }}</h4>
-              <p v-if="bookingType=='feature' && featureAvailable==true" style="color:green;">Tickets available</p>
-              <p v-else="bookingType=='feature'"><span style="color: red">Tickets Sold Out!</span></p>
+              <p v-if="featureQty > 0" style="color:green;">Tickets available</p>
+              <p v-else><span style="color: red">Tickets Sold Out!</span></p>
               <p v-show="onSale==true" style="color: blue">{{ sale }}</p>
             </div>
             <button class="button" :class="{ buttonFeature:bookingType!='cruise' }" @click="addItemToCart">{{ btnTitle }}</button>

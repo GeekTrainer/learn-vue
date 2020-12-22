@@ -21,7 +21,6 @@ const app = Vue.createApp({
             //TODO: Add feature properties
             featurePrice: 0,
             featureQty: 0,
-            featureAvailable: true,
             onSale: false,
         }
     },
@@ -51,7 +50,6 @@ const app = Vue.createApp({
             this.productName = 'Asteroid Fireworks Display',
             this.productDesc = 'As we pass by the planet of Mars, you can watch a special fireworks event from our Viewpoint Star Surround Deck.'
             this.id = '1101'
-            this.featureAvailable = true
             this.featurePrice = '12,000'
             this.featureQty = 50
             this.onSale = false
@@ -67,7 +65,6 @@ const app = Vue.createApp({
             this.productName = 'Bullet Train Tour'
             this.productDesc = 'Buy a ticket on our Bullet Train for an exciting whirlwind tour through the center of the Earth.'
             this.id = '1102'
-            this.featureAvailable = true
             this.featurePrice = '25,000'
             this.featureQty = 25
             this.onSale = true
@@ -83,7 +80,6 @@ const app = Vue.createApp({
             this.productName = 'Alien Spaceship Ride-a-long'
             this.productDesc = 'Aliens from our sister galaxy have a limited number of seats available for observers to watch Titanium mining operations on the moon.'
             this.id = '1103'
-            this.featureAvailable = true
             this.featurePrice = '55,000'
             this.featureQty = 0
             this.onSale = false
@@ -100,12 +96,6 @@ const app = Vue.createApp({
     computed: {
         featureDetails() {
             return '$' + this.featurePrice + ' (each person) - ' + this.featureQty + ' Tickets remaining'
-        },
-        featureAvailable() {
-            if (this.featureQty <=0) {
-                this.featureAvailable = false
-            }
-            return this.featureAvailable
         },
         sale() {
             if (this.onSale) {
