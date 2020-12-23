@@ -46,32 +46,32 @@ isSelectedAlien: false,
 
 //TODO: set boolean values for all thumbnails
 featureBookCruise() {
-    this.selectedProdImg = './assets/images/space-4888643_1284x856.jpg'
-    this.isSelectedCruise = true
-    this.isSelectedAsteroid = false
-    this.isSelectedBullet = false
-    this.isSelectedAlien = false
+    this.selectedProdImg = './assets/images/space-4888643_1284x856.jpg';
+    this.isSelectedCruise = true;
+    this.isSelectedAsteroid = false;
+    this.isSelectedBullet = false;
+    this.isSelectedAlien = false;
     },
 featureAsteroid() {
-    this.selectedProdImg = './assets/images/asteroid-5737398_1284x856.jpg'
-    this.isSelectedCruise = false
-    this.isSelectedAsteroid = true
-    this.isSelectedBullet = false
-    this.isSelectedAlien = false
+    this.selectedProdImg = './assets/images/asteroid-5737398_1284x856.jpg';
+    this.isSelectedCruise = false;
+    this.isSelectedAsteroid = true;
+    this.isSelectedBullet = false;
+    this.isSelectedAlien = false;
     },
 featureBulletTrain() {
-    this.selectedProdImg = './assets/images/fantasy-5732286_1284x856.jpg'
-    this.isSelectedCruise = false
-    this.isSelectedAsteroid = false
-    this.isSelectedBullet = true
-    this.isSelectedAlien = false
+    this.selectedProdImg = './assets/images/fantasy-5732286_1284x856.jpg';
+    this.isSelectedCruise = false;
+    this.isSelectedAsteroid = false;
+    this.isSelectedBullet = true;
+    this.isSelectedAlien = false;
     },
 featureAlienShip() {
-    this.selectedProdImg = './assets/images/spaceship-5730066_1284x856.jpg'
-    this.isSelectedCruise = false
-    this.isSelectedAsteroid = false
-    this.isSelectedBullet = false
-    this.isSelectedAlien = true
+    this.selectedProdImg = './assets/images/spaceship-5730066_1284x856.jpg';
+    this.isSelectedCruise = false;
+    this.isSelectedAsteroid = false;
+    this.isSelectedBullet = false;
+    this.isSelectedAlien = true;
     },
 ...
 ```

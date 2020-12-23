@@ -8,9 +8,6 @@ We currently have our application interface working so that clicking any of the 
 
 Start by adding a new class to the **styles.css** file in the `assets` folder. Then add an `<h3>` tag in your **index.html** file for display of a Feature Header.
 - Add a class named `featureHeader` below the comment that reads `/* TODO: Add featureHeader class */`
-- Add an `<h3>` tag below the comment that reads `<!-- TODO: Create header for features -->`
-  - Style the `<h3>` tag with class `featureHeader`
-  - Show the `<h3>` tag only when the bookingType is `feature`
 
 ```css
 ...
@@ -27,6 +24,9 @@ Start by adding a new class to the **styles.css** file in the `assets` folder. T
 }
 ...
 ```
+- Add an `<h3>` tag below the comment that reads `<!-- TODO: Create header for features -->`
+  - Style the `<h3>` tag with class `featureHeader`
+  - Show the `<h3>` tag only when the bookingType is `feature`
 
 ```html
 ...
@@ -62,7 +62,6 @@ The new `<h3>` tag should be displayed now if you view your **index.html** page 
 If you display your HTML page now and click any of the feature thumbnails, you should see only the new **Add Trip Feature** heading, the product name, and the product description for any selected feature. Now it's time to add a few more details that are specific to each trip feature so that passengers will want to add these attractions to their basic cruise package.
 
 - Add new properties in the `data()` section of your **main.js** file below the comment that reads `//TODO: Add feature properties`.
-- Add new settings to each of the three feature methods below the comment that reads `//TODO: update feature methods`
 
 ```javascript
 ...
@@ -72,66 +71,67 @@ featureQty: 0,
 onSale: false,
 ...
 ```
+- Add new settings to each of the three feature methods below the comment that reads `//TODO: update feature methods`
 
 ```javascript
 ...
 //TODO: update feature methods
 featureBookCruise() {
-    this.productName = 'Book a Cruise to the Moon'
-    this.productDesc = 'Cruise to the moon in our luxurious shuttle. Watch the astronauts working outside the International Space Station.'
-    this.id = '1100'
-    this.selectedProdImg = './assets/images/space-4888643_1284x856.jpg'
-    this.btnTitle = 'Book a Cruise'
-    this.bookingType = 'cruise'
-    this.isSelectedCruise = true
-    this.isSelectedAsteroid = false
-    this.isSelectedBullet = false
-    this.isSelectedAlien = false
+    this.productName = 'Book a Cruise to the Moon';
+    this.productDesc = 'Cruise to the moon in our luxurious shuttle. Watch the astronauts working outside the International Space Station.';
+    this.id = '1100';
+    this.selectedProdImg = './assets/images/space-4888643_1284x856.jpg';
+    this.btnTitle = 'Book a Cruise';
+    this.bookingType = 'cruise';
+    this.isSelectedCruise = true;
+    this.isSelectedAsteroid = false;
+    this.isSelectedBullet = false;
+    this.isSelectedAlien = false;
 },
 featureAsteroid() {
-    this.productName = 'Asteroid Fireworks Display'
-    this.productDesc = 'As we pass by the planet of Mars, you can watch a special fireworks event from our Viewpoint Star Surround Deck.'
-    this.id = '1101'
-    this.featurePrice = '12,000'
-    this.featureQty = 50
-    this.onSale = false
-    this.selectedProdImg = './assets/images/asteroid-5737398_1284x856.jpg'
-    this.btnTitle = 'Add Feature'
-    this.bookingType = 'feature'
-    this.isSelectedCruise = false
-    this.isSelectedAsteroid = true
-    this.isSelectedBullet = false
-    this.isSelectedAlien = false
+    this.productName = 'Asteroid Fireworks Display';
+    this.productDesc = 'As we pass by the planet of Mars, you can watch a special fireworks event from our Viewpoint Star Surround Deck.';
+    this.id = '1101';
+    this.featurePrice = '12,000';
+    this.featureQty = 50;
+    this.onSale = false;
+    this.selectedProdImg = './assets/images/asteroid-5737398_1284x856.jpg';
+    this.btnTitle = 'Add Feature';
+    this.bookingType = 'feature';
+    this.isSelectedCruise = false;
+    this.isSelectedAsteroid = true;
+    this.isSelectedBullet = false;
+    this.isSelectedAlien = false;
 },
 featureBulletTrain() {
-    this.productName = 'Bullet Train Tour'
-    this.productDesc = 'Buy a ticket on our Bullet Train for an exciting whirlwind tour through the center of the Earth.'
-    this.id = '1102'
-    this.featurePrice = '25,000'
-    this.featureQty = 25,
-    this.onSale = true
-    this.selectedProdImg = './assets/images/fantasy-5732286_1284x856.jpg'
-    this.btnTitle = 'Add Feature'
-    this.bookingType = 'feature'
-    this.isSelectedCruise = false
-    this.isSelectedAsteroid = false
-    this.isSelectedBullet = true
-    this.isSelectedAlien = false
+    this.productName = 'Bullet Train Tour';
+    this.productDesc = 'Buy a ticket on our Bullet Train for an exciting whirlwind tour through the center of the Earth.';
+    this.id = '1102';
+    this.featurePrice = '25,000';
+    this.featureQty = 25;
+    this.onSale = true;
+    this.selectedProdImg = './assets/images/fantasy-5732286_1284x856.jpg';
+    this.btnTitle = 'Add Feature';
+    this.bookingType = 'feature';
+    this.isSelectedCruise = false;
+    this.isSelectedAsteroid = false;
+    this.isSelectedBullet = true;
+    this.isSelectedAlien = false;
 },
 featureAlienShip() {
-    this.productName = 'Alien Spaceship Ride-a-long'
-    this.productDesc = 'Aliens from our sister galaxy have a limited number of seats available for observers to watch Titanium mining operations on the moon.'
-    this.id = '1103'
-    this.featurePrice = '55,000'
-    this.featureQty = 0
-    this.onSale = false
-    this.selectedProdImg = './assets/images/spaceship-5730066_1284x856.jpg'
-    this.btnTitle = 'Add Feature'
-    this.bookingType = 'feature'
-    this.isSelectedCruise = false
-    this.isSelectedAsteroid = false
-    this.isSelectedBullet = false
-    this.isSelectedAlien = true
+    this.productName = 'Alien Spaceship Ride-a-long';
+    this.productDesc = 'Aliens from our sister galaxy have a limited number of seats available for observers to watch Titanium mining operations on the moon.';
+    this.id = '1103';
+    this.featurePrice = '55,000';
+    this.featureQty = 0;
+    this.onSale = false;
+    this.selectedProdImg = './assets/images/spaceship-5730066_1284x856.jpg';
+    this.btnTitle = 'Add Feature';
+    this.bookingType = 'feature';
+    this.isSelectedCruise = false;
+    this.isSelectedAsteroid = false;
+    this.isSelectedBullet = false;
+    this.isSelectedAlien = true;
 },
 ...
 ```
@@ -154,7 +154,7 @@ In your **main.js** file, make sure the `featureQty` is set to `0` for the `feat
 //TODO: Add computed properties
 computed: {
     featureDetails() {
-        return '$' + this.featurePrice + ' (each person) - ' + this.featureQty + ' Tickets remaining'
+        return '$' + this.featurePrice + ' (each person) - ' + this.featureQty + ' Tickets remaining';
     },
 }
 ...
