@@ -10,14 +10,10 @@ We will demonstrate this project using **VS Code**. You can download and set up 
 
 After completing the VS Code installation, you will also want to install the following extensions:
 
-- Vue (syntax highlighting for Vue.js) - jcbuisson
-- Vue VSCode Snippets - sarah.drasner
-- Vetur - Vue tooling for VS Code - Pine Wu
-- Live Server - Ritwick Dey
-
-You can see a list of installed extensions in VS Code by clicking the four-block icon in the left column of the VS Code interface. You can use the search bar at the top of that column to find a specific extension. Clicking the name of any extension will load a detailed description and installation information in the right panel. Getting started information and instructional videos for VS Code are available at the [Getting started with Visual Studio Code](https://code.visualstudio.com/docs/introvideos/basics) webpage.
-
-![Image of the VS Code interface showing the icons and list of installed extensions on the left. Information about the Debugger for Microsoft Edge extension is displayed in the right panel.](../media/vscode_extensions.png)
+- [Vue (syntax highlighting for Vue.js](https://marketplace.visualstudio.com/items?itemName=jcbuisson.vue) - jcbuisson
+- [Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets) - sarah.drasner
+- [Vetur - Vue tooling for VS Code](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - jcbuisson
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) - Ritwick Dey
 
 ## Live preview of HTML pages
 
@@ -31,6 +27,6 @@ You will briefly see text indicating that the server is starting, and the Go Liv
 
 ## Keyboard shortcuts for Live Server
 
-You can open an HTML page in the live server by using two consecutive keyboard commands: **Alt+L** followed by **Alt+O**. Note that the browser will not be displayed inside the VS Code editor, but rather will appear in a separate browser window. In the image below you can see VS Code on the left and an Edge browser running on live server at the right.
+You can then open the page in Live Server by using two consecutive keyboard commands: **Alt+L** followed by **Alt+O** on a Windows or Linux machine (**Option+L** followed by **Option+O** on a Mac). Note that the browser will not be displayed inside the VSCode editor, but rather will appear in a separate browser window. In the image below you can see VS Code on the left and an Edge browser running in Live Server on the right.
 
 ![Side-by-side images showing the VS Code application on the left with an open HTML file, and the same HTML page on the right displayed in a Microsoft Edge browser running on a live server.](../media/vscode_liveserver.png)

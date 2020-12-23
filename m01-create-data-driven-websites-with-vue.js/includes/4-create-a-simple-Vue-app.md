@@ -124,7 +124,7 @@ You will briefly see text indicating that the server is starting, and the Go Liv
 
 ![Image of the footer area in the bottom of the VS Code application after starting the Go Live server.](../media/liveserver_port.png)
 
-You can then open the page in the live server by using two consecutive keyboard commands: **Alt+L** followed by **Alt+O**. Note that the browser will not be displayed inside the VSCode editor, but rather will appear in a separate browser window. In the image below you can see VS Code on the left and an Edge browser running on the live server on the right.
+You can then open the page in Live Server by using two consecutive keyboard commands: **Alt+L** followed by **Alt+O** on a Windows or Linux machine (**Option+L** followed by **Option+O** on a Mac). Note that the browser will not be displayed inside the VSCode editor, but rather will appear in a separate browser window. In the image below you can see VS Code on the left and an Edge browser running in Live Server on the right.
 
 ![Side-by-side images showing the VS Code application on the left with an open HTML file, and the same HTML page on the right displayed in a Microsoft Edge browser running on a live server.](../media/vscode_liveserver.png)
 
