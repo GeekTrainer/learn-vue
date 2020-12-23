@@ -2,13 +2,13 @@ In this section you will create a starter Vue application using an HTML file tha
 
 ## Step 1: Link to the Vue core library in your HTML file
 
-To install Vue.js by linking to the Vue core library, paste the following script tag into the starter HTML file.
+To install Vue.js by linking to the Vue core library, paste the following script tag into your starter **index.html** file below the comment that reads `TODO: Import Vue.js core library`.
 
 ```html
-<!-- //TODO: link to the VueJS core library within the <head> tag of your HTML file -->
+<!-- TODO: Import Vue.js core library -->
 <script src="https://unpkg.com/vue@next"></script>
 ```
-Your **index.html** page should now look like the example shown below.
+Your full **index.html** page should now look like the example shown below.
 
 ```html
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ Your **index.html** page should now look like the example shown below.
     <title>Relecloud Galaxy Tours</title>
     <!-- Import CSS Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
-    <!-- //TODO: link to the VueJS core library within the <head> tag of your HTML file -->
+    <!-- TODO: Import Vue.js core library -->
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
@@ -34,14 +34,18 @@ Your **index.html** page should now look like the example shown below.
 
 Now we can start writing Vue script inside our HTML file if we want to, but it is much cleaner and easier to update our application if we place the Vue data into a separate JavaScript file. Let's create a **main.js** file for this purpose.
 
-On the first line instantiate (create an instance of) your Vue application using a `constant` named `app`. Also define a data item **productName** with a value of **Book a Cruise to the Moon**. Your **main.js** file should now contain the code snippet below.
+On the first line instantiate (create an instance of) your Vue application using a `constant` named `app` below the comment that reads `//TODO: Create the VueJS app`.
+- Instantiate the Vue app
+- Define a data item **productName** with a value of **Book a Cruise to the Moon** below the comment that reads `//TODO: Define a data property`.
+
+Your **main.js** file should now contain the code snippet below.
 
 ```javascript
-//TODO: Create the VueJS app using a constant named app
+//TODO: Create the VueJS app
 const app = Vue.createApp({
     data() {
         return {
-            //TODO: Define a data property item as productName with a text value
+            //TODO: Define a data property
             productName: 'Book a Cruise to the Moon'
         }
     },
@@ -55,21 +59,20 @@ The `createApp()` function is available to us because we imported the Vue.js lib
 
 ## Step Three: Mount the Vue Application
 
-In addition to importing the Vue app that is defined in our JavaScript file, we need to mount our Vue application into the DOM so that Vue can track the current state of different objects in our HTML page. To accomplish this, we add another construct at the bottom of the main.js file to mount the Vue app into the DOM.
-
-Inside the mount method we have an argument `#app`, which is a DOM selector used to plug the app into a piece of our DOM.
+In addition to importing the Vue app that is defined in our JavaScript file, we need to mount our Vue application into the DOM so that Vue can track the current state of different objects in our HTML page. To accomplish this, we add another construct at the bottom of the main.js file. Inside the mount method we have an argument `#app`, which is a DOM selector used to plug the app into a piece of our DOM.
+- Mount the Vue app into the DOM below the comment that reads `//TODO: Mount the Vue app to the DOM`.
 
 ```javascript
-//TODO: add another construct under the app construct to mount the Vue app into the DOM
+//TODO: Mount the Vue app to the DOM
 const mountedApp = app.mount('#app')
 ```
 
 ## Step Four: Link to the Vue application at the bottom of your HTML file
 
-Next we link to our Vue application in the HTML file. Perform this task as shown in the code snippet below.
+Next we link to our Vue application in the HTML file. Perform this task as shown in the code snippet below the comment that reads `TODO: Import Vue app after DOM is loaded`.
 
 ```html
-<!-- //TODO: Import Vue app after DOM is loaded -->
+<!-- TODO: Import Vue app after DOM is loaded -->
     <script src="./main.js"></script>
   </body>
 </html>
@@ -82,7 +85,7 @@ Next we link to our Vue application in the HTML file. Perform this task as shown
 
 To identify the Vue app within the DOM we wrap a `<div>` tag around the parts of our HTML code where we want to plug in pieces of data being tracked by our Vue application.
 
-Then we need to tell our HTML page where to display the piece of `data` we have defined for our `product`. So, replace the literal text in your `<h2>` tag with a VueJS variable name placed inside double curly braces `{{ variable }}`.
+Then we need to tell our HTML page where to display the piece of `data` we have defined for our `product`. So, replace the literal text "Produce Name Goes Here" in your `<h2>` tag with your VueJS variable name placed inside double curly braces `{{ variable }}`. Enter this information below the comment that reads `TODO: replace literal text with data property`.
 
 After accomplishing these tasks, your **index.html** should be structured as shown below.
 
@@ -94,20 +97,20 @@ After accomplishing these tasks, your **index.html** should be structured as sho
     <title>Relecloud Galaxy Tours</title>
     <!-- Import CSS Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
-    <!-- Import Vue.js core library -->
+    <!-- TODO: Import Vue.js core library -->
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
-    <!-- //TODO: Wrap a <div> tag around the HTML content that you want to manipulate with VueJS -->
-    <!-- //TODO: Opening <div> goes below -->
+    <!-- TODO: Wrap <div> tag around Vue content -->
+    <!-- TODO: Opening <div> goes below -->
     <div id="app">
       <div class="nav-bar"></div>
       <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
-      <!-- //TODO: replace literal text with a defined variable (surrounded by double curly braces) -->
+      <!-- TODO: replace literal text with data property -->
       <h2>{{ productName }}</h2>
-    <!-- //TODO: Ending <div> goes below -->
+    <!-- TODO: Ending <div> goes below -->
     </div>
-    <!-- //TODO: Import Vue app after DOM is loaded -->
+    <!-- TODO: Import Vue app after DOM is loaded -->
     <script src="./main.js"></script>
   </body>
 </html>

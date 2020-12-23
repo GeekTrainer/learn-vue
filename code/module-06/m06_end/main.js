@@ -1,4 +1,4 @@
-// Create the VueJS app using a constant named app
+//Create the VueJS app
 const app = Vue.createApp({
     data() {
         return {
@@ -66,5 +66,5 @@ const app = Vue.createApp({
     },
 })
 
-// Define another constant to mount the Vue app to the DOM
+//Mount the Vue app to the DOM
 const mountedApp = app.mount('#app')
