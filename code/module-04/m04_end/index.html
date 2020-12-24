@@ -25,9 +25,9 @@
               <p v-else><span style="color: red">Sold out!</span> Please check back for our next available shuttle.</p>
               <p v-show="earlybird && numSeatsAvailable > 12" style="color: blue">Early Bird discount 12% if you book by June 30, 2051.</p>
               <p v-show="numSeatsAvailable == 0">Bookings for our next cruise shuttle will be available in February, 2051!</p>
-              <!-- //TODO: Add an <h3> tag to serve as a label for the list of values. The heading should not be displayed if no seats are available for booking. -->
+              <!-- TODO: Add <h3> tag -->
               <h3 v-show="numSeatsAvailable > 0">Passenger Rates</h3>
-              <!-- //TODO: Add a <ul> tag to display the list of values in an unordered array. The list should not be displayed if no seats are available for booking. -->
+              <!-- TODO: Add <ul> tag -->
               <ul v-show="numSeatsAvailable > 0">
                 <li v-for="passengerRate in passengerRates">{{ passengerRate }}</li>
               </ul>

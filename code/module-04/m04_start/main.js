@@ -8,9 +8,9 @@ const app = Vue.createApp({
             selectedProdImg: './assets/images/space-4888643_1284x856.jpg',
             seatsAvailable: true,
             earlybird: true,
-            //TODO: Set num_seats_available to 75
+            //TODO: Set numSeatsAvailable to 75
             numSeatsAvailable: 0,
-            //TODO: Add an array of values to display passenger rates
+            //TODO: Add array for passenger rates
             
         }
     }
