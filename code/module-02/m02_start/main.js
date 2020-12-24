@@ -4,7 +4,7 @@ const app = Vue.createApp({
         return {
             productName: 'Book a Cruise to the Moon',
             productDesc: 'Cruise to the moon in our luxurious shuttle. Watch the astronauts working outside the International Space Station.',
-            //TODO: Add property selectedProdImg
+            //TODO: Add selectedProdImg
 
         }
     }

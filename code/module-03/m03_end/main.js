@@ -6,11 +6,11 @@ const app = Vue.createApp({
             productDesc: 'Cruise to the moon in our luxurious shuttle. Watch the astronauts working outside the International Space Station.',
             companyUrl: 'https://docs.microsoft.com/en-us/learn/',
             selectedProdImg: './assets/images/space-4888643_1284x856.jpg',
-            //TODO: Add a seatsAvailable property with a boolean value
+            //TODO: Add seatsAvailable boolean
             seatsAvailable: true,
-            //TODO: Create an earlybird property with a boolean value
+            //TODO: Add earlybird boolean
             earlybird: true,
-            //TODO: Create a numSeatsAvailable property with a numeric value so we can perform conditional rendering based on numeric equations
+            //TODO: Add numSeatsAvailable numeric
             numSeatsAvailable: 26,
         }
     }

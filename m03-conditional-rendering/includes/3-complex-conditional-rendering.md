@@ -9,8 +9,8 @@ Since we can ask our Vue application to make a decision based on more than one p
 <h3>{{ product_desc }}</h3>
 <p v-if="seats_available" style="color:green;">Reservations available</p>
 <p v-else><span style="color:red;">Sold out</span> Please check back for our next available shuttle.</p>
-<!-- //TODO: Expand the logic in the v-show directive to display this <p> if earlybird is "true", but only if more than 12 seats are available for booking -->
 <p v-show="earlybird && num_seats_available > 12" style="color: blue">Early Bird discount 12% if you book by December 20, 2050!</p>
+<!-- TODO: Add directives to <p> tags (ABOVE) -->
 ...
 ```
 

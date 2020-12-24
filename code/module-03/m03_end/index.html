@@ -20,13 +20,13 @@
           <div class="product-desc">
             <h2>{{ productName }}</h2>
             <h3>{{ productDesc }}</h3>
-              <!-- //TODO: Add <p> tags for content that will be rendered based on conditions specified in the Vue app -->
+              <!-- TODO: Add <p> tags for new content -->
               <p v-if="numSeatsAvailable > 12" style="color:green;">Reservations available</p>
               <p v-else-if="numSeatsAvailable <= 12 && numSeatsAvailable > 0" style="color:red;">Almost Sold Out!</p> 
               <p v-else><span style="color: red">Sold out!</span> Please check back for our next available shuttle.</p>
               <p v-show="earlybird && numSeatsAvailable > 12" style="color: blue">Early Bird discount 12% if you book by December 20, 2050!</p>
               <p v-show="numSeatsAvailable == 0">Bookings for our next cruise shuttle will be available in February, 2051!</p>
-              <!-- //TODO: Add directives to the <p> tags (ABOVE) to reflect the appropriate v-if, v-else-if, v-else, and v-show conditions -->
+              <!-- TODO: Add directives to <p> tags (ABOVE) -->
           </div>
         </div>
       </div>
