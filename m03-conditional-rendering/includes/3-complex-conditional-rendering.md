@@ -2,15 +2,17 @@
 
 Suppose we need to implement complex conditional logic based upon more than just the two options that are available to us when using a boolean value (i.e., true or false). Vue allows us to specify more than one condition within a directive. Furthermore, we can control the display more precisely by using our numeric property `numSeatsAvailable`, because it allows us to create conditional logic based upon a mathematical scale of values.
 
-Since we can ask our Vue application to make a decision based on more than one property and more than one value for a given property, we will leave the `v-show=earlybird` condition in place on our Early Bird paragraph. Now add some conditional logic to specify that this paragraph will only be displayed if the Early Bird special is running and more than 12 seats are available for booking. Example code is shown below.
+Since we can ask our Vue application to make a decision based on more than one property and more than one value for a given property, we will leave the `v-show=earlybird` condition in place on our Early Bird paragraph. Now we will add some conditional logic to specify that this paragraph will only be displayed if the Early Bird special is running **and** more than 12 seats are available for booking. Example code is shown below.
+
+- Add `&& numSeatsAvailable > 12` to the `v-show` directive in the Early Bird paragraph below the comment that reads `TODO: Add <p> tags for new content`.
 
 ```html
 ...
 <h3>{{ product_desc }}</h3>
+<!-- TODO: Add <p> tags for new content -->
 <p v-if="seats_available" style="color:green;">Reservations available</p>
 <p v-else><span style="color:red;">Sold out</span> Please check back for our next available shuttle.</p>
-<p v-show="earlybird && num_seats_available > 12" style="color: blue">Early Bird discount 12% if you book by December 20, 2050!</p>
-<!-- TODO: Add directives to <p> tags (ABOVE) -->
+<p v-show="earlybird && numSeatsAvailable > 12" style="color: blue">Early Bird discount 12% if you book by December 20, 2050!</p>
 ...
 ```
 
@@ -29,13 +31,17 @@ Now lets display 1 of 3 paragraphs in our HTML interface by using a stacked comb
 - Display the **Sold Out!** paragraph if no seats are available on our space shuttle.
 - The `v-show` directive on the Early Bird discount paragraph remains, but it must be located at the bottom so that it will not interfere with the `v-if`, `v-else-if`, and `v-else` directives.
 
-To accomplish these objectives, change the `<p>` tag directives in your **index.html** to reflect the appropriate `v-if`, `v-else-if`, `v-else`, and `v-show directives`, as displayed in the code snippet below.
+To accomplish these objectives, set `<p>` tag directives in your **index.html** to reflect the appropriate `v-if`, `v-else-if`, `v-else`, and `v-show directives` below the comment that reads `TODO: Add <p> tags for new content`.
+
+- Set `v-if` for `numSeatsAvailable > 12` on "Reservations available" paragraph
+- Add a new paragraph that reads "Almost Sold Out!" and set `v-else-if` for `numSeatsAvailable <= 12 && numSeatsAvailable > 0`.
+- Set `v-else` on existing "Sold Out!" paragraph
 
 ```html
 <div class="product-desc">
   <h2>{{ product_name }}</h2>
   <h3>{{ product_desc }}</h3>
-  <!-- //TODO: change the <p> tag directives to reflect the appropriate v-if, v-else-if, v-else, and v-show conditions -->
+  <!-- TODO: Add <p> tags for new content -->
   <p v-if="numSeatsAvailable > 12" style="color:green;">Reservations available</p>
   <p v-else-if="numSeatsAvailable <= 12 && numSeatsAvailable > 0" style="color:red;">Almost Sold Out!</p> 
   <p v-else><span style="color: red">Sold out!</span> Please check back for our next available shuttle.</p>

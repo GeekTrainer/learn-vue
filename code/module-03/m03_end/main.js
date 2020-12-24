@@ -6,11 +6,9 @@ const app = Vue.createApp({
             productDesc: 'Cruise to the moon in our luxurious shuttle. Watch the astronauts working outside the International Space Station.',
             companyUrl: 'https://docs.microsoft.com/en-us/learn/',
             selectedProdImg: './assets/images/space-4888643_1284x856.jpg',
-            //TODO: Add seatsAvailable boolean
+            //TODO: Add data properties
             seatsAvailable: true,
-            //TODO: Add earlybird boolean
             earlybird: true,
-            //TODO: Add numSeatsAvailable numeric
             numSeatsAvailable: 26,
         }
     }
