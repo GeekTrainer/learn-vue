@@ -8,3 +8,4 @@ After completing the VS Code installation, you will also want to install the fol
 - [Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets) - sarah.drasner
 - [Vetur - Vue tooling for VS Code](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - jcbuisson
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) - Ritwick Dey
+- [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) - Tobermory
