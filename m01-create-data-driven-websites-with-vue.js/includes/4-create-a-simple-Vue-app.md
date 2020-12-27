@@ -8,7 +8,7 @@ To install Vue.js by linking to the Vue core library, paste the following script
 <!-- TODO: Import Vue.js core library -->
 <script src="https://unpkg.com/vue@next"></script>
 ```
-Your full **index.html** page should now look like the example shown below.
+Your **index.html** page should now look like the example shown below.
 
 ```html
 <!DOCTYPE html>
@@ -21,10 +21,7 @@ Your full **index.html** page should now look like the example shown below.
     <!-- TODO: Import Vue.js core library -->
     <script src="https://unpkg.com/vue@next"></script>
   </head>
-  <body>
-    <h1>Product name goes here</h1>
-  </body>
-</html>
+...
 ```
 
 > [!TIP]
@@ -36,16 +33,16 @@ Now we can start writing Vue script inside our HTML file if we want to, but it i
 
 On the first line instantiate (create an instance of) your Vue application using a `constant` named `app` below the comment that reads `//TODO: Create the VueJS app`.
 - Instantiate the Vue app
-- Define a data item **productName** with a value of **Book a Cruise to the Moon** below the comment that reads `//TODO: Define a data property`.
+- Define a data item **productName** with a value **Book a Cruise to the Moon** below the comment that reads `//TODO: Define data properties`.
 
-Your **main.js** file should now contain the code snippet below.
+Your **main.js** file should now contain the code below.
 
 ```javascript
 //TODO: Create the VueJS app
 const app = Vue.createApp({
     data() {
         return {
-            //TODO: Define a data property
+            //TODO: Define data properties
             productName: 'Book a Cruise to the Moon'
         }
     },
@@ -57,22 +54,13 @@ const app = Vue.createApp({
 
 The `createApp()` function is available to us because we imported the Vue.js library into the `<head>` tag of our HTML page. We then pass an argument for this function as an object with a `data` property. This object returns another object that we will use to store our data.
 
-## Step Three: Mount the Vue Application
-
-In addition to importing the Vue app that is defined in our JavaScript file, we need to mount our Vue application into the DOM so that Vue can track the current state of different objects in our HTML page. To accomplish this, we add another construct at the bottom of the main.js file. Inside the mount method we have an argument `#app`, which is a DOM selector used to plug the app into a piece of our DOM.
-- Mount the Vue app into the DOM below the comment that reads `//TODO: Mount the Vue app to the DOM`.
-
-```javascript
-//TODO: Mount the Vue app to the DOM
-const mountedApp = app.mount('#app')
-```
-
-## Step Four: Link to the Vue application at the bottom of your HTML file
+## Step Three: Link to the Vue application at the bottom of your HTML file
 
 Next we link to our Vue application in the HTML file. Perform this task as shown in the code snippet below the comment that reads `TODO: Import Vue app after DOM is loaded`.
 
 ```html
-<!-- TODO: Import Vue app after DOM is loaded -->
+...
+    <!-- TODO: Import Vue app after DOM is loaded -->
     <script src="./main.js"></script>
   </body>
 </html>
@@ -81,11 +69,32 @@ Next we link to our Vue application in the HTML file. Perform this task as shown
 > [!NOTE]
 > NOTE: When a web page is loaded, the browser creates a DOM (Document Object Model) of the page. The HTML DOM model is constructed as a tree of Objects. This provides JavaScript with all the power it needs to change elements, attributes, and CSS styles within an HTML document, thus enabling the creation of dynamic HTML on the front end. An image and further explanation of the DOM is available on the [W3 Schools website](https://www.w3schools.com/js/js_htmldom.asp).
 
+## Step Four: Mount the Vue Application
+
+In addition to importing the Vue app that is defined in our JavaScript file, we need to mount into the DOM so that Vue can track the current state of different objects in our HTML page. To accomplish this, we add a construct at the bottom of the **index.html** file. Inside the mount method we have an argument `#app`, which is a DOM selector used to plug the app into a piece of our DOM.
+- Mount the Vue app into the DOM below the comment that reads `//TODO: Mount Vue app to the DOM`.
+
+```html
+...
+    <!-- TODO: Import Vue app after DOM is loaded -->
+    <script src="./main.js"></script>
+
+    <!-- Mount Vue App to the DOM -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>
+```
+
 ## Step Five: Identify the Vue app within the DOM
 
-To identify the Vue app within the DOM we wrap a `<div>` tag around the parts of our HTML code where we want to plug in pieces of data being tracked by our Vue application.
+To identify the Vue app within the DOM we wrap a `<div>` tag around the parts of our HTML code where we want to plug in pieces of data being tracked by our Vue application. This will be essentially most of the `<body>` content in our HTML page.
+- Create opening `<div>` tag with `id="app"` below the comment that reads `TODO: Wrap <div> tag around Vue content`.
+- Create closing `</div>` tag below the comment that reads `TODO: Ending <div> goes below`
 
-Then we need to tell our HTML page where to display the piece of `data` we have defined for our `product`. So, replace the literal text "Produce Name Goes Here" in your `<h2>` tag with your VueJS variable name placed inside double curly braces `{{ variable }}`. Enter this information below the comment that reads `TODO: replace literal text with data property`.
+Next we want to tell our HTML page where to display the piece of `data` we have defined for our `product`.
+- Create an `<h2>` tag with your VueJS variable name placed inside double curly braces `{{ variable }}`. Enter this information below the comment that reads `TODO: Add heading tags`.
 
 After accomplishing these tasks, your **index.html** should be structured as shown below.
 
@@ -102,16 +111,21 @@ After accomplishing these tasks, your **index.html** should be structured as sho
   </head>
   <body>
     <!-- TODO: Wrap <div> tag around Vue content -->
-    <!-- TODO: Opening <div> goes below -->
     <div id="app">
       <div class="nav-bar"></div>
       <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
-      <!-- TODO: replace literal text with data property -->
+      <!-- TODO: Add heading tags -->
       <h2>{{ productName }}</h2>
-    <!-- TODO: Ending <div> goes below -->
+      <!-- TODO: Ending <div> goes below -->
     </div>
+
     <!-- TODO: Import Vue app after DOM is loaded -->
     <script src="./main.js"></script>
+
+    <!-- Mount Vue App to the DOM -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
   </body>
 </html>
 ```
@@ -119,7 +133,7 @@ After accomplishing these tasks, your **index.html** should be structured as sho
 > [!IMPORTANT]
 > IMPORTANT: Note that page execution order is important in VueJS processing. We cannot attach our application to the DOM until the HTML page is fully loaded. Therefore, we import the Vue application at the bottom of the page after all other HTML elements have been loaded into the browser. It is generally a good idea to let the HTML page load before calling an external script file that is intended to change the content or structure of the DOM.
 
-You should now be able to view the HTML page in your browser to see that the words "Product name goes here" have been replaced with the words "Book a Cruise to the Moon." You can just double-click on the index.html file to open it in a browser on your local computer. However, if you installed the Live Server extension in VS Code, you can open a live view of your HTML page that will be updated immediately every time you make a change and save the file. To do this, start the server by clicking the "Go Live" link in the blue footer at the bottom of the screen.
+You should now be able to view the HTML page in your browser to see see the product title "Book a Cruise to the Moon." You can just double-click on the index.html file to open it in a browser on your local computer. However, if you installed the Live Server extension in VS Code, you can open a live view of your HTML page that will be updated immediately every time you make a change and save the file. To do this, start the server by clicking the "Go Live" link in the blue footer at the bottom of the VS Code screen.
 
 ![Image of the footer area in the bottom of the VS Code application prior to starting the Go Live server.](../media/liveserver_golive.png)
 

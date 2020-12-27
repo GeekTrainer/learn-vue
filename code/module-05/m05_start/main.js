@@ -24,6 +24,3 @@ const app = Vue.createApp({
 //TODO: Change selected image
 
 })
-
-//Mount the Vue app to the DOM
-const mountedApp = app.mount('#app')

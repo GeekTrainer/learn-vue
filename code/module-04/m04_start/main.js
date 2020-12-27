@@ -15,6 +15,3 @@ const app = Vue.createApp({
         }
     }
 })
-
-// Define another constant to mount the Vue app to the DOM
-const mountedApp = app.mount('#app')

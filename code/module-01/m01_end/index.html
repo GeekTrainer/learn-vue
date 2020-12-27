@@ -10,16 +10,21 @@
   </head>
   <body>
     <!-- TODO: Wrap <div> tag around Vue content -->
-    <!-- TODO: Opening <div> goes below -->
     <div id="app">
       <div class="nav-bar"></div>
       <h1 style="text-align: center;">Relecloud Galaxy Tours</h1>
-      <!-- TODO: replace literal text with data property -->
+      <!-- TODO: Add heading tags -->
       <h2>{{ productName }}</h2>
       <h3>{{ productDesc }}</h3>
       <!-- TODO: Ending <div> goes below -->
     </div>
+
     <!-- TODO: Import Vue app after DOM is loaded -->
     <script src="./main.js"></script>
+
+    <!-- Mount Vue App to the DOM -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
   </body>
 </html>

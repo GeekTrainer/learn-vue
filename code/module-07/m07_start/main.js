@@ -70,6 +70,3 @@ const app = Vue.createApp({
     //TODO: Add computed properties
 
 })
-
-//Mount the Vue app to the DOM
-const mountedApp = app.mount('#app')
