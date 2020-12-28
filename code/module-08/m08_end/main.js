@@ -23,6 +23,7 @@ const app = Vue.createApp({
             onSale: false,
             //TODO: Add berth property
             berth: true,
+            previous: true,
         }
     },
     methods: {

@@ -26,6 +26,8 @@
             </div>
             <!-- TODO: Add component -->
             <food-prefs :berth="berth"></food-prefs>
+            <br>
+            <rate-trip :previous="previous"></rate-trip>
           </div>
         <div class="product-desc">
             <h3 class="featureHeader" v-show="bookingType=='feature'">Add Trip Feature</h3>
@@ -63,6 +65,7 @@
 
     <!-- TODO: Import Vue components -->
     <script src="./components/FoodPrefs.js"></script>
+    <script src="./components/RateTrip.js"></script>
 
     <!-- Mount Vue App to the DOM -->
     <script>

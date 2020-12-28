@@ -1,6 +1,6 @@
 Our sample project is a fictitious travel agency for booking space travel. Our cruise around the Galaxy will take several days, so we will need to feed our passengers during the trip. We need to know which passengers have particular food sensitivities or allergies, so we want to create a form that allows people to submit this information.
 
-In addition, we plan to offer "free room service" for First Class passengers who book a sleeping berth compartment. We will accomplish these objectives by creating components and props, which we will add in this module. In a later module we demonstrate how to create and add forms.
+In addition, we plan to offer "free room service" for First Class passengers who book a sleeping berth compartment. We will accomplish these objectives by creating components and props. In the next module we demonstrate how to create and add a form to the component you will create in this module.
 
 If you completed the prior exercises, your HTML file should look like the image below when viewed in a browser. You can continue to build upon your own files, or you can use the files in our [`starting code`](link).
 
@@ -17,5 +17,4 @@ Upon completion of this module you will:
 
 - Create components as separate Javascript files
 - Add the components to your Vue interface
-- Create a prop that emits the new information from your components
-- Add listeners for those emits in your app
+- Create props that transmit data from your main app to your components

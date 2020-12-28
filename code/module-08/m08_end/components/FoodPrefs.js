@@ -17,9 +17,9 @@ app.component('food-prefs', {
   computed: {
     roomService() {
       if (this.berth) {
-        return `: No charge`
+        return `: No charge`;
       }
-      return `: $24.99`
+      return `: $24.99`;
     }
   }
 })
