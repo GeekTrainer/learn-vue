@@ -24,8 +24,10 @@
               <img src="./assets/images/fantasy-5732286_1284x856.jpg" @click="featureBulletTrain" :class="{ highlight: isSelectedBullet }" style="width:12%; margin-left:12px; margin-right:0px;">
               <img src="./assets/images/spaceship-5730066_1284x856.jpg" @click="featureAlienShip" :class="{ highlight: isSelectedAlien }" style="width:12%; margin-left:12px; margin-right:0px;">
             </div>
+            <!-- TODO: Add component -->
+
           </div>
-          <div class="product-desc">
+        <div class="product-desc">
             <h3 class="featureHeader" v-show="bookingType=='feature'">Add Trip Feature</h3>
             <h2>{{ productName }}</h2>
             <h3>{{ productDesc }}</h3>
@@ -58,6 +60,9 @@
 
     <!-- Import Vue app after DOM is loaded -->
     <script src="./main.js"></script>
+
+    <!-- TODO: Import Vue components -->
+
 
     <!-- Mount Vue App to the DOM -->
     <script>

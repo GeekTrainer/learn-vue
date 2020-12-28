@@ -2,7 +2,7 @@
 
 Props are custom attributes for passing data into a component. The `prop` must be defined within the same Javascript file where the `component` is defined, because all components are limited to the scope of the isolated component.
 
-![Screenshot showing the HTML page with the main product image on the left and 4 thumbnail images below it. Product name and description are displayed on the right. A new component is displayed within a bordered box that is titled "Food Preferences."](../media/m08-comp-food-prefs.png)
+![Screenshot showing the HTML page with the main product image on the left and 4 thumbnail images below it. Product name and description are displayed on the right. A new component is displayed at bottom left within a bordered box that is titled "Food Preferences."](../media/m08-comp-food-prefs.png)
 
 Suppose we need this component to have access to a data component that is outside of its scope? We have decided that passengers who purchase the rate for "First Class with a sleeping berth" should receive certain services for "free" or at "reduced cost." Since the main application and several components will need to access this data property, we will put it in our **main.js** file.
 
@@ -53,7 +53,7 @@ To generate a specific case for use of the `berth` property within our `componen
 })
 ```
 
-Back in our **index.html** file we are going to add the shorthand for `v-bind` to our `component` to ensure that we can reactively receive the new value of `berth` if that property is updated within the application.
+Back in our **index.html** file we are going to add the shorthand for `v-bind` to our `component` to ensure that we will reactively receive the new value of `berth` if that property is updated within our application.
 
 ```html
 ...
@@ -61,4 +61,11 @@ Back in our **index.html** file we are going to add the shorthand for `v-bind` t
 <food-prefs :berth="berth"></food-prefs>
 ...
 ```
- 
+
+Now our Vue application should render as shown in the image below if the passenger making reservations has booked a cruise at the rate for "First class with sleeping berth" (i.e., the data property for `berth` in **main.js** is true).
+
+![Screenshot showing the HTML page with the main product image on the left and 4 thumbnail images below it. Product name and description are displayed on the right. A new component is displayed at bottom left within a bordered box that is titled "Food Preferences." The Room Service Fee is listed as "no charge".](../media/m08-sleeping-berth.png)
+
+For passengers who do not book a sleeping birth  (i.e., the data property for `berth` in **main.js** is flase) the new component will appear as shown in the image below.
+
+![Screenshot showing the HTML page with the main product image on the left and 4 thumbnail images below it. Product name and description are displayed on the right. A new component is displayed at bottom left within a bordered box that is titled "Food Preferences." The Room Service Fee is listed as "$24.99".](../media/m08-no-sleeping-berth.png)

@@ -21,6 +21,8 @@ const app = Vue.createApp({
             featurePrice: 0,
             featureQty: 0,
             onSale: false,
+            //TODO: Add berth property
+
         }
     },
     methods: {
