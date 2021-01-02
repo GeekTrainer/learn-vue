@@ -1,4 +1,4 @@
-Our sample project is a fictitious travel agency for booking space travel. Our cruise around the Galaxy will take several days, so we will need to feed our passengers during the trip. We need to know which passengers have particular food sensitivities or allergies, so we want to create a form that allows people to submit this information.
+Our sample project is a fictitious travel agency for booking space travel. Our cruise around the Galaxy will take several days, so we will need to feed our passengers during the trip. We need to know which passengers have particular food sensitivities or allergies. We will set up a component for the Food Preferences section of our HTML template.
 
 In addition, we plan to offer "free room service" for First Class passengers who book a sleeping berth compartment. We will accomplish these objectives by creating components and props. In the next module we demonstrate how to create and add a form to the component you will create in this module.
 
