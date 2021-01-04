@@ -72,7 +72,7 @@ app.component('foodprefs-form', {
         return
       }
 
-      let productReview = {
+      let foodprefanswers = {
         passenger: this.passenger,
         allergies: this.allergies,
         allergydesc: this.allergydesc,
@@ -80,7 +80,7 @@ app.component('foodprefs-form', {
         vegan: this.vegan,
       }
 
-      this.$emit('review-submitted', productReview);
+      this.$emit('foodpref-submitted', foodprefanswers);
 
       this.passenger = '';
       this.allergies = '';

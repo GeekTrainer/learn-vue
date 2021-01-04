@@ -25,8 +25,8 @@
               <img src="./assets/images/spaceship-5730066_1284x856.jpg" @click="featureAlienShip" :class="{ highlight: isSelectedAlien }" style="width:12%; margin-left:12px; margin-right:0px;">
             </div>
             <!-- TODO: Add listener for food-prefs data -->
-            <foodpref-list v-if="reviews.length" :reviews="reviews"></foodpref-list>
-            <foodprefs-form @review-submitted="addReview"></foodprefs-form>
+            <foodpref-list v-if="foodprefs.length" :foodprefs="foodprefs"></foodpref-list>
+            <foodprefs-form @foodpref-submitted="addFoodpref"></foodprefs-form>
             <br>
             <review-list v-if="reviews.length" :reviews="reviews"></review-list>
             <review-form @review-submitted="addReview"></review-form>

@@ -1,6 +1,6 @@
 app.component('foodpref-list', {
   props: {
-    reviews: {
+    foodprefs: {
       type: Array,
       required: true
     }
@@ -11,15 +11,15 @@ app.component('foodpref-list', {
   <div class="print-list">
   <h3>Food preferences submitted:</h3>
     <ul>
-      <li v-for="(review, index) in reviews" :key="index">
-        <strong>{{ review.passenger }}</strong>
+      <li v-for="(foodpref, index) in foodprefs" :key="index">
+        <strong>{{ foodpref.passenger }}</strong>
         <br>
-        Food allergies:  {{ review.allergies }} <br>
-        Allergy description: {{ review.allergydesc }}
+        Food allergies:  {{ foodpref.allergies }} <br>
+        Allergy description: {{ foodpref.allergydesc }}
         <br>
-        Gluten-free:  {{ review.glutenfree }} 
+        Gluten-free:  {{ foodpref.glutenfree }} 
         <br/>
-        Vegan:  {{ review.vegan }} 
+        Vegan:  {{ foodpref.vegan }} 
       </li>
     </ul>
   </div>
