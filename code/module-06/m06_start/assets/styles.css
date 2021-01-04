@@ -115,7 +115,7 @@ p {
 .review-form {
   display: flex;
   flex-direction: column;
-  width: 425px;
+  width: 66%;
   padding: 20px;
   margin: 40px;
   border: 2px solid #d8d8d8;
