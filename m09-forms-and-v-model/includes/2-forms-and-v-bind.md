@@ -3,6 +3,10 @@
 Your HTML interface should look similar to the one shown in the screenshot below. In this section we will add a form to the "Food Preferences" component that is located at the bottom left side of the screen.
 
 ![Screenshot showing the HTML page with a selected product image on the left and 4 thumbnail images below it. The first thumbnail from the left is highlighted with a yellow background. Product name and description are displayed on the right. Two components are located at the bottom left. Two components are shown at the bottom left of the screen: "Food Preferences" and "Welcome Back to the Galaxy!" is shown only if this person is a previous passenger on a Galaxy Tour.](../media/m09_start.png)
+- The "Room Service Fee" in the Food Preferences panel will read "No charge" if the passenger has booked a cruise at the rate for "First class with sleeping berth" (`berth` property is `true`).
+  - It will read $24.99 if the `berth` property is `false`.
+- If the passenger has previously booked a cruitse with Relecloud Galaxy Tours (`previous` is `true`) the message in the second box will invite the user to fill out a cruise review form, which will be added in the next training module.
+  - When `previous` is `false` the second box will instead inform users that "Comments are Welcome!"
 
 ## Create form and data properties
 

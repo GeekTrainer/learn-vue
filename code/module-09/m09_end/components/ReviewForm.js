@@ -1,7 +1,19 @@
 app.component('review-form', {
+  props: {
+    previous: {
+      type: Boolean,
+      required: true,
+    }
+  },
   template:
   /*html*/
-  `<form class="review-form" @submit.prevent="onSubmit">
+  `<div class="componentBox">
+  <h4 style="text-align:center;">{{ rateTrip }}</h4>
+  <p v-if="previous">Please tell us about your latest trip with Relecloud Galaxy Tours.</p>
+  <p v-else>Please provide comments or submit questions regarding Relecloud Galaxy Tours.</p>
+  </div>
+
+  <form class="review-form" @submit.prevent="onSubmit">
     <h3>Review a previous cruise</h3>
     <label for="name">Name:</label>
     <input id="name" v-model="name">
@@ -58,5 +70,13 @@ app.component('review-form', {
       this.recommend = null;
 
     },
+  },
+  computed: {
+    rateTrip() {
+      if (this.previous) {
+        return `Welcome Back to the Galaxy!`;
+      }
+      return `Comments are Welcome!`;
+    }
   }
 })
