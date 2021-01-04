@@ -1,5 +1,3 @@
-## Props
-
 Props are custom attributes for passing data into a component. The `prop` must be defined within the same Javascript file where the `component` is defined, because all components are limited to the scope of the isolated component.
 
 ![Screenshot showing the HTML page with the main product image on the left and 4 thumbnail images below it. Product name and description are displayed on the right. A new component is displayed at bottom left within a bordered box that is titled "Food Preferences."](../media/m08-comp-food-prefs.png)
@@ -9,10 +7,8 @@ Suppose we need this component to have access to a data property that is outside
 - Add `berth` as a boolean data property in **main.js** below the comment that reads `//TODO: Add berth property`.
 
 ```javascript
-...
 //TODO: Add berth property
 berth: true,
-...
 ```
 
 Now we need to add a `prop` that will allow our `component` to have access to the `berth` data property. Add this in our component Javascript file so the component can receive that value from the main application. We can even add some validation for the prop, such as the `type` of value it should be passing and whether or not the value is `required`.
@@ -31,7 +27,6 @@ app.component('food-prefs', {
   },
   template: 
   /*html*/
-...
 ```
 
 To generate a specific case for use of the `berth` property within this particular `component` we can create a custom data property that is specific to our needs. We will accomplish this by defining a `computed` property in our **FoodPrefs.js** file.
@@ -56,10 +51,8 @@ To generate a specific case for use of the `berth` property within this particul
 Back in our **index.html** file we are going to add the shorthand for `v-bind` to our `component` tag to ensure that it will reactively receive the new value of `berth` when that property is updated within our application.
 
 ```html
-...
 <!-- TODO: Add component -->
 <food-prefs :berth="berth"></food-prefs>
-...
 ```
 
 Now our Vue application should render as shown in the image below if the passenger making reservations has booked a cruise at the rate for "First class with sleeping berth" (i.e., the data property for `berth` in **main.js** is true).

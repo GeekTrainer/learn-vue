@@ -11,7 +11,6 @@ Open **index.html** either from the [starter code](link), or your existing proje
   - Increment the value of cart by 1
 
 ```javascript
-...
     //TODO: Add a comma
     },
     //TODO: Increment value of cart
@@ -33,10 +32,8 @@ Now change the button in your HTML file to use the `addToCart` method instead of
 - Add `v-on:click` directive to Book a Cruise button below the comment that reads `TODO: Add item to cart`
 
 ```html
-...
 <!-- TODO: Add item to cart -->
 <button class="button" v-on:click="addItemToCart">Book a Cruise</button>
-...
 ```
 
 If you render the HTML file now, the cart should behave the same way it did when using the data expression. Clicking the "Book a Cruise" button should increment the number in the cart by 1 every time you click it because the `v-on` directive is still listening for that click event.
@@ -46,9 +43,7 @@ If you render the HTML file now, the cart should behave the same way it did when
 You should also be aware that Vue allows a shorthand notation when using the `v-on` directive. You can use the "at" symbol (@) in place of `v-on:`, as shown below.
 
 ```html
-...
 <button class="button" @click="addItemToCart">Book a Cruise</button>
-...
 ```
 
 ## Change selected product image when thumbnail is clicked
@@ -64,7 +59,6 @@ Then use the `v-on:click` directive in your **index.html** file to execute the a
 - Apply `v-on:click` directive in **index.html** below the comment `TODO: Change selected image`
 
 ```javascript
-...
 //TODO: Change selected image
 featureBookCruise() {
     this.selectedProdImg = './assets/images/space-4888643_1284x856.jpg';
@@ -78,11 +72,9 @@ featureBulletTrain() {
 featureAlienShip() {
     this.selectedProdImg = './assets/images/spaceship-5730066_1284x856.jpg';
 },
-...
 ```
 
 ```html
-...
 <!-- TODO: Change selected image -->
 <div style="text-align:left; padding-top:0; height:200px;">
   <img src="./assets/images/space-4888643_1284x856.jpg" @click="featureBookCruise" style="width:12%; margin-right:0px;">
@@ -90,13 +82,13 @@ featureAlienShip() {
   <img src="./assets/images/fantasy-5732286_1284x856.jpg" @click="featureBulletTrain" style="width:12%; margin-left:12px; margin-right:0px;">
   <img src="./assets/images/spaceship-5730066_1284x856.jpg" @click="featureAlienShip" style="width:12%; margin-left:12px; margin-right:0px;">
 </div>
-...
 ```
 
 > [!TIP]
 > If you want to have this method execute whenever a user hovers the mouse over a thumbnail image you could use the Vue @mouseover directive instead of @click.
 
 ![Screenshot showing the HTML page with a selected produce image on the left and 4 thumbnail images below it. Product name and description are displayed on the right, with two paragraphs of text. Below this are unordered lists for Passenger Rates and Group Discounts](../media/thumbnails_cart_button.png)
+
 - Change the selected product image when a thumbnail image is clicked
 - Increment the value of cart when "Book a Cruise" button is clicked
 
