@@ -1,4 +1,4 @@
-app.component('rate-trip', {
+app.component('review-form', {
   props: {
     previous: {
       type: Boolean,
