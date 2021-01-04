@@ -119,6 +119,14 @@ p {
   width: 50%;
 }
 
+.print-list {
+  width: 66%;
+  padding: 0 0 0 20px;
+  background-color: lightyellow;
+  margin-left: 40px;
+  border: 2px dashed #d8d8d8;
+}
+
 .review-form {
   display: flex;
   flex-direction: column;
@@ -127,18 +135,6 @@ p {
   margin: 40px;
   border: 2px solid #d8d8d8;
   background-color: white;
-}
-
-.review-container {
-  width: 425px;
-  padding: 20px;
-  background-color: white;
-  margin-left: 40px;
-  border: 2px solid #d8d8d8;
-}
-
-.review-container li {
-  margin-bottom: 30px;
 }
 
 .review-form .button {
