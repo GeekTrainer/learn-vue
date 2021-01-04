@@ -50,12 +50,12 @@ app.component('review-form', {
         recommend: this.recommend
 
       }
-      this.$emit('review-submitted', productReview)
+      this.$emit('review-submitted', productReview);
 
-      this.name = ''
-      this.review = ''
-      this.rating = null
-      this.recommend = null
+      this.name = '';
+      this.review = '';
+      this.rating = null;
+      this.recommend = null;
 
     },
   }
