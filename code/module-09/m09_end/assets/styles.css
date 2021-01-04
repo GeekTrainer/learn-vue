@@ -145,6 +145,14 @@ p {
   font-size: 18px;
 }
 
+.print-list {
+  width: 66%;
+  padding: 0 0 0 20px;
+  background-color: lightyellow;
+  margin-left: 40px;
+  border: 2px dashed #d8d8d8;
+}
+
 .review-form {
   display: flex;
   flex-direction: column;
@@ -153,14 +161,6 @@ p {
   margin: 40px;
   border: 2px solid #d8d8d8;
   background-color: white;
-}
-
-.review-list {
-  width: 66%;
-  padding: 0 0 0 20px;
-  background-color: lightyellow;
-  margin-left: 40px;
-  border: 2px dashed #d8d8d8;
 }
 
 .review-container li {

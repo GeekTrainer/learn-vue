@@ -8,7 +8,7 @@ app.component('review-list', {
   template:
   /*html*/
   `
-  <div class="review-list">
+  <div class="print-list">
   <h3>Cruise Reviews:</h3>
     <ul>
       <li v-for="(review, index) in reviews" :key="index">

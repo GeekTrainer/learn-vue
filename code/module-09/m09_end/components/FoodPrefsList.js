@@ -8,7 +8,7 @@ app.component('foodpref-list', {
   template:
   /*html*/
   `
-  <div class="review-list">
+  <div class="print-list">
   <h3>Food preferences submitted:</h3>
     <ul>
       <li v-for="(review, index) in reviews" :key="index">
