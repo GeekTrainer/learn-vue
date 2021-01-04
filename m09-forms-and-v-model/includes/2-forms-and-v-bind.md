@@ -5,11 +5,12 @@ Your HTML interface should look similar to the one shown in the screenshot below
 ![Screenshot showing the HTML page with a selected product image on the left and 4 thumbnail images below it. The first thumbnail from the left is highlighted with a yellow background. Product name and description are displayed on the right. Two components are located at the bottom left. Two components are shown at the bottom left of the screen: "Food Preferences" and "Welcome Back to the Galaxy!" is shown only if this person is a previous passenger on a Galaxy Tour.](../media/m09_start.png)
 
 ## Create form and data properties
-Create a `<form>` tag in the **FoodPrefs.js** file, which is located under the **components** folder. To bind the data, we will also enter data() properties in the same file.
 
-- Add the `<form>` element content shown here in the **FoodPrefs.js** file below the comment that reads `/* TODO: Add <form> element below last <p> tag */`
-  - The `<form>` element will go under the paragraph that reads "Please fill out this form to let us know your food preferences."
-- Add new `data()` properties for the form data that will be generated so we can bind these form elements to the data in our Vue application. The `data()` option should be entered below the comment that reads `/* TODO: Add form data properties */`.
+In this section you will create a `<form>` tag in the **FoodPrefs.js** file, which is located under the **components** folder. To bind the form elements to your data, you will also enter `data()` properties in the same file for the data that will be generated when the form is submitted.
+
+- Add the `<form>` element content shown below in the **FoodPrefs.js** file below the comment that reads `/* TODO: Add <form> element below last <p> tag */`.
+  - The `<form>` element will go below the paragraph that reads "Please fill out this form to let us know your food preferences."
+- Add new `data()` properties for the form data that will be generated so we can bind these form elements to the data in our Vue application. The `data()` option should be entered below the comment that reads `/* TODO: Add form data properties and methods */`.
   - Note that the name of each data property must match the name of the `id` in each input field on the form.
 
 ```javascript
@@ -52,7 +53,7 @@ Create a `<form>` tag in the **FoodPrefs.js** file, which is located under the *
     <div style="text-align:center;"><input class="button" type="submit" value="Submit"></div>
     </form>
   </div>`,
-  /* TODO: Add form data properties */
+  /* TODO: Add form data properties and methods */
   data() {
     return {
       passenger: '',
@@ -62,19 +63,12 @@ Create a `<form>` tag in the **FoodPrefs.js** file, which is located under the *
       allergydesc: '',
     }
   },
-   computed: {
-    roomService() {
-      if (this.berth) {
-        return `: No charge`;
-      }
-      return `: $24.99`;
-    }
-  }
-})
+...
 ```
 
 ## Use v-model to create two-way binding from template to data
-On each form element following `id` we add the `v-model` directive, using the same `id` as the element. For example, the tag <input id="passenger"> becomes <input id="passenger" v-model="passenger">.
+
+On each form element following `id` we add the `v-model` directive, using the same `id` as the element. For example, the tag `<input id="passenger">` becomes `<input id="passenger" v-model="passenger">`.
 - Add the `v-model` directive to each form element below the comment that reads `/* TODO: Add <form> element below last <p> tag */`. The code in the `template` section of **FoodPrefs.js** should now look like the code snippet shown here.
 
 ```javascript
@@ -120,29 +114,116 @@ On each form element following `id` we add the `v-model` directive, using the sa
 ...
 ```
 
-## Add a listener to the form for the submit event
-We need to add a `listener` to the form so that When the user clicks the submit button the form will capture the data. We will use `@submit.prevent="onSubmit"`.
+## Add a listener to the form and emit the event
+
+We need to add a `listener` to the form in **FoodPrefs.js** so that when the user clicks the `Submit` button the form will capture the data. We will use `@submit.prevent="onSubmit"` for the listener on the `<form>` tag. We then need to create the method `onSubmit` for actions to be performed when the event occurs.
+
+- Add a listener to the opening `<form>` tag below the comment that reads `/* TODO: Add <form> element below last <p> tag */`.
 - The **prevent** modifier keeps the browser from refreshing the page so that the user experience remains seemless.
-- We will need to add an `onSubmit` method to be executed when the listener hears the click of the Submit button.
+- Add a trigger to the listener so it will execute a method named `onSubmit`.
 
-Now we have accomplished a save of the data submitted through our form, but the data still lives within the isolated scope of this form. So we need to make this data available to all components within the template. We do this using `$emit` with the data property that contains the submitted data.
+```javascript
+...
+ template: 
+  /* TODO: Add <form> element below last <p> tag */
+  /*html*/
+  `<div class="componentBox">
+    <h4 style="text-align:center;">Food Preferences</h4>
+    <p style="text-align:center;"><strong>Room Service Fee</strong>{{ roomService }}</p>
+    <p>Please fill out this form to let us know your food preferences.</p>
+    <form @submit.prevent="onSubmit">`
+...
+```
 
-We also need to clear out the fields in the form so it can be used again. Otherwise, each time the form is activated it will contain pre-filled field entries.
+- Create the `onSubmit` method in **FoodPrefs.js** for capturing form data and storing it in data properties (below the comment that reads `/* TODO: Add methods */`).
+  - The method will create a `foodPrefsData` object that will capture the data submitted in the form.
+  - Use `$emit` to transfer the data to the HTML interface
+  - Emit a `foodPrefSubmitted` event that passes the captured information to the `foodPrefsData` property.
+  - Clear out the form fields so the form can be re-used after the data has been transmitted.
 
-## Import the submitted form data into our template.
-Open **index.html** and add the script source for this new component below the comment that reads `<!-- TODO Import additional components -->`.
+```javascript
+...
+/* TODO: Add form data properties and methods */
+  data() {
+    return {
+      passenger: '',
+      glutenfree: '',
+      vegan: '',
+      allergies: '',
+      allergydesc: '',
+    }
+  },
+   computed: {
+    roomService() {
+      if (this.berth) {
+        return `: No charge`;
+      }
+      return `: $24.99`;
+    }
+  },
+/* TODO: Add methods */
+  methods: {
+    onSubmit() {
+      let foodPrefs = {
+        passenger: this.passenger,
+        glutenfree: this.glutenfree,
+        vegan: this.vegan,
+        allergies: this.allergies,
+        allergydesc: this.allergydesc,
+      }
+      this.$emit ('foodPrefSubmitted', foodPrefs);
 
-## Use the component in the template
-<review-form></review-form>
+      this.passenger = ''
+      this.glutenfree = ''
+      this.vegan = ''
+      this.allergies = ''
+      this.allergydesc = ''
+    }
+  }
+})
+...
+```
 
-The form works, but nothing happens with the data when we click the Submit button.
-We have added a listener in the form to `$emit` the event when the button is submitted, but we also need to add a listener in the template to receive the information.
+![Screenshot showing the HTML page with a selected product image on the left and 4 thumbnail images below it. The first thumbnail from the left is highlighted with a yellow background. Product name and description are displayed on the right. Two components are located at the bottom left. Two components are shown at the bottom left of the screen: "Food Preferences" and "Welcome Back to the Galaxy!" is shown only if this person is a previous passenger on a Galaxy Tour.](../media/m09_Food-Pref-Form.png)
 
-In the `<review-form>` tag we add a listener that is attached to a method that will be executed when a review-form is submitted.
-- In the **ReviewForm.js** file, add the listener to the `<review-form>` tag below the comment that reads TODO: Add form component here
+## Listen for the emitted form data in the main application
 
-Add reviews data array
+The form works now, but nothing happens when we click the `Submit` button because our application does not yet have access to the data. We need to create a `listener` in the Vue template to receive the data emitted from the `component`. We will add this listener to the `<food-prefs>` tag where it is displayed in the **index.html** page. Then we need to create the `addFoodPrefs` method in our **main.js** Vue application.
 
-Add review method that pushes the new review into the reviews array.
+- In **index.html** add a listener `@foodPrefSubmitted` to the `<food-prefs>` tag below the comment that reads `<!-- TODO: Add listener for food-prefs data -->`.
+  - The listener will execute a method named `addFoodPrefs`.
 
-## Display the reviews
+```html
+...
+<!-- TODO: Add listener for food-prefs data -->
+<food-prefs :berth="berth" @foodPrefSubmitted="addFoodPrefs"></food-prefs>
+...
+```
+
+Now we modify the **main.js** application file to create an array data property and a method that will push the data elements into that array when data is emitted from the form that resides in our component.
+
+- Add an array data property below the comment that reads `//TODO: create array property`.
+
+```javascript
+...
+berth: true,
+previous: true,
+//TODO: create array property
+foodPrefsData: [],
+}
+...
+```
+
+- Create a method `addFoodPrefs` below the comment that reads `//TODO: Create addFoodPrefs method`.
+
+```javascript
+...
+//TODO: Create addFoodPrefs method
+addFoodPrefs(foodPref) {
+    this.foodPrefs.push(foodPref);
+}
+...
+```
+
+## Display the form data in the template
+

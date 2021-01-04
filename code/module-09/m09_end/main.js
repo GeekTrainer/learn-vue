@@ -23,6 +23,9 @@ const app = Vue.createApp({
             onSale: false,
             berth: true,
             previous: true,
+            //TODO: Add array properties
+            foodprefs: [],
+            reviews: [],
         }
     },
     methods: {
@@ -91,6 +94,13 @@ const app = Vue.createApp({
             this.isSelectedBullet = false;
             this.isSelectedAlien = true;
         },
+        //TODO: Create method to push array
+        addFoodpref(foodpref) {
+            this.foodprefs.push(foodpref);
+        },
+        addReview(review) {
+            this.reviews.push(review);
+        }
     },
     computed: {
         featureDetails() {

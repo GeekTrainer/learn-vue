@@ -12,7 +12,7 @@ app.component('food-prefs', {
     <h4 style="text-align:center;">Food Preferences</h4>
     <p style="text-align:center;"><strong>Room Service Fee</strong>{{ roomService }}</p>
     <p>Please fill out this form to let us know your food preferences.</p>
-    <form>
+    <form @submit.prevent="onSubmit">
     <label for="passenger">Passenger:  </label>
     <input id="passenger" v-model="passenger">
 
@@ -43,7 +43,7 @@ app.component('food-prefs', {
     <div style="text-align:center;"><input class="button" type="submit" value="Submit"></div>
     </form>
   </div>`,
-/* TODO: Add form data properties */
+/* TODO: Add form data properties and methods */
   data() {
     return {
       passenger: '',
@@ -60,5 +60,24 @@ app.component('food-prefs', {
       }
       return `: $24.99`;
     }
-  }
+  },
+  /* TODO: Add methods */
+  methods: {
+    onSubmit() {
+      let foodprefanswers = {
+        passenger: this.passenger,
+        glutenfree: this.glutenfree,
+        vegan: this.vegan,
+        allergies: this.allergies,
+        allergydesc: this.allergydesc,
+      }
+      this.$emit ('foodpref-submitted', foodprefanswers);
+
+      this.passenger = ''
+      this.glutenfree = ''
+      this.vegan = ''
+      this.allergies = ''
+      this.allergydesc = ''
+    }
+  },
 })

@@ -1,6 +1,6 @@
 Our sample project is a fictitious travel agency for booking space travel. Our cruise around the Galaxy will take several days, so we will need to feed our passengers during the trip. We want to know which passengers have particular food sensitivities or allergies, so we need to create a form that allows people to submit this information.
 
-Our application already uses `v-bind`, which provides one-way binding of the data in our **main.js** file to our HTML interface, which is often referred to as the **template**. In this module you will add a form to the **Food Preferences** component that is located of the bottom left of the HTML template.
+Our application already uses `v-bind`, which provides one-way binding of the data in our **main.js** file to our HTML interface, which is often referred to as the Vue **template**. In this module you will add a form to the **Food Preferences** component that is located of the bottom left of the HTML template.
 
 When working with forms, one-way binding is not enough. We also have to provide binding from the template to the Vue data properties in our **main.js** file. When a user enters information into a form we want to record that information and store the data in Vue. In this module you will learn how to create forms that implement two-way data binding using `v-model`.
 
@@ -14,10 +14,10 @@ If you completed the prior exercises, your HTML file should look like the image 
 
 Upon completion of this module you will:
 
-- Add a form to the "Food Preferences" component, and the data properties to be captured when the form is submitted
-- Use `v-model` on each form element to create two-way data binding between the form and Vue data properties
-  - Add a method that will be executed when the Submit button is clicked
-  - Add a listener to the form to execute the mthod
-  - Add a listener to the HTML template to receive the data from the form using `$emit`
-  - Clear out the fields in the form after submission so the form can be re-used
-- Display the saved data within the HTML template
+- Add a form to the "Food Preferences" component, as well as the data properties to be captured when the form is submitted.
+- Use `v-model` on each form element to create two-way data binding between the form and Vue data properties.
+  - Add a method that will be executed when the Submit button is clicked.
+  - Add a listener to the form to execute the method.
+  - Add a listener to the HTML template to receive the data from the form using `$emit`.
+  - Clear out the fields in the form after submission so the form can be re-used.
+- Display the saved data within the HTML template.
