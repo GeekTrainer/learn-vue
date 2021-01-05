@@ -1,5 +1,4 @@
-app.component('food-prefs', {
-  //TODO: Add berth prop
+app.component('foodprefs-form', {
   props: {
     berth: {
       type: Boolean,
@@ -7,13 +6,17 @@ app.component('food-prefs', {
     }
   },
   template: 
+  /* TODO: Add <form> element below last <p> tag */
   /*html*/
   `<div class="componentBox">
-    <h4 style="text-align:center;">Food Preferences</h4>
+    <h3 style="text-align:center;">Food Preferences</h3>
     <p style="text-align:center;"><strong>Room Service Fee</strong>{{ roomService }}</p>
     <p>Please fill out this form to let us know your food preferences.</p>
   </div>`,
-  //TODO: Add computed property
+/* TODO: Add form data properties and methods */
+
+/* TODO: Add methods */
+
   computed: {
     roomService() {
       if (this.berth) {
@@ -21,5 +24,5 @@ app.component('food-prefs', {
       }
       return `: $24.99`;
     }
-  }
+  },
 })

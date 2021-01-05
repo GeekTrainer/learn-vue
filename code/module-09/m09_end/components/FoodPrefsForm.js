@@ -12,6 +12,7 @@ app.component('foodprefs-form', {
     <h3 style="text-align:center;">Food Preferences</h3>
     <p style="text-align:center;"><strong>Room Service Fee</strong>{{ roomService }}</p>
     <p>Please fill out this form to let us know your food preferences.</p>
+
     <form @submit.prevent="onSubmit">
     <h4>Submit food preferences</h4>
     <label for="passenger">Passenger name:</label>
@@ -56,19 +57,11 @@ app.component('foodprefs-form', {
       vegan: '',
     }
   },
-   computed: {
-    roomService() {
-      if (this.berth) {
-        return `: No charge`;
-      }
-      return `: $24.99`;
-    }
-  },
   /* TODO: Add methods */
   methods: {
     onSubmit() {
       if (this.passenger === '' || this.allergies === '' || this.allergydesc === '' || this.glutenfree === '' || this.vegan === '') {
-        alert('Review is incomplete. Please fill out every field.')
+        alert('Form is incomplete. Please fill out every field.')
         return
       }
 
@@ -89,5 +82,13 @@ app.component('foodprefs-form', {
       this.vegan = '';
 
     },
-  }
+  },
+  computed: {
+    roomService() {
+      if (this.berth) {
+        return `: No charge`;
+      }
+      return `: $24.99`;
+    }
+  },
 })
