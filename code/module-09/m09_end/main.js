@@ -23,7 +23,7 @@ const app = Vue.createApp({
             onSale: false,
             berth: true,
             previous: true,
-            //TODO: Add array property
+            //TODO: Create array property
             foodprefs: [],
             reviews: [],
         }

@@ -23,6 +23,8 @@ const app = Vue.createApp({
             onSale: false,
             berth: true,
             previous: true,
+            //TODO: Create array property
+
         }
     },
     methods: {
@@ -91,6 +93,10 @@ const app = Vue.createApp({
             this.isSelectedBullet = false;
             this.isSelectedAlien = true;
         },
+        //TODO: Create method to push data into array
+
+
+
     },
     computed: {
         featureDetails() {

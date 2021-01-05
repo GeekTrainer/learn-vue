@@ -91,7 +91,7 @@ Now we need to create a two-way binding between our template and the data in the
     <p style="text-align:center;"><strong>Room Service Fee</strong>{{ roomService }}</p>
     <p>Please fill out this form to let us know your food preferences.</p>
 
-    <form @submit.prevent="onSubmit">
+    <form>
     <h4>Submit food preferences</h4>
     <label for="passenger">Passenger name:</label>
     <input id="passenger" v-model="passenger">
@@ -130,7 +130,7 @@ Now we need to create a two-way binding between our template and the data in the
 
 ## Add a listener to the form to execute an event
 
-We need to add a `listener` to the form in **FoodPrefsForm.js** so that when the user clicks the `Submit` button the form will capture the event and execute a method. We will use `@submit.prevent="onSubmit"` for the listener and place it in the opening `<form>` tag. The **prevent** modifier keeps the browser from refreshing the page so that the user experience remains seemless.
+We need to add a `listener` to the `<form>` tag in **FoodPrefsForm.js** so that when the user clicks the `Submit` button the form will capture the event and execute a method. We will use `@submit.prevent="onSubmit"` for the listener and place it in the opening `<form>` tag. The **prevent** modifier keeps the browser from refreshing the page so that the user experience remains seemless.
 
 - Add a listener to the opening `<form>` tag below the comment that reads `/* TODO: Add <form> element below last <p> tag */`.
 - Add a trigger to the listener so it will execute a method named `onSubmit`.
@@ -215,7 +215,7 @@ We need to create a `listener` in the Vue template to receive the data emitted f
 
 Now we modify the **main.js** application file to create an array data property and a method that will push the data elements into that array when data is emitted from the form that resides in our component.
 
-- Add an array data property to **main.js** below the comment that reads `//TODO: create array property`.
+- Add an array data property to **main.js** below the comment that reads `//TODO: Create array property`.
 
 ```javascript
 ...
@@ -245,7 +245,7 @@ The form works now, as shown in the image below. However, when we click the `Sub
 
 Create a component named **FoodPrefsList.js** to display the data that is generated when a Food Preferences form is submitted. Make sure you include a prop to pull the data arraty "down" into this component from the template.
 
-- Create a `foodprefs` prop at the top of the component that is defined as type `Array`.
+- Create a **foodprefs** `prop` at the top of the component that is defined as type `Array`.
 - Add the `html` elements that will be displayed in the template.
 
 ```javascript
@@ -318,3 +318,7 @@ We can accomplish this by adding a simple `if` statement at the beginning of our
 ...
 ```
 
+When a user fills out the form, but one or more fields are empty when they click the `Submit` button, the browser will pop up an alert message as shown in the image below.
+
+![Screenshot showing the HTML page with a selected product image on the left and 4 thumbnail images below it. The first thumbnail from the left is highlighted with a yellow background. Product name and description are displayed on the right. Two components are shown at the bottom left of the screen. The first component highlighted with a light yellow background contains the sample data that was submitted in the form. The form fields are now cleared in the "Food Preferences" form.](../media/m09_Food-Pref-Form_alert.png)
+- The Vue application performs a validation check on the data fields in the form "after" the `Submit` button is clicked but "before" executing the `onSubmit` method.
