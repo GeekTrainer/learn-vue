@@ -145,6 +145,11 @@ p {
   font-size: 18px;
 }
 
+.componentBox .button {
+  display: block;
+  margin: 20px auto;
+}
+
 .print-list {
   width: 66%;
   padding: 0 0 0 20px;

@@ -7,8 +7,7 @@ app.component('foodpref-list', {
   },
   template:
   /*html*/
-  `
-  <div class="print-list">
+  `<div class="print-list">
   <h3>Food preferences submitted:</h3>
     <ul>
       <li v-for="(foodpref, index) in foodprefs" :key="index">
@@ -22,6 +21,5 @@ app.component('foodpref-list', {
         Vegan:  {{ foodpref.vegan }} 
       </li>
     </ul>
-  </div>
-`
+  </div>`
 })

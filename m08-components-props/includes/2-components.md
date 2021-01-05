@@ -52,6 +52,11 @@ If you are using VS Code and you installed the `es-6-string-html` extension, you
 .componentBox p, li {
   font-size: 18px;
 }
+
+.componentBox .button {
+  display: block;
+  margin: 20px auto;
+}
 ...
 ```
 

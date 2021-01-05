@@ -23,7 +23,7 @@ const app = Vue.createApp({
             onSale: false,
             berth: true,
             previous: true,
-            //TODO: Add array properties
+            //TODO: Add array property
             foodprefs: [],
             reviews: [],
         }
@@ -94,7 +94,7 @@ const app = Vue.createApp({
             this.isSelectedBullet = false;
             this.isSelectedAlien = true;
         },
-        //TODO: Create method to push array
+        //TODO: Create method to push data into array
         addFoodpref(foodpref) {
             this.foodprefs.push(foodpref);
         },

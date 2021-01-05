@@ -9,7 +9,7 @@ app.component('review-form', {
   /*html*/
   `<div class="componentBox">
   <h4 style="text-align:center;">{{ rateTrip }}</h4>
-  <p v-if="previous">Please tell us about your latest trip with Relecloud Galaxy Tours.</p>
+  <p v-if="previous">Please tell us about your latest trip with <strong>Relecloud Galaxy Tours</strong> by filling out the form below.</p>
   <p v-else>Please provide comments or submit questions regarding Relecloud Galaxy Tours.</p>
   </div>
 
@@ -18,7 +18,7 @@ app.component('review-form', {
     <label for="name">Name:</label>
     <input id="name" v-model="name">
 
-    <label for="review">Review:</label>      
+    <label for="review">Review Comments:</label>      
     <textarea id="review" v-model="review"></textarea>
 
     <label for="rating">Rating:</label>
@@ -31,7 +31,7 @@ app.component('review-form', {
     </select>
 
     <br>
-    <label for="recommend">Would you recommend this product?</label>
+    <label for="recommend">Would you recommend a <strong>Relecloud Galaxy Cruise</strong>?</label>
     <select id="recommend" v-model="recommend">
       <option>Yes</option>
       <option>No</option>
@@ -51,7 +51,7 @@ app.component('review-form', {
   methods: {
     onSubmit() {
       if (this.name === '' || this.review === '' || this.rating === null || this.recommend === null) {
-        alert('Review is incomplete. Please fill out every field.')
+        alert('Form is incomplete. Please fill out every field.')
         return
       }
 
