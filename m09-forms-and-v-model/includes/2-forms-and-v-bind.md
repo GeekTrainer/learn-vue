@@ -77,6 +77,7 @@ In this section you will create a `<form>` tag in the **FoodPrefsForm.js** file,
 ## Use v-model to create two-way binding from template to data
 
 Now we need to create a two-way binding between our template and the data in the form we just created. On each form element we add the `v-model` directive, using the same `id` as the element in our `v-model` directive. For example, the tag `<input id="passenger">` becomes `<input id="passenger" v-model="passenger">`.
+
 - Add the `v-model` directive to each form element below the comment that reads `/* TODO: Add <form> element below last <p> tag */`.
 - The code in the `template` section of **FoodPrefsForm.js** should now look like the code snippet shown here.
 
@@ -127,11 +128,9 @@ Now we need to create a two-way binding between our template and the data in the
 ...
 ```
 
-## Add a listener to the form and emit the event
+## Add a listener to the form to execute an event
 
 We need to add a `listener` to the form in **FoodPrefsForm.js** so that when the user clicks the `Submit` button the form will capture the event and execute a method. We will use `@submit.prevent="onSubmit"` for the listener and place it in the opening `<form>` tag. The **prevent** modifier keeps the browser from refreshing the page so that the user experience remains seemless.
-
-Then we need to create the method `onSubmit` to define actions that will be performed when the event occurs.
 
 - Add a listener to the opening `<form>` tag below the comment that reads `/* TODO: Add <form> element below last <p> tag */`.
 - Add a trigger to the listener so it will execute a method named `onSubmit`.
@@ -150,9 +149,15 @@ Then we need to create the method `onSubmit` to define actions that will be perf
 ...
 ```
 
-- Create the `onSubmit` method in **FoodPrefsForm.js** for capturing form data and storing it in data properties (below the comment that reads `/* TODO: Add methods */`).
+## Emit the event
+
+Now we need to create the method `onSubmit` to define actions that will be performed when the event occurs, but we have a new problem to address. You already know how to use a `prop` in a `component` to pull down data that is available in the application template for use in your component. We can think of the template as the "parent" component. Now we need to push data "up" from the child component, in this case **FoodPrefsForm.js**, to make our form data available to the parent or to other child components within our Vue application. We can accomplish this using `$emit`.
+
+We will emit our event by assigning it an event name. Then we add a listener for that event in our template, or in any other component that needs to receive information about this event. The listener can, in turn, execute another method to perform specific operations with the data it receives from our form event.
+
+- Create the `onSubmit` method in **FoodPrefsForm.js** for capturing form data and storing it in data properties below the comment that reads `/* TODO: Add methods */`.
   - The method will create a `foodprefanswers` object that will capture the data submitted in the form.
-  - Emit a `review-submitted` event that passes the data contained in `foodprefanswers` "up" to the HTML interface, since it exists in a `component`.
+  - Emit a `review-submitted` event that passes the data contained in `foodprefanswers` "up" to the HTML interface.
   - Clear out the form fields so the form can be re-used after the data has been transmitted.
 
 ```javascript
