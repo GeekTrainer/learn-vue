@@ -24,12 +24,13 @@
               <img src="./assets/images/fantasy-5732286_1284x856.jpg" @click="featureBulletTrain" :class="{ highlight: isSelectedBullet }" style="width:12%; margin-left:12px; margin-right:0px;">
               <img src="./assets/images/spaceship-5730066_1284x856.jpg" @click="featureAlienShip" :class="{ highlight: isSelectedAlien }" style="width:12%; margin-left:12px; margin-right:0px;">
             </div>
-            <!-- TODO: Add listener for food-prefs data -->
+            <!-- TODO: Add foodpref-list -->
             <foodpref-list v-if="foodprefs.length" :foodprefs="foodprefs"></foodpref-list>
-            <foodprefs-form @foodpref-submitted="addFoodpref"></foodprefs-form>
+            <!-- TODO: Add listener for foodprefs-form -->
+            <foodprefs-form @foodpref-submitted="addFoodpref" :berth="berth"></foodprefs-form>
             <br>
             <review-list v-if="reviews.length" :reviews="reviews"></review-list>
-            <review-form @review-submitted="addReview"></review-form>
+            <review-form @review-submitted="addReview" :previous="previous"></review-form>
           </div>
         <div class="product-desc">
             <h3 class="featureHeader" v-show="bookingType=='feature'">Add Trip Feature</h3>
@@ -65,12 +66,12 @@
     <!-- Import Vue app after DOM is loaded -->
     <script src="./main.js"></script>
 
-    <!-- Import Vue components -->
+    <!-- TODO: Import Vue components -->
     <script src="./components/FoodPrefsForm.js"></script>
     <script src="./components/FoodPrefsList.js"></script>
     <script src="./components/ReviewForm.js"></script>
     <script src="./components/ReviewList.js"></script>
-
+    <script src="./components/test.vue"></script>
     <!-- Mount Vue App to the DOM -->
     <script>
       const mountedApp = app.mount('#app')

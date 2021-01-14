@@ -1,0 +1,12 @@
+{
+    "dependencies": {
+        "vue": "^3.0.2",
+    },
+    "devDependencies": {
+        "snowpack": "^2.17.1"
+    },
+    "scripts": {
+        "build": "npx snowpack build",
+        "start": "npx snowpack dev"
+    }
+}
