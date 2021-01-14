@@ -3,6 +3,7 @@ If you completed the prior exercises, your HTML file should look like the image 
 Before users decide to book a cruise, they will want to know how much it costs. So the next thing we need to do is add information about pricing.
 
 ![Screenshot showing the HTML page with a selected product image on the left; product name and description are shown on the right, followed by two paragraphs that read "Sold out! Please check back for our next available shuttle." and "Bookings for our next cruise shuttle will be available in February, 2051.](../media/m4-html-start.png)
+
 - If the `data()` property for `numSeatsAvailable` is set to `0`, the text in the product detail section will inform users that this cruise is "Sold out!"
 - An additional paragraph will be displayed that asks users to check back in February, 2051 to book seats on the next cruise shuttle.
 
