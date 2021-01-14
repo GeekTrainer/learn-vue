@@ -7,10 +7,10 @@ We currently have our application interface working so that clicking any of the 
 ## Add feature information
 
 Start by adding a new class to the **styles.css** file in the `assets` folder. Then add an `<h3>` tag in your **index.html** file for display of a Feature Header.
+
 - Add a class named `featureHeader` below the comment that reads `/* TODO: Add featureHeader class */`
 
 ```css
-...
 /* TODO: Add featureHeader class */
 .featureHeader {
   margin-top: 44px;
@@ -22,17 +22,15 @@ Start by adding a new class to the **styles.css** file in the `assets` folder. T
   border-top-color: #fc810e;
   border-bottom-color: #fc810e;
 }
-...
 ```
+
 - Add an `<h3>` tag below the comment that reads `<!-- TODO: Create header for features -->`
   - Style the `<h3>` tag with class `featureHeader`
   - Show the `<h3>` tag only when the bookingType is `feature`
 
 ```html
-...
 <!-- TODO: Create header for features -->
 <h3 class="featureHeader" v-show="bookingType=='feature'">Add Trip Feature</h3>
-...
 ```
 
 The new `<h3>` tag should be displayed now if you view your **index.html** page in a browser and then click any of the 3 feature images to the right of the main thumbnail image. The problem is that we still have information for the main cruise displayed below the new header, so let's clear out that area so we can use that space for feature information when a feature is selected.
@@ -41,7 +39,6 @@ The new `<h3>` tag should be displayed now if you view your **index.html** page 
   - Do not add this setting to the buttons because they are being managed independently with other application variables.
 
 ```html
-...
 <!-- TODO: Display only for cruises-->
 <p v-if="bookingType=='cruise' && numSeatsAvailable > 12" style="color:green;">Reservations available</p>
 <p v-else-if="bookingType=='cruise' && numSeatsAvailable <= 12 && numSeatsAvailable > 0" style="color:red;">Almost Sold Out!</p> 
@@ -56,7 +53,6 @@ The new `<h3>` tag should be displayed now if you view your **index.html** page 
 <ul v-show="bookingType=='cruise' && numSeatsAvailable > 0">
   <li v-for="groupDiscount in groupDiscounts">{{ groupDiscount }}</li>
 </ul>
-...
 ```
 
 If you display your HTML page now and click any of the feature thumbnails, you should see only the new **Add Trip Feature** heading, the product name, and the product description for any selected feature. Now it's time to add a few more details that are specific to each trip feature so that passengers will want to add these attractions to their basic cruise package.
@@ -64,17 +60,15 @@ If you display your HTML page now and click any of the feature thumbnails, you s
 - Add new properties in the `data()` section of your **main.js** file below the comment that reads `//TODO: Add feature properties`.
 
 ```javascript
-...
 //TODO: Add feature properties
 featurePrice: 0,
 featureQty: 0,
 onSale: false,
-...
 ```
+
 - Add new settings to each of the three feature methods below the comment that reads `//TODO: update feature methods`
 
 ```javascript
-...
 //TODO: update feature methods
 featureBookCruise() {
     this.productName = 'Book a Cruise to the Moon';
@@ -133,7 +127,6 @@ featureAlienShip() {
     this.isSelectedBullet = false;
     this.isSelectedAlien = true;
 },
-...
 ```
 
 ## Display new information using computed properties
@@ -150,14 +143,12 @@ In your **main.js** file, make sure the `featureQty` is set to `0` for the `feat
   - Add the text " Tickets remaining"
 
 ```javascript
-...
 //TODO: Add computed properties
 computed: {
     featureDetails() {
         return '$' + this.featurePrice + ' (each person) - ' + this.featureQty + ' Tickets remaining';
     },
 }
-...
 ```
 
 Finally, add the following new content to your **index.html** file below the comment that reads `<!-- TODO: Create feature contents -->`.
@@ -170,7 +161,6 @@ Finally, add the following new content to your **index.html** file below the com
   - Else display "Tickets Sold Out!"
 
 ```html
-...
 <!-- TODO: Create feature contents -->
 <div v-show="bookingType=='feature'">
   <h3>Cost and Availability</h3>
@@ -179,7 +169,6 @@ Finally, add the following new content to your **index.html** file below the com
   <p v-else><span style="color: red">Tickets Sold Out!</span></p>
   <p v-show="onSale==true" style="color: blue">{{ sale }}</p>
 </div>
-...
 ```
 
 You may be wondering why we don't use another computed property to represent whether tickets are available for each feature rather using the inline expression `featureQty > 0`. This is because a computed property cannot change the value of a piece of data. When we need to change data, we must use a method, and a method would need to be fired whenever the data for `featureQty` changes. A computed property is a good choice when you need to change the output display for "existing" data.
@@ -187,9 +176,11 @@ You may be wondering why we don't use another computed property to represent whe
 Your final rendered interface should look like the screenshots displayed below.
 
 ![Screenshot showing the HTML page with a selected feature image on the left and 4 thumbnail images below it. The second thumbnail from the left is highlighted with a yellow background. Feature name, description, cost and number of tickets remaining are displayed on the right for the "Asteroid Fireworks Display." "Tickets Available" is displayed in green text. At the bottom are two buttons labeled "Add Feature" and "Remove Item". The "Remove Item" button is disabled](../media/m07-asteroid-fireworks.png)
+
 - Asteroid Fireworks Display description, price and tickets remaining when thumbnail #2 is clicked
   - "Tickets available" is displayed because `featureQty` computed value is greater than 0.
 
 ![Screenshot showing the HTML page with a selected feature image on the left and 4 thumbnail images below it. The second thumbnail from the left is highlighted with a yellow background. Feature name, description, cost and number of tickets remaining are displayed on the right for the "Alien Spaceship Ride-a-long." "Tickets Sold Out!" is displayed in red text. At the bottom are two buttons labeled "Add Feature" and "Remove Item". The "Remove Item" button is disabled](../media/m07-alien-spaceship.png)
+
 - **Alien Spaceship Ride-a-long** description, price and tickets remaining when thumbnail #4 is clicked
-  - "Tickets Sold Out!" is displayed because `featureQty` is 0.
+  - "Tickets Sold Out!" is displayed because `featureQty` is 0

@@ -9,11 +9,9 @@ We already have a `disabledButton` class in our **styles.css** file that sets th
   - Use the `v-bind:class` directive to apply the `disabledButton` class style when the value of cart is 0
 
 ```html
-...
 <button class="button" @click="addItemToCart">Book a Cruise</button>
 <!-- TODO: Disable Remove Item button -->
 <button class="button" :disabled="cart==0" :class="{ disabledButton:cart==0 }" @click="removeItemFromCart">Remove Item</button>
-...
 ```
 
 When viewed in a live browser your HTML page should look like the image below.
