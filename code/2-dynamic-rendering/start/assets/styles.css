@@ -1,21 +1,28 @@
 body {
   background-color: #f2f2f2;
-  margin: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin: 0, 5%;
   font-family: tahoma;
   color: #282828;
+  font-size: 12px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  vertical-align: middle;
+  margin: 5px;
 }
 
 .button {
-  margin: 14px;
   background-color: #39495c;
   border-radius: 5px;
-  font-size: 18px;
-  width: 160px;
-  height: 60px;
   color: white;
-  padding: 20px;
+  padding: 2px;
   text-align: center;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .cart {
@@ -38,22 +45,6 @@ body {
 .disabledButton {
   background-color: #d8d8d8;
   cursor: not-allowed;
-}
-
-h1 {
-  font-size: 50px;
-}
-
-h2 {
-  font-size: 40px;
-}
-
-h3 {
-  font-size: 25px;
-}
-
-h4 {
-  font-size: 20px;
 }
 
 img {
@@ -125,6 +116,18 @@ p {
   margin: 40px;
   border: 2px solid #d8d8d8;
   background-color: white;
+}
+
+.review-container {
+  width: 425px;
+  padding: 20px;
+  background-color: white;
+  margin-left: 40px;
+  border: 2px solid #d8d8d8;
+}
+
+.review-container li {
+  margin-bottom: 30px;
 }
 
 .review-form .button {
