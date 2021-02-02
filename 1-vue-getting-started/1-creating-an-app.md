@@ -1,4 +1,4 @@
-To start using Vue.js we need to install the framework, create an app, and then register it on the page. Let's see how this is done.
+To start using Vue.js we need to install the framework, create a Vue app, and then register it on the page (tell the page how to use the app). Let's see how this is done.
 
 ## Adding Vue.js to a page
 
