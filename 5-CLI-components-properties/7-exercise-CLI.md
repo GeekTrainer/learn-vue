@@ -1,0 +1,1 @@
+The exercise will have them take the basic application created by the CLI template and expand it. 
