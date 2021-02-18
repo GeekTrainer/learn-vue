@@ -77,7 +77,7 @@ You will be asked to set several options (preferences) before the project is cre
 
 ![Screenshot showing the Command Prompt terminal on a Windows computer. The "create project" command is asking the user "Where do you prefer placing config for Babel, ESLint, etc.?" ](media/Vue-CLI_04.png)
 
-You can save your settings as a preset or choose to create the project. Note that your project will be created in the folder in which you ran the ```vue create project``` command in a subfolder named after the projectname you set.
+You can save your settings as a preset or choose to create the project. Note that your project will be created in the folder in which you ran the `vue create project` command in a subfolder named after the projectname you set.
 
 If you created the project in another directory, you'll need to **navigate** to the `directory` where your project is located, using the command shown below. This is so you can run the project to test that everything got created properly. (Note that suggested commands are shown at the bottom of the confirmation screen that indicates your project was created successfully.)
 
