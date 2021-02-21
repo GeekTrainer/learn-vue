@@ -16,5 +16,5 @@ Upon completion of this module you will understand the following:
 - Knowledge of JavaScript
 - Familiarity with Vue.js and directives
 - [Git](https://git-scm.com/)
-- A code editor, such as [Visual Studio Code](https://code.visualstudio.com)
+- [Visual Studio Code](https://code.visualstudio.com)
   - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
