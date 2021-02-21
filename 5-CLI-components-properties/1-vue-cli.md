@@ -1,6 +1,7 @@
 This section demonstrates how to use the Vue CLI to build a starter project that provides a skeleton framework that you can use to rapidly deploy a Vue application. In the next section we will demonstrate how to build a starter project using the Vue graphical user interface (UI).
 
 Some of the advantages of using the CLI to create a Vue project include the statements listed below. The CLI:
+
 - Selects the libraries that your project will use.
 - Configures Webpack, so that all JavaScript files, CSS files and other dependencies get properly bundled together and optimized for deployment. This can reduce loading speed for your application.
 - Allows you to use single-file `.vue` components, `TypeScript`, `SCSS`, `Pug` and the latest versions of `ECMAScript`.
@@ -13,8 +14,6 @@ In order to use Vue CLI, you will need to run `npm`, which is the package manage
 
 ```bash
 node -v
-``` 
-```bash
 npm -v
 ```
 
@@ -38,9 +37,11 @@ npm install -g @vue/cli
 On a Windows computer these files will likely be located at: `C:\Program Files\nodejs\node_modules\npm`.
 
 On a Mac computer these files will likely be located at: `/usr/local/lib/node_modules/@vue/.`
+
 ## Create a project
 
 After installation of the Vue CLI, you can create your project in two different ways:
+
 - using commands in a terminal
 - using the Vue UI
 

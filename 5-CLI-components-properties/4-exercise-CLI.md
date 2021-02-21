@@ -11,21 +11,25 @@ We'll call this new page "Learn" and we'll provide some basic resources on how a
 4. Now let's create the page. Find the `views` folder under `src`, right click and select **New File**. Name the file `Learn.vue`.
 5. Paste in the following code and save the file:
    
-`<template>
-    <h1>This is the Learning Page!</h1>
-</template>`
+    ```html
+    <template>
+        <h1>This is the Learning Page!</h1>
+    </template>
+    ```
 
-This is the HTML that will render when the page loads. You can add whatever else you would like including links. Use the `Home.vue` and `About.vue` files as a template.
+    This is the HTML that will render when the page loads. You can add whatever else you would like including links. Use the `Home.vue` and `About.vue` files as a template.
 
 6. Now lets ensure the routes work. Open the `router` folder in Visual Studio Code Explorer and open the `index.js` file. 
 7. Add a route to the `const routes` variable by typing a comma after the last route in the JSON list (the default is the "About" route) and add the following code and save the file:
 
-`   {
-    path: "/learn",
-    name: "Learn",
-        component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Learn.vue")
-  }`
+    ```javascript
+    {
+        path: "/learn",
+        name: "Learn",
+            component: () =>
+            import(/* webpackChunkName: "about" */ "../views/Learn.vue")
+    }
+    ```
 
 That's it! You just added your first Vue component with a route to the new page. If you run `npm run serve' you should see a page that looks similar to the one below. If you click on the "Learn" link, Vue will load your new page into the viewport.  
 

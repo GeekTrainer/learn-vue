@@ -1,4 +1,16 @@
-- event handlers
-- updating state
-- forms
-- computed properties??
+Users typically modify data in a web application through a form. Since Vue.js is about working with dynamic data, it has a robust mechanism for binding data to forms. We can also manage events, performing different operations when a user clicks on a button or otherwise interacts with the page. And we even have the ability to add in values which are computed dynamically, allowing us to minimize the amount repeated code.
+
+In this module you will learn how to:
+
+- bind model data to a form
+- add event handlers
+- create computed values
+
+Prerequisites
+
+- Knowledge of HTML and CSS
+- Knowledge of JavaScript
+- Familiarity with Vue.js and directives
+- [Git](https://git-scm.com/)
+- [Visual Studio Code](https://code.visualstudio.com)
+  - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
