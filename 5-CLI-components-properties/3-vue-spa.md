@@ -6,12 +6,14 @@ You should see two main sections in this file: a `<template>` section and a `<st
 
 ## The Template Section
 
+
 If you look closely at this section, you'll notice that it's essentially HTML that will be rendered to the application pages at run time. In this HTML you can use Vue constructs as well as general HTML. In `App.vue` you should see two `router-link` directives which pull in other `.vue` files that will be used in the final rendering. You can examine the `Home.vue` and `About.vue` files in the `views` subfolder. When you examine these files, you'll see content that is rendered in your sample application and carefully examining the structure will help you understand how you can build on this model for your own application.
 
 >[!HINT]
 >Hint: The routes are declared in `index.js` in the `router` subfolder and are imported in `main.js` which is a peer to `App.vue`.
 
 ## The Script Section
+
 
 As mentioned earlier, the script section of a `.vue` file contains JavaScript that will be used when the project is rendered. Let's take a look at another `.vue` file to see how this works.
 
@@ -24,6 +26,7 @@ You should notice that the JavaScript in this section imports yet *another* `.vu
 You can think about how this might work when building a project with a team of developers. If the project is designed and architected appropriately, various components can be given to specific developers to work on. They can create `.vue` files with all the HTML, scripts, and styles those components require and then, at build time, all the components can be brought together to create a single application.
 
 ## The Style Section
+
 
 Very simply, this section contains CSS styles that can be referenced in the HTML in the `<template>` section. Because of the way Vue brings each component together to render a single app, styles used in any component can be referenced in any other. There's one exception: if a specific style includes the `scoped` keyword, that style will only be able to be referenced by the component in which the style appears.
 

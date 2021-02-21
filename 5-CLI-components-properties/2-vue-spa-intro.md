@@ -4,8 +4,6 @@ In this and subsequent topics, we'll be developing a single-page application (SP
 
 ## Vue SPAs
 
-### Main Application
-
 The CLI will install all the files you need for a single-page application. When the scripts are finished running, your folder structure should look something like this:
 
 ![Screenshot showing the File Explorer on a Windows computer. The Explorer window shows the file structure of the application the command line interface installed. ](media/Vue-SPA_01.png)
