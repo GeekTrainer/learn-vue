@@ -8,6 +8,7 @@ In this module you will learn how to:
 
 Prerequisites
 
+- A basic understanding of Vue.js
 - Knowledge of HTML and CSS
 - Knowledge of JavaScript
 - Familiarity with Vue.js and directives

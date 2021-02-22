@@ -1,0 +1,171 @@
+body {
+  background-color: #f2f2f2;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin: 0, 5%;
+  font-family: tahoma;
+  color: #282828;
+  font-size: 12px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+.button {
+  background-color: #39495c;
+  border-radius: 5px;
+  color: white;
+  padding: 2px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.cart {
+  margin: 25px 100px;
+  float: right;
+  border: 1px solid #d8d8d8;
+  padding: 30px 30px;
+  background-color: white;
+}
+
+.color-circle {
+  width: 50px;
+  height: 50px;
+  margin-top: 8px;
+  border: 2px solid #d8d8d8;
+  border-radius: 50%;
+}
+
+
+.disabledButton {
+  background-color: #d8d8d8;
+  cursor: not-allowed;
+}
+
+img {
+  border: 2px solid #d8d8d8;
+  width: 70%;
+  margin: 40px;
+  padding: 15px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+li {
+  font-size: 18px;
+}
+
+.nav-bar {
+  background: linear-gradient(-50deg, #010801, #0d0d60);
+  height: 60px;
+  margin-bottom: 25px;
+}
+
+.out-of-stock-img {
+  opacity: 0.5;
+}
+
+p {
+  font-size: 22px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product-images,
+.product-desc {
+  width: 50%;
+}
+
+.print-list {
+  width: 66%;
+  padding: 0 0 0 20px;
+  background-color: lightyellow;
+  margin-left: 40px;
+  border: 2px dashed #d8d8d8;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  width: 66%;
+  padding: 20px;
+  margin: 40px;
+  border: 2px solid #d8d8d8;
+  background-color: white;
+}
+
+.review-container {
+  width: 425px;
+  padding: 20px;
+  background-color: white;
+  margin-left: 40px;
+  border: 2px solid #d8d8d8;
+}
+
+.review-container li {
+  margin-bottom: 30px;
+}
+
+.review-form .button {
+  display: block;
+  margin: 30px auto;
+}
+
+select {
+  height: 40px;
+  font-size: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+textarea {
+  width: 95%;
+  height: 70px;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .product-image,
+  .product-info {
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  .review-form {
+    width: 90%;
+  }
+}
