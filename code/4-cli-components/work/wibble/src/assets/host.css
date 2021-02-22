@@ -1,0 +1,25 @@
+body {
+  background-color: #f2f2f2;
+  margin: 0, 5%;
+  font-family: tahoma;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  vertical-align: middle;
+  margin: 2em;
+}
+
+.button {
+  background-color: #39495c;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+
+.nav-bar {
+  background: linear-gradient(-50deg, #010801, #0d0d60);
+  height: 60px;
+  margin-bottom: 25px;
+}
