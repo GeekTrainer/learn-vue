@@ -2,7 +2,7 @@ Before users decide to book a cruise, they will want to know what is available a
 
 ## Clone the starter repository and explore the code
 
-We have provided a starter repository for this module.
+You've been provided a starter repository for this module.
 
 1. Clone the starter repository and open the folder in [Visual Studio Code](https://code.visualstudio.com) by executing the following code
 
@@ -36,10 +36,10 @@ Let's update the HTML to display the list of all products and their prices.
 
 ### Exploring the code
 
-Note the `v-for` directive. This will create a new `div` element for each `productClass`. We also generate the `index` for each item, which we use as the `:key` for the display. Finally, we see the appropriate code to display the `name` and `price` for each `productClass`.
+Note the `v-for` directive. This will create a new `div` element for each `productClass` item. You also generate the `index` for each item, which you use as the `:key` for the display. Finally, you see the appropriate code to display the `name` and `price`, for each `productClass` item.
 
 > ![NOTE]
-> Note the call to `toLocalString`. Because we are working inside the `{{ }}` we are able to call any valid JavaScript. Also, while the locale string is set to **en-US**, you can update it to your particular region.
+> Note the call to `toLocalString`. Because you're working inside the `{{ }}` you're able to call any valid JavaScript. Also, while the locale string is set to **en-US**, you can update it to your particular region.
 
 ## Launch the page in Live Server
 

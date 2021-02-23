@@ -1,4 +1,4 @@
-Let's update our display to highlight items which are almost sold out, and show the appropriate buttons to book a trip. If the trip offers early bird we will set the button text appropriately, otherwise prompt the user to book now. If there are fewer than 10 seats available we'll display a message saying the class is almost sold out.
+Let's update your display to highlight items which are almost sold out, and show the appropriate buttons to book a trip. If the trip offers early bird, you will set the button text appropriately, otherwise prompt the user to book now. If there are fewer than 10 seats available you'll display a message saying the class is almost sold out.
 
 ## Add the code to update the display
 
