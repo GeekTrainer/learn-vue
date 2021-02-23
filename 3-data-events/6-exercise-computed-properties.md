@@ -1,4 +1,4 @@
-Let's create a computed property to display out the information about the selected cabin. We will also add in the necessary HTML to display it on the page.
+Let's create a computed property to display out the information about the selected cabin. You will also add in the necessary HTML to display it on the page.
 
 ## Add the computed property
 
@@ -17,7 +17,7 @@ Let's add the computed property to create a string to be displayed for the selec
     },
     ```
 
-    Notice how we are able to use `this` to access the `product.cabins`, and `booking.cabinIndex` to find the cabin the user selected. We then create the display string by using the ECMAScript template.
+    Notice how you're able to use `this` to access the `product.cabins`, and `booking.cabinIndex` to find the cabin the user selected. We then create the display string by using the ECMAScript template.
 
 ## Add the display to the page
 
@@ -40,7 +40,7 @@ Let's add the display to our page.
     </div>
     ```
 
-    Notice how we are using `v-show` to display when `booking.completed` is set to true, which we setup earlier with our button. Also notice how we are able to read `bookingCabinDisplay` like we would any other string value inside Vue to display it to the user.
+    Notice how you're using `v-show` to display when `booking.completed` is set to `true`, which you setup earlier with our button. Also notice how we are able to read `bookingCabinDisplay` like you would any other string value inside Vue to display it to the user.
 
 ## Test the page
 
