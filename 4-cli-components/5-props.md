@@ -1,43 +1,94 @@
-HTML elements can display information to the user and allow interaction with the page. We can pass information into the element using attributes, and respond to various events like click. When we create a Vue component we are in essence creating a custom HTML element. As a result, we can implement this same type of functionality through props and custom events.
+HTML elements are the building blocks we use to create pages. We can configure their behavior by setting attributes to different values. As highlighted earlier, creating a component is similar to creating a custom HTML tag. As a result, we can pass in information to enhance the reuse of components through props.
 
-## Props as attributes
+## Defining props
 
-Props, short for properties, are a collection of different attributes we can add to our components. Their values can be set by the caller in the same fashion as an HTML attribute - a key/value pair. We declare props on a component by setting the `props` property inside the `script` section.
+Props, short for properties, are a set of values we can pass into a component. You will typically add props to a component to pass in the values it should display or otherwise change its behavior.
+
+You define props for a component by adding the `props` field inside the `script` element. You can list the names of a components props by listing them in an array:
 
 ```html
+<!-- UserDisplay component -->
 <script>
 export default {
     name: 'UserDisplay',
-    props: ['lastName', 'firstName']
+    props: ['name', 'age']
 }
 </script>
 ```
 
-In the above example, we can set the values for the properties `lastName` and `firstName` by adding attributes to the `user-display` element the component creates. Notice the names will be converted into kebab-case, just like the name of the component itself.
+Props are set by the caller of the component using the same syntax as an HTML attribute. Assuming the above component, we can set `name` and `age` like this:
 
 ```html
-<user-display first-name="Cheryl" last-name="Smith"></user-display>
+<!-- inside parent component -->
+<template>
+    <user-display :name='Cheryl' :age='28'></user-display>
+</template>
+<script>
+import UserDisplay from './UserDisplay.vue';
+export default {
+    components: {
+        UserDisplay
+    }
+}
+</script>
 ```
 
-We can also create more robust props by creating a template for the object, similar to how you might declare a schema. If we had a `user` object with `firstName` and `lastName` properties of type `String`, we can register it in our component as follows:
+> ![NOTE]
+> The component named `UserDisplay` will be converted into the kebab-cased `user-display` by Vue.js. Also, the `:` in front of each name indicates this is a Vue.js property we are setting.
+
+## Restricting types
+
+By listing them as part of an array, the caller can pass in values of any type. This can be appropriate for basic applications, but you will often want to indicate what data types you are expecting for each prop.
+
+We can provide more robust information about the props we are expecting by defining a schema. If you want to indicate `name` should be a string and `age` a number, you can define your props schema like the following:
 
 ```html
+<!-- UserDisplay component script -->
 <script>
 export default {
-    user: {
-        firstName: String,
-        lastName: String
+    name: 'UserDisplay',
+    props: {
+        name: String,
+        age: Number
     }
-    props: ['lastName', 'firstName']
 }
 </script>
 ```
 
-We can then use the component with the following:
+Notice how we are creating a props object with the types for `name` and `age`. This component will now only accept the specified data types. We can still set them as before:
 
 ```html
+<!-- inside parent component -->
+<user-display :name='Cheryl' :age='28'></user-display>
+```
+
+## Complex objects
+
+When working with Vue you will typically work with objects rather than individual values. Fortunately you can declare more complex structures with props as well.
+
+If we are using a `User` object with the properties of `name` and `age`, we can declare this as a full construct in our props:
+
+```html
+<!-- UserDisplay component script -->
+<script>
+export default {
+    name: 'UserDisplay',
+    props: {
+        user: {
+            name: String,
+            age: Number
+        }
+    }
+}
+</script>
+```
+
+We can set the value using the attribute as we did before. In addition, we can pass in dynamic data as well by specifying the name of the object we wish to use. In the example below we have a piece of data named `user`, which is passed using the same syntax as static values.
+
+```html
+<!-- parent component -->
 <template>
-<user-display user="user"></user-display>
+<user-display :user="user"></user-display>
 </template>
 
 <script>
@@ -55,44 +106,30 @@ export default {
         UserDisplay
     }
 }
+</script>
+```
+
+## Using props inside a component
+
+Inside a component, props can be read in the same way you would read data. The full `UserDisplay` component might look like this:
+
+```html
+<template>
+    <div>Name: {{ user.name }}</div>
+    <div>Age: {{ user.age }}</div>
+</template>
+<script>
+export default {
+    name: 'UserDisplay',
+    props: {
+        user: {
+            name: String,
+            age: Number
+        }
+    }
+}
+</script>
 ```
 
 > ![IMPORTANT]
-> Props are designed to be read-only for a component. If you need to modify values you can use `data()`.
-
-## Events
-
-HTML elements can raise events based on user interaction. Components allow us to do the same thing by emitting events. When creating the component you register any events your component may emit by listing them in the `emits` field in the `script`.
-
-```html
-<!-- inside the component's vue file -->
-<script>
-export default {
-    // normal component fields
-    emits: ['saveUser']
-}
-</script>
-```
-
-Emitting an event is done by using the `emit` function. You can call this function directly inside an event handler using the normal Vue syntax:
-
-```html
-<!-- inside the component's vue file -->
-<template>
-<!-- the rest of the template -->
-<button @click="emit('saveUser')">Save user</button>
-</template>
-```
-
-You can also emit an event from inside a method by using `this.$emit`.
-
-```html
-<!-- inside the component's vue file -->
-<script>
-export default {
-    // normal component fields
-    emits: ['saveUser']
-}
-</script>
-```
-
+> Unlike stateful data, values passed via props are a one-way binding. If changes are made to a prop those updates do *not* bubble back to the parent.
