@@ -18,3 +18,12 @@ Prerequisites:
 - Familiarity with Vue.js and directives
 - [Visual Studio Code](https://code.visualstudio.com)
 - [Node.js](https://nodejs.org/en/)
+
+> ![NOTE]
+> If you wish to obtain the completed code for this module, you can clone the repository by executing the following in a command or terminal window
+>
+> ```bash
+> git clone [INSERT REPO HERE]
+> git clone [INSERT STARTER DIRECTORY HERE]
+> code .
+> ```

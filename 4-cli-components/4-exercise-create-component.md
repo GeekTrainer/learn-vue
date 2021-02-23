@@ -33,7 +33,7 @@ Let's create the *Host* component.
 
 The snippet creates the `script` element for us with `export default` already created. `export default` allows this component to be loaded by another component in Vue. We will add the needed code into this section.
 
-1. Inside the curly braces (`{ }`) of `export default`, add the following code to name the component, register our data, and add three comments for the future:
+1. Inside the curly braces (`{ }`) of `export default`, add the following code to name the component, register our data, and add two comments for the future:
 
     ```javascript
     name: 'Host',
@@ -48,8 +48,9 @@ The snippet creates the `script` element for us with `export default` already cr
                     { name: 'First', price: 430000 },
                 ]
             },
-            // TODO: Add bookings array
-
+            bookings: [
+                { name: 'Sample', price: 0 }
+            ]
         }
     },
 
@@ -59,7 +60,7 @@ The snippet creates the `script` element for us with `export default` already cr
 
     ```
 
-    The `name` field sets the name of the component. `data()` registers the `cruise` object as data for the component. The three `TODO` comments will serve as markers for the future.
+    The `name` field sets the name of the component. `data()` registers the `cruise` object as data for the component, and `bookings` which we will use later to store a list of cruise bookings. The three `TODO` comments will serve as markers for the future.
 
     > ![NOTE]
     > `TODO` comments are a great way to place notes in your code of tasks which need to be completed later.
@@ -71,21 +72,27 @@ With our data registered, let's add the HTML to the `template` element to displa
 1. Inside the `template` element in *Host.vue*, add the following HTML to display the name and description of the cruise, as well as a placeholder for two components we will create later:
 
     ```html
+    <section>
     <div class="nav-bar"></div>
     <h1>Relecloud Galaxy Tours</h1>
 
     <div>
-        <h2>{{ product.name }}</h2>
-        <div>{{ product.description }}</div>
+        <h2>{{ cruise.name }}</h2>
+        <div>{{ cruise.description }}</div>
         <hr />
 
         <div class="row">
-            <!-- TODO: Add booking-form -->
+            <div>
+                <!-- TODO: Add booking-form -->
 
-            <!-- TODO: Add booking-list -->
+            </div>
+            <div>
+                <!-- TODO: Add booking-list -->
 
+            </div>
         </div>
     </div>
+    </section>
     ```
 
 ## Add the style
