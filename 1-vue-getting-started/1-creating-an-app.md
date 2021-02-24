@@ -51,7 +51,7 @@ At this point, the data is now exposed so that it can be displayed for the user,
 
 ## Mounting the app
 
-In order for Vue.js to use the created app object, it must be _mounted_. By mounting the app, you're telling Vue.js the portion of the page it controls, allowing it to display information or even HTML. To mount the application you reference the `id` of an ordinary HTML element.
+In order for Vue.js to use the created app object, it must be *mounted*. By mounting the app, you're telling Vue.js the portion of the page it controls, allowing it to display information or even HTML. To mount the application you reference the `id` of an ordinary HTML element.
 
 ```html
 <!-- the HTML element which will host our app -->
