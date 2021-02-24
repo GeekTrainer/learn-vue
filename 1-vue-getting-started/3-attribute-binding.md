@@ -88,7 +88,7 @@ The example above is static though. If you want to be able to change the data, y
 </script>
 ```
 
-The data property `classObject` has two properties where their values are booleans. The boolean values allows you to _enable_ or _disable_ specific classes. Setting `centered` to `false` would render `<div class="active">`, as `active` would be the only property that's still `true`.
+The data property `classObject` has two properties where their values are booleans. The boolean values allows you to *enable* or *disable* specific classes. Setting `centered` to `false` would render `<div class="active">`, as `active` would be the only property that's still `true`.
 
 > ![NOTE]
 > When creating a class object, JavaScript naming rules apply. If you have a class name which uses a dash, such as `center-text`, you will have to place the name in quotes (`'center-text': true`) when adding the property.
