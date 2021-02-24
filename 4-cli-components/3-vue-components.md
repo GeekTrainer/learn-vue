@@ -62,7 +62,7 @@ export default {
 As highlighted earlier, single-file components are saved with a *.vue* extension. You can load these in a similar fashion to other modules by using the `import` statement, and register them by using the `components` property. Once registered they become available for use as a tag inside of `template`.
 
 > ![NOTE]
-> When importing a library with `import`, it's standard to use PascalCase (or upper camel case) for the name, where the first letter for each word is capitalized, like so `PascalCase`. However, in HTML, the convention is for tag names to use kebab-case with each word in lowercase letters and a dash (`-`) between them. Vue will automatically manage the two different conventions.
+> When importing a library with `import`, it's standard to use PascalCase (or upper camel case) for the name, where the first letter for each word is capitalized, like `PascalCase`. However, in HTML, the convention is for tag names to use kebab-case with each word in lowercase letters and a dash (`-`) between them. Vue will automatically manage the two different conventions.
 
 ```html
 <template>
