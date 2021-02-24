@@ -1,6 +1,6 @@
-In this module we explored how Vue.js allows you to dynamically change the display. We saw how to use the directives `v-for`, `v-show`, `v-if`, `v-else-if`, and `v-if`.
+In this module, you've explored how Vue.js allows you to dynamically change the display. You saw how to use the directives `v-for`, `v-show`, `v-if`, `v-else-if`, and `v-if`.
 
-We saw the following:
+You saw the following:
 
 - How to render all items in an array
 - How to show or hide HTML elements based on variable values

@@ -1,8 +1,8 @@
-Let's continue building our application by creating a component to display the current list of bookings. We will add in a form the user can use to add bookings, so for the time being we will create a static array.
+Let's continue building our application by creating a component, to display the current list of bookings. You will add in a form the user can use, to add bookings, so for the time being you will create a static array.
 
 ## Create the component
 
-We will start by creating our component.
+You will start by creating your component.
 
 1. Inside Visual Studio Code, create a new file inside *src/components* named *BookingList.vue*
 1. Inside *BookingList.vue*, type `vue`, and select *\<vue\> with default.vue* from the snippets menu
@@ -13,7 +13,7 @@ We will start by creating our component.
 
 ## Register the props and computed value
 
-We are expecting an `Array` of information about bookings, so we will declare our prop as type `Array`. Because we are creating a component, we can also take advantage of computed properties to automatically calculate values for us. We will add a computed property to add the total price and return a display value we can use.
+You're expecting an `Array` of information about bookings, so we will declare our prop as type `Array`. Because you're creating a component, you can also take advantage of computed properties to automatically calculate values for you. You will add a computed property to add the total price and return a display value you can use.
 
 1. Open *src/components/BookingList.vue* if not already open
 1. Inside the curly braces (`{ }`) for `export default`, add the following code to add the following code to create a prop named `bookings` and the `computed` property:
@@ -39,7 +39,7 @@ We are expecting an `Array` of information about bookings, so we will declare ou
 
 ## Add the template for display
 
-Let's add the template to display the information for our bookings. We will use `v-for` to loop through all bookings, and the `totalDisplay` computed property we created earlier.
+Let's add the template to display the information for our bookings. You will use `v-for` to loop through all bookings, and the `totalDisplay` computed property we created earlier.
 
 1. Open *src/components/BookingList.vue* if not already open
 1. Inside the `<template>` element, add the following HTML:
@@ -64,7 +64,7 @@ Let's add the template to display the information for our bookings. We will use 
 
 ## Add our component to the main page
 
-Let's use our component, and pass in a list of bookings.
+Let's use your component, and pass in a list of bookings.
 
 1. Open *src/components/Host.vue*
 1. Add a new line below the opening `<script>` tag and before `export default`
@@ -90,7 +90,7 @@ Let's use our component, and pass in a list of bookings.
 
 ## Use the component
 
-With our component registered, we will call it in our page. We will use the `bookings` array we created earlier to seed the list of bookings on the page.
+With your component registered, we will call it in our page. We will use the `bookings` array we created earlier to seed the list of bookings on the page.
 
 1. Open *src/components/Host.vue* if not already open
 1. Below the comment which reads `TODO: Add booking-list`, add the following code to use the `booking-list` component:
@@ -101,7 +101,7 @@ With our component registered, we will call it in our page. We will use the `boo
 
 ## Test the page
 
-With our component registered and configured, let's test the page!
+With your component registered and configured, let's test the page!
 
 1. Save all files by clicking *File* > *Save all*
 1. Return to your browser window with [http://localhost:8080](http://localhost:8080) and hit refresh

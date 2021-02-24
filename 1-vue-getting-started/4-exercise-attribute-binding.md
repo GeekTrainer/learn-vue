@@ -1,8 +1,8 @@
-We would like to display an image of what the space cruise looks like for our customers. Because each type of adventure will have a different image and potentially style, we want to add it to the data object for our application.
+You would like to display an image of what the space cruise looks like for your customers. Because each type of adventure will have a different image, and potentially style, you want to add it to the data object for your application.
 
 ## Add the properties to the data object
 
-In the previous exercise we created `data()` inside the `App` object. Let's add the properties for the image.
+In the previous exercise you created `data()` inside the `App` object. Let's add the properties for the image.
 
 1. Open **index.js**.
 1. Immediately below the line which reads `// additional properties later` add the following code:
@@ -36,13 +36,13 @@ const app = Vue.createApp({
 
 ## Add the HTML
 
-Let's update the HTML to include the image. We will set the attributes and style by using attribute binding.
+Let's update the HTML to include the image. You will set the attributes and style by using attribute binding.
 
 1. Open **index.html**.
 1. Add the following HTML below the line which reads `<div>{{ productDescription }}</div>`:
 
     ```html
-    <img v-bind:src="productImage" v-bind:alt="productImageDescription" :style="productImageStyle" />
+    <img :src="productImage" :alt="productImageDescription" :style="productImageStyle" />
     ```
 
     The entire `div` element for the app should now look like the following:
@@ -51,9 +51,11 @@ Let's update the HTML to include the image. We will set the attributes and style
     <div id="app">
         <h2>{{ productName }}</h2>
         <div>{{ productDescription }}</div>
-        <img v-bind:src="productImage" v-bind:alt="productImageDescription" :style="productImageStyle" />
+        <img :src="productImage" :alt="productImageDescription" :style="productImageStyle" />
     </div>
     ```
+
+    Not how the shorthand notation `:attribute` is used on all the attributes and how this usage makes for an easier read over the longer `v-bind:attribute`.
 
 ## Test the results
 

@@ -1,8 +1,10 @@
-When working with data-driven applications you typically need to be able to update the display based on certain values. You might need to change the color to indicate a warning, deactivate an unavailable option, or simply not display a control. Vue.js offers several directives to control how (or if) items are displayed.
+When working with data-driven applications, you typically need to be able to update the display based on certain values. You might need to change the color to indicate a warning, deactivate an unavailable option, or simply not display a control. Vue.js offers several directives to control how (or if) items are displayed.
 
 ## Toggle visibility
 
 You can control an item being displayed by using the `v-show` directive. `v-show` will examine a boolean value or expression, and determine if a component should be displayed. As you might suspect, `true` means it will be displayed, and `false` means it won't.
+
+Below is an example of using `v-show` with an expression that evaluates to `true` or `false`.
 
 ```html
 <div v-show="new Date().getMonth() < 3">It is the first quarter</div>
@@ -13,7 +15,7 @@ You can control an item being displayed by using the `v-show` directive. `v-show
 
 ## Boolean logic
 
-Vue.js supports three directives for implementing boolean logic: `v-if`, `v-else-if`, and `v-else`. As you might expect, these align perfectly traditional `if`, `else if`, and `else` statements.
+Vue.js supports three directives for implementing boolean logic: `v-if`, `v-else-if`, and `v-else`. As you might expect, these align perfectly traditional `if`, `else if`, and `else` statements. 
 
 ```html
 <div v-if="new Date().getMonth() < 3">It is the first quarter</div>

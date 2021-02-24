@@ -1,4 +1,4 @@
-We want to create an application which allows a user to create bookings on a cruise to the moon. Over the course of a couple of exercises we will create a component for the form the user will complete to create a booking, and another to display the list of created bookings. The first component we will create will host both of child components.
+You want to create an application which allows a user to create bookings on a cruise to the moon. Over the course of a couple of exercises, you will create a component for the form the user will complete, to create a booking, and another to display the list of created bookings. The first component you will create, will host both of child components.
 
 ## Install Visual Studio Code extensions
 

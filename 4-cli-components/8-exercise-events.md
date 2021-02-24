@@ -1,8 +1,8 @@
-Let's complete our application by adding a form the user can use to book a cruise. The form will have a dropdown list for the user to select their desired cabin, and a button to book the cruise. We will set this up as a new component, and create an event for the button. We will finish by calling this new component from `Host.vue`.
+Let's complete your application by adding a form the user can use to book a cruise. The form will have a dropdown list for the user to select their desired cabin, and a button to book the cruise. We will set this up as a new component, and create an event for the button. You will finish by calling this new component from `Host.vue`.
 
 ## Create the component
 
-We will start by creating the component.
+You will start by creating the component.
 
 1. Inside Visual Studio Code, create a new file in *src/components* named *BookingForm.vue*
 1. Inside *BookingForm.vue*, type `vue`, and select *\<vue\> with default.vue* from the snippets menu
@@ -43,7 +43,7 @@ Let's add the code the component will use, including registering the props, emit
 
 ## Add the display template
 
-With the code added we can turn our attention to the display. We want to have a dropdown list for cabin selection, and a button to book the trip. The button will call the `bookCabin` function we created earlier.
+With the code added we can turn our attention to the display. You want to have a dropdown list for cabin selection, and a button to book the trip. The button will call the `bookCabin` function you created earlier.
 
 1. Open *src/components/BookingForm.vue* if not already open
 1. Add the following code inside the `<template>` tags to create the display:
@@ -68,11 +68,11 @@ With the code added we can turn our attention to the display. We want to have a 
     </section>
     ```
 
-    The HTML creates our form. We loop through the `cabins` prop by using `v-for` to create the dropdown list. We bind the model of the `select` tag to the `cabinIndex` which will be returned back when the user selects a cabin and clicks the button. We then setup the button to call `bookCabin` when clicked.
+    The HTML creates our form. We loop through the `cabins` prop by using `v-for` to create the dropdown list. You bind the model of the `select` tag to the `cabinIndex` which will be returned back when the user selects a cabin and clicks the button. You then setup the button to call `bookCabin` when clicked.
 
 ## Add BookingForm to the page
 
-We will finish by adding the newly created `BookingForm` to our application by adding it to *Host.vue*.
+You will finish by adding the newly created `BookingForm` to our application by adding it to *Host.vue*.
 
 1. Open *src/components/Host.vue*
 1. Import `BookingForm` by adding the following code after the comment which reads `TODO: Register next component`:
@@ -102,7 +102,7 @@ We will finish by adding the newly created `BookingForm` to our application by a
     },
     ```
 
-    `addBooking` retrieves the selected cabin by using the index, and creates a new `booking` object by using `cabin.name` and `cabin.price`. We then add the `booking` to the `bookings` array.
+    `addBooking` retrieves the selected cabin by using the index, and creates a new `booking` object by using `cabin.name` and `cabin.price`. You then add the `booking` to the `bookings` array.
 
 1. Use the `booking-form` component by adding the following after the comment which reads `TODO: Add booking-form`
 
