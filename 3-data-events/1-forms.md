@@ -1,4 +1,4 @@
-The data returned by the `data()` function in a Vue app, or component, is generically referred to as _state_. State is any information your application needs to track to perform the necessary operations. Users typically modify state through HTML forms. Vue.js allows you to bind data to a form, allowing users to update state.
+The data returned by the `data()` function in a Vue app, or component, is generically referred to as *state*. State is any information your application needs to track to perform the necessary operations. Users typically modify state through HTML forms. Vue.js allows you to bind data to a form, allowing users to update state.
 
 ## v-model
 
