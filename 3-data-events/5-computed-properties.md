@@ -27,4 +27,3 @@ const app = Vue.createApp({
 ```
 
 The fields `lastName` and `firstName` are concatenated using a string literal.
-
